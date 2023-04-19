@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">FreeSkills</string>
-</resources>
+    <string name="get_started">Find It</string>
+    <string name="loading">loading..</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+
+
+    <!--Onbarding String Values-->
+    <string name="screen1">GetStarted!</string>
+    <string name="screen2">Learn What You Like</string>
+    <string name="screen3">Get Reminder</string>
+    <string name="explore_youtube">Find Your Future</string>
+    <string name="screen1desc">We are excited to have you on board and ready to help you start your coding journey.we will provide you with all the necessary information to get started with our platform.</string>
+       <string name="screen2desc">Learn the syntax, basic programming concepts such as variables, data types, and control structures. Practice by writing small programs and experimenting with code.</string>
+    <string name="screen3desc">We Help You to get focused On Your journey </string>
+    <string name="startDesc">Self-Trust is First Secret of Success</string>
+
+   </resources>
