@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="406dp"
+    android:layout_height="502dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     app:flow_horizontalAlign="center">
@@ -13,12 +13,12 @@
         android:layout_width="246dp"
         android:layout_height="192dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="44dp"
         android:scaleType="centerCrop"
         android:src="@drawable/app_logo"
         app:layout_constraintBottom_toTopOf="@+id/sliderTitle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.964"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/rubik_light"
         android:text="@string/screen1desc"
         android:textAlignment="center"
@@ -40,7 +40,7 @@
         android:id="@+id/sliderTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="44dp"
         android:fontFamily="@font/rubik_semibold"
         android:text="@string/screen1"
         android:textAlignment="center"
@@ -49,7 +49,6 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/sliderDesc"
         app:layout_constraintEnd_toEndOf="@+id/sliderImage"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/sliderImage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
