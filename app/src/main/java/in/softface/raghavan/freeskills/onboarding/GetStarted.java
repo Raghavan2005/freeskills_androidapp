@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import in.softface.raghavan.freeskills.MainActivity;
 import in.softface.raghavan.freeskills.R;
+import in.softface.raghavan.freeskills.login.Sign_up_Activity;
 
 public class GetStarted extends AppCompatActivity {
     Button startButton;
@@ -20,7 +21,7 @@ public class GetStarted extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(GetStarted.this, MainActivity.class);
+                Intent i = new Intent(GetStarted.this, Sign_up_Activity.class);
                 startActivity(i);
                 finish();
             }

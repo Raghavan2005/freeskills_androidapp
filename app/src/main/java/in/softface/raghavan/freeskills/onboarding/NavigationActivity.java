@@ -1,6 +1,7 @@
 package in.softface.raghavan.freeskills.onboarding;
 
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -9,10 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import in.softface.raghavan.freeskills.MainActivity;
+import java.util.Objects;
+
 import in.softface.raghavan.freeskills.R;
 
 public class NavigationActivity extends AppCompatActivity {
@@ -25,6 +28,7 @@ public class NavigationActivity extends AppCompatActivity {
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
         }
+        @SuppressLint("SetTextI18n")
         @Override
         public void onPageSelected(int position) {
             setDotIndicator(position);
@@ -47,37 +51,28 @@ public class NavigationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
         backButton = findViewById(R.id.backButton);
         nextButton = findViewById(R.id.nextButton);
         skipButton = findViewById(R.id.skipButton);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (getItem(0) > 0) {
-                    slideViewPager.setCurrentItem(getItem(-1), true);
-                }
+        backButton.setOnClickListener(v -> {
+            if (getItem(0) > 0) {
+                slideViewPager.setCurrentItem(getItem(-1), true);
             }
         });
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (getItem(0) < 2)
-                    slideViewPager.setCurrentItem(getItem(1), true);
-                else {
-                    Intent i = new Intent(NavigationActivity.this, GetStarted.class);
-                    startActivity(i);
-                    finish();
-                }
-            }
-        });
-        skipButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        nextButton.setOnClickListener(v -> {
+            if (getItem(0) < 2)
+                slideViewPager.setCurrentItem(getItem(1), true);
+            else {
                 Intent i = new Intent(NavigationActivity.this, GetStarted.class);
                 startActivity(i);
                 finish();
             }
+        });
+        skipButton.setOnClickListener(v -> {
+            Intent i = new Intent(NavigationActivity.this, GetStarted.class);
+            startActivity(i);
+            finish();
         });
         slideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
         dotIndicator = (LinearLayout) findViewById(R.id.dotIndicator);
