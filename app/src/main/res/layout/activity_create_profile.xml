@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/TextAppearance.Material3.BodyLarge"
+    tools:context=".login.profile.CreateProfile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/Createtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="Creating Profile"
+        android:paddingTop="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/profileimage"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/image_3"
+        android:background="@drawable/rounded_bg"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/white"
+        android:paddingEnd="10dp"
+        android:gravity="center_vertical" />
+
+    <EditText
+        android:id="@+id/editUsername"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter Your Username"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:imeOptions="actionDone"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"
+        android:backgroundTintMode="add"
+        android:inputType="text" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="25dp"
+        android:layout_gravity="center">
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_marginStart="20dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+
+        android:padding="10dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/text1"
+            android:layout_height="wrap_content"
+            android:text="Educational"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:paddingEnd="10dp"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/radio_one"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="School" />
+
+        <RadioButton
+            android:id="@+id/radio_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:onClick="checkButton"
+            android:text="College" />
+
+        <RadioButton
+            android:id="@+id/radio_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:onClick="checkButton"
+            android:text="Self-taught" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_marginEnd="20dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Current Level"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:paddingEnd="10dp" />
+
+        <RadioButton
+            android:id="@+id/Beginner"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton1"
+            android:text="Beginner" />
+
+        <RadioButton
+            android:id="@+id/Intermediate"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:onClick="checkButton1"
+            android:layout_height="wrap_content"
+            android:text="Intermediate" />
+
+        <RadioButton
+            android:id="@+id/Advanced"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton1"
+            android:text="Advanced" />
+
+    </RadioGroup>
+</LinearLayout>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_marginTop="20dp"
+        android:layout_width="350dp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:layout_height="30dp" />
+
+    <Switch
+        android:id="@+id/Notificationtg"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:layout_gravity="left"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:onClick="checkswitchandcheckbox"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:text="Would you like to enable Notifications" />
+
+    <CheckBox
+        android:id="@+id/user_policy"
+    android:layout_marginStart="20dp"
+    android:padding="5dp"
+    android:layout_marginTop="20dp"
+        android:onClick="checkswitchandcheckbox"
+        android:textColor="@color/white"
+        android:textAlignment="viewStart"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:text="Please acknowledge your agreement to our user policy."
+/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/Summit"
+
+            android:layout_width="300dp"
+            android:layout_marginTop="25dp"
+            android:text="Summit"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"/>
+        <ProgressBar
+            android:id="@+id/loadingpg"
+            android:layout_width="300dp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_height="50dp"/>
+
+    </FrameLayout>
+
+</LinearLayout>

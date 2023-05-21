@@ -1,0 +1,5 @@
+<!-- rounded_bg.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#00FFFFFF" />
+    <corners android:radius="25dp" />
+</shape>
