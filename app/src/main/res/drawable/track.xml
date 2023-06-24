@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~   *************************************************************
+  ~   Created by Raghavan at softface.in on 6/23/23, 11:01 PM
+  ~    funwithmetamil@gmail.com
+  ~     Last modified 6/23/23, 11:01 PM
+  ~     Copyright (c) 2023.
+  ~     All rights reserved.
+  ~   *************************************************************
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+
+            <corners android:radius="100dp" />
+            <solid android:color="#F10000" />
+
+        </shape>
+    </item>
+
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+
+            <corners android:radius="100dp" />
+            <solid android:color="#14E41C" />
+
+        </shape>
+    </item>
+
+</selector>

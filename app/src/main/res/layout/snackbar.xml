@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~   *************************************************************
+  ~   Created by Raghavan at softface.in on 6/23/23, 11:12 PM
+  ~    funwithmetamil@gmail.com
+  ~     Last modified 6/23/23, 11:12 PM
+  ~     Copyright (c) 2023.
+  ~     All rights reserved.
+  ~   *************************************************************
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center"
+    android:background="@drawable/green_rounded_background"
+    android:minHeight="45dp"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/ok_baseline_check_24"
+            android:gravity="center"
+            android:text="Success Snackbar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

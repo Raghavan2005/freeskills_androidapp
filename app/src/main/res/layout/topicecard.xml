@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~   *************************************************************
+  ~   Created by Raghavan at softface.in on 6/12/23, 7:04 PM
+  ~    funwithmetamil@gmail.com
+  ~     Last modified 6/12/23, 7:04 PM
+  ~     Copyright (c) 2023.
+  ~     All rights reserved.
+  ~   *************************************************************
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="6dp"
+        app:cardCornerRadius="7dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:cardBackgroundColor="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/sno"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_margin="6dp"
+                android:textColor="@color/white"
+                android:text="10."
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/topicname"
+                android:layout_width="210dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:fontFamily="@font/robotothin"
+                android:gravity="left|center"
+                android:inputType="textMultiLine"
+                android:maxLines="2"
+                android:text="What is the router? sadas asd asdasd asda"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:id="@+id/topicplay"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/black"
+                android:clickable="true"
+                android:textAlignment="center"
+                android:drawableLeft="@drawable/play"
+                android:text="Play Now At 12:34:345"
+                android:textColor="@color/white"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

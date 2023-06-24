@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~   *************************************************************
+  ~   Created by Raghavan at softface.in on 6/12/23, 5:47 PM
+  ~    funwithmetamil@gmail.com
+  ~     Last modified 6/12/23, 5:47 PM
+  ~     Copyright (c) 2023.
+  ~     All rights reserved.
+  ~   *************************************************************
+  -->
+
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:orientation="horizontal"
+    android:id="@+id/toolbar"
+    android:layout_height="?actionBarSize">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/black"
+        android:layout_gravity="start"
+        android:src="@drawable/back"/>
+    <TextView
+        android:id="@+id/coursetitile"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="@integer/material_motion_duration_long_1"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:fontFamily="@font/robotobold"
+        android:text="CSS Preprocessors" />
+
+
+</LinearLayout>
+</androidx.appcompat.widget.Toolbar>
+
+
+
+
+

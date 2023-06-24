@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~   *************************************************************
+  ~   Created by Raghavan at softface.in on 6/18/23, 11:16 PM
+  ~    funwithmetamil@gmail.com
+  ~     Last modified 6/18/23, 11:16 PM
+  ~     Copyright (c) 2023.
+  ~     All rights reserved.
+  ~   *************************************************************
+  -->
+
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
+    <explode
+        android:duration="50"
+        android:interpolator="@android:interpolator/bounce" />
+</transitionSet>

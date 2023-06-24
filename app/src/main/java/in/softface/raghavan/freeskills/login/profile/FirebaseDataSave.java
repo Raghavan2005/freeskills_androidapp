@@ -1,6 +1,14 @@
-package in.softface.raghavan.freeskills.login.profile;
+/*
+ *   *************************************************************
+ *   Created by Raghavan at softface.in on 6/8/23, 11:32 PM
+ *    funwithmetamil@gmail.com
+ *     Last modified 6/8/23, 11:32 PM
+ *     Copyright (c) 2023.
+ *     All rights reserved.
+ *   *************************************************************
+ */
 
-import static java.nio.file.Paths.get;
+package in.softface.raghavan.freeskills.login.profile;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -15,7 +23,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FirebaseDataSave extends AppCompatActivity {
+public class FirebaseDataSave{
 
 
     private FirebaseFirestore db;
@@ -23,6 +31,7 @@ public class FirebaseDataSave extends AppCompatActivity {
     SharedPreferences sharedPreferences ;
     String savedEducational,savedCurrentLevel,savedLanguage,savedUsername,savedProfileImage;
     boolean savedNotifications,savedUserPolicy;
+    String email;
 
      public FirebaseDataSave(Context context) {
          db = FirebaseFirestore.getInstance();
@@ -35,6 +44,7 @@ public class FirebaseDataSave extends AppCompatActivity {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
         assert currentUser != null;
+        email = currentUser.getEmail();
 
         userID = currentUser.getUid();
        savedEducational = educational;
@@ -59,6 +69,7 @@ public class FirebaseDataSave extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         // Save the values in shared preferences
+        editor.putString("Userid",userID);
         editor.putString("educational", savedEducational);
         editor.putString("currentLevel", savedCurrentLevel);
         editor.putString("language", savedLanguage);
@@ -66,6 +77,7 @@ public class FirebaseDataSave extends AppCompatActivity {
         editor.putString("profileImage", savedProfileImage);
         editor.putBoolean("notifications", savedNotifications);
         editor.putBoolean("userPolicy", savedUserPolicy);
+        editor.putString("email",email);
 
         // Apply the changes
         editor.apply();
@@ -83,6 +95,7 @@ public class FirebaseDataSave extends AppCompatActivity {
         data.put("ProfileImageURL", savedProfileImage);
         data.put("Notifications", savedNotifications);
         data.put("UserPolicy", savedUserPolicy);
+        data.put("Email",email);
         return data;
     }
 //get data from firebase

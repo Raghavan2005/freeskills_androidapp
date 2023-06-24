@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~   *************************************************************
+  ~   Created by Raghavan at softface.in on 6/8/23, 11:32 PM
+  ~    funwithmetamil@gmail.com
+  ~     Last modified 6/8/23, 11:32 PM
+  ~     Copyright (c) 2023.
+  ~     All rights reserved.
+  ~   *************************************************************
+  -->
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,8 +16,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:background="#BDBDBD"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~   *************************************************************
+  ~   Created by Raghavan at softface.in on 6/8/23, 11:32 PM
+  ~    funwithmetamil@gmail.com
+  ~     Last modified 6/8/23, 11:32 PM
+  ~     Copyright (c) 2023.
+  ~     All rights reserved.
+  ~   *************************************************************
+  -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -48,12 +58,12 @@
         android:hint="Enter Your Username"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="10dp"
-        android:imeOptions="actionDone"
         android:textSize="20sp"
         android:textColor="@color/white"
         android:backgroundTint="@color/white"
         android:backgroundTintMode="add"
-        android:inputType="text" />
+        android:inputType="text"
+        />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -163,6 +173,8 @@
         android:layout_width="350dp"
         android:layout_height="30dp"
         android:layout_gravity="left"
+        android:checked="true"
+        android:defaultFocusHighlightEnabled="true"
         android:textColor="@color/white"
         android:layout_marginStart="20dp"
         android:onClick="checkswitchandcheckbox"

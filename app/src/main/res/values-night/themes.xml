@@ -1,16 +1,33 @@
+<!--
+  ~   *************************************************************
+  ~   Created by Raghavan at softface.in on 6/8/23, 11:32 PM
+  ~    funwithmetamil@gmail.com
+  ~     Last modified 6/8/23, 11:32 PM
+  ~     Copyright (c) 2023.
+  ~     All rights reserved.
+  ~   *************************************************************
+  -->
+
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.FreeSkills" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryVariant">#756E70</item>
+        <item name="colorOnPrimary">#292828</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">#3F51C5</item>
+        <item name="colorSecondaryVariant">#3346AF</item>
+        <item name="textFillColor">@color/white</item>
+        <item name="colorOnSecondary">#212121</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">#212121</item>
+
         <!-- Customize your theme here. -->
     </style>
+    `
+
+    <style name="Theme.FreeSkills.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.FreeSkills.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

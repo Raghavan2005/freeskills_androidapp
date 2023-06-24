@@ -1,3 +1,13 @@
+/*
+ *   *************************************************************
+ *   Created by Raghavan at softface.in on 6/8/23, 11:32 PM
+ *    funwithmetamil@gmail.com
+ *     Last modified 6/8/23, 11:32 PM
+ *     Copyright (c) 2023.
+ *     All rights reserved.
+ *   *************************************************************
+ */
+
 package in.softface.raghavan.freeskills.login.profile;
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -29,10 +39,11 @@ import java.util.Objects;
 import java.util.Random;
 
 import in.softface.raghavan.freeskills.R;
+import in.softface.raghavan.freeskills.notifications.Notification_Screen;
 
 public class CreateProfile extends AppCompatActivity {
     EditText editText;
-    Intent i;
+    Intent i,i1;
     Handler handler = new Handler();
 
 
@@ -42,7 +53,7 @@ public class CreateProfile extends AppCompatActivity {
     String Educational, Current_Level, language, Username ,ProfileImage;
     final int delayMillis = 200;
     //179
-    boolean Notifications, user_policy;
+     public boolean Notifications, user_policy;
     @SuppressLint("UseSwitchCompatOrMaterialCode")
     Switch Notificationtg;
     CheckBox user_policytg;
@@ -60,7 +71,12 @@ public class CreateProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_profile);
         // Declaration Of Object
-        i = new Intent(CreateProfile.this, PCreatedActivity.class);
+       //Next file TO GO
+
+            i = new Intent(CreateProfile.this, Notification_Screen.class);
+            i1 = new Intent(CreateProfile.this, PCreatedActivity.class);
+
+
         editText = findViewById(R.id.editUsername);
         Educationalrg = (RadioGroup) findViewById(R.id.radioGroup);
         Current_Levelrg = findViewById(R.id.radioGroup2);
@@ -85,8 +101,9 @@ public class CreateProfile extends AppCompatActivity {
                 editText.setText(inputText);
                 Username = editText.getText().toString().toUpperCase().replaceAll("\\s", "");
                 // Clear focus and hide the cursor
-                editText.clearFocus();
                 keyboard.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+                editText.clearFocus();
+
 
                 return true;
             }
@@ -136,7 +153,10 @@ public class CreateProfile extends AppCompatActivity {
     }
 
     public void checkswitchandcheckbox(View v) {
-        Notifications = Notificationtg.isChecked();
+           Notifications=Notificationtg.isChecked();
+
+            Log.d("Noooooooo", "checkswitchandcheckbox: " + Notifications);
+
         user_policy = user_policytg.isChecked();
 
     }
@@ -145,36 +165,49 @@ public class CreateProfile extends AppCompatActivity {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                startActivity(i);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                finish();
+                if(!Notifications){
+                    startActivity(i1);
+                    finish();
+                }
+                else {
+                    startActivity(i);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    finish();
+                }
+
+
 
             }
         };
+        if (user_policy) {
 
-        if (Educational != null && Current_Level != null && Username != null ) {
-            FirebaseDataSave firebaseDataSave=new FirebaseDataSave(getApplicationContext());
-            firebaseDataSave.saveUserData(Educational,Current_Level,language,Username,randomProfileImage,Notifications,user_policy);
+            if (Educational != null && Current_Level != null && Username != null) {
+                FirebaseDataSave firebaseDataSave = new FirebaseDataSave(getApplicationContext());
+                firebaseDataSave.saveUserData(Educational, Current_Level, language, Username, randomProfileImage, Notifications, user_policy);
                 loadingpg.setVisibility(View.VISIBLE);
                 Summit.setVisibility(View.GONE);
                 Toast.makeText(CreateProfile.this, "Account Created", Toast.LENGTH_SHORT).show();
-                Log.d("TAG", "Created");
-            handler.postDelayed(runnable, delayMillis);
+                // Log.d("TAG", "Created");
+                handler.postDelayed(runnable, delayMillis);
+            } else {
+
+                Toast.makeText(this, "Account Cant Created : Try Again", Toast.LENGTH_SHORT).show();
             }
-        else {
 
-            Toast.makeText(CreateProfile.this, "Account Cant Created : Try Again", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Account Cant Created : Please acknowledge your agreement to our user policy", Toast.LENGTH_SHORT).show();
+
+
         }
-
     }
     public static class ProfileImageGenerator {
-        private static final String BASE_URL = "https://robohash.org/";
+        private static final String BASE_URL = "https://api.multiavatar.com/";
 
         public static String generateRandomProfileImage() {
             Random random = new Random();
             int randomNumber = random.nextInt(1000); // Generate a random number for variety
 
-            return BASE_URL + "user" + randomNumber + ".png";
+            return BASE_URL + "Bond" + randomNumber + ".png";
         }
     }
 

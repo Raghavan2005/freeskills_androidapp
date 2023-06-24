@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~   *************************************************************
+  ~   Created by Raghavan at softface.in on 6/8/23, 11:32 PM
+  ~    funwithmetamil@gmail.com
+  ~     Last modified 6/8/23, 11:32 PM
+  ~     Copyright (c) 2023.
+  ~     All rights reserved.
+  ~   *************************************************************
+  -->
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -19,7 +29,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:fontFamily="@font/rubik_semibold"
         android:text="@string/explore_youtube"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -30,7 +39,6 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:text="@string/startDesc"
-        android:fontFamily="@font/rubik_light"
         android:layout_marginTop="20dp"
         android:textAlignment="center"
         android:textColor="@color/gray"
@@ -43,7 +51,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/gray"
-        android:fontFamily="@font/rubik_semibold"
         android:padding="8dp"
         android:text="@string/get_started"
         android:textSize="20sp"

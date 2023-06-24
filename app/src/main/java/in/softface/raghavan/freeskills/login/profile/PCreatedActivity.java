@@ -1,3 +1,13 @@
+/*
+ *   *************************************************************
+ *   Created by Raghavan at softface.in on 6/8/23, 11:32 PM
+ *    funwithmetamil@gmail.com
+ *     Last modified 6/8/23, 11:32 PM
+ *     Copyright (c) 2023.
+ *     All rights reserved.
+ *   *************************************************************
+ */
+
 package in.softface.raghavan.freeskills.login.profile;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +17,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.util.Log;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,8 +34,10 @@ import java.util.Random;
 
 import in.softface.raghavan.freeskills.BackgroundTask;
 import in.softface.raghavan.freeskills.R;
+import in.softface.raghavan.freeskills.joblist.Joblist;
 
 public class PCreatedActivity extends AppCompatActivity {
+
     String[] quotes = {
             "The only way to do great work is to love what you do.",
             "In the middle of every difficulty lies opportunity.",
@@ -36,10 +51,10 @@ public class PCreatedActivity extends AppCompatActivity {
             "The future belongs to those who believe in the beauty of their dreams."
     };
     String randomQuote;
-    String UserName,imageurl;
+    String UserName, imageurl;
     ImageView profile;
     private FirebaseFirestore db;
-    TextView username,textquotes;
+    TextView username, textquotes;
 
     SharedPreferences sharedPreferences;
 
@@ -47,17 +62,17 @@ public class PCreatedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pcreated);
-         sharedPreferences= getSharedPreferences("UsersData", Context.MODE_PRIVATE);
-        UserName = sharedPreferences.getString("username", "");
+        sharedPreferences = getSharedPreferences("UsersData", Context.MODE_PRIVATE);
+        UserName = sharedPreferences.getString("username", "Not Found");
         imageurl = sharedPreferences.getString("profileImage", "");
-        profile=(ImageView)findViewById(R.id.profileimage);
-        username=(TextView)findViewById(R.id.username);
-        textquotes=(TextView)findViewById(R.id.quotes) ;
-        Log.d ("sdasdas",UserName+"  "+imageurl);
+        profile = findViewById(R.id.profileimage);
+        username = findViewById(R.id.username);
+        textquotes = findViewById(R.id.quotes);
+       // Log.d("sdasdas", UserName + "  " + imageurl);
 
         Random random = new Random();
         int index = random.nextInt(quotes.length);
-        UserName=capitalizeFirstLetter(UserName);
+        UserName = capitalizeFirstLetter(UserName);
         randomQuote = quotes[index];
         Picasso.get()
                 .load(imageurl)
@@ -67,8 +82,17 @@ public class PCreatedActivity extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).hide();
 
+        // Delay in milliseconds before switching to the next activity
+        long switchDelay = 2000; // 2 seconds
+
+        // Create an instance of AutoSwitchActivity
+        AutoSwitchActivity autoSwitchActivity = new AutoSwitchActivity(this, Joblist.class, switchDelay);
+
+        // Start the auto switching
+        autoSwitchActivity.start();
 
     }
+
     public static String capitalizeFirstLetter(String str) {
         if (str == null || str.isEmpty()) {
             return str;
@@ -79,8 +103,4 @@ public class PCreatedActivity extends AppCompatActivity {
 
         return firstLetter + restOfString;
     }
-
-
-    }
-
-
+}

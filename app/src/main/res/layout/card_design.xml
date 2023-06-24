@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~   *************************************************************
+  ~   Created by Raghavan at softface.in on 6/11/23, 1:33 PM
+  ~    funwithmetamil@gmail.com
+  ~     Last modified 6/11/23, 1:33 PM
+  ~     Copyright (c) 2023.
+  ~     All rights reserved.
+  ~   *************************************************************
+  -->
+
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@color/black"
+    app:cardCornerRadius="10dp"
+    android:layout_marginStart="4dp"
+    app:cardElevation="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:id="@+id/cardimage"
+        android:layout_height="120dp"
+        android:transitionName="@string/blue_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_3"
+        android:contentDescription="TODO" />
+
+</com.google.android.material.card.MaterialCardView>
