@@ -14,7 +14,7 @@ android {
         minSdk 23
         targetSdk 33
         versionCode 1
-        versionName "Alpha_1.0.1"
+        versionName "Alpha_1.0.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -43,7 +43,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-crashlytics:18.3.7'
     implementation 'com.google.firebase:firebase-analytics:21.3.0'
     implementation 'com.google.firebase:firebase-auth:22.0.0'
-    implementation 'com.google.android.gms:play-services-auth:20.5.0'
+    implementation 'com.google.android.gms:play-services-auth:20.6.0'
     implementation "com.google.android.gms:play-services-gcm:17.0.0"
     implementation 'com.google.firebase:firebase-messaging:23.1.2'
     implementation 'androidx.preference:preference:1.2.0'

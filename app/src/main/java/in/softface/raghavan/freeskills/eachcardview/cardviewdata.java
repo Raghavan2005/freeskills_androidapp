@@ -16,12 +16,12 @@ import org.jetbrains.annotations.Contract;
 
 public class cardviewdata {
     /*    public carddata[]  Continue = new carddata[]{
-                new carddata("Frontend_",gen_yt_imgurl("ugjsOJLH52o"),"asdas");
-                new carddata("Internet",gen_yt_imgurl("ugjsOJLH52o")),
+                new carddata("Frontend_",gen_yt_imgurl("ET8mqVGDQ1s"),"asdas");
+                new carddata("Internet",gen_yt_imgurl("ET8mqVGDQ1s")),
                 new carddata("Internet","https://img.youtube.com/vi/bMknfKXIFA8/maxresdefault.jpg"),
-                new carddata("Internet",gen_yt_imgurl("ugjsOJLH52o")),
+                new carddata("Internet",gen_yt_imgurl("ET8mqVGDQ1s")),
                 new carddata("Internet","https://img.youtube.com/vi/bMknfKXIFA8/maxresdefault.jpg"),
-                new carddata("Internet",gen_yt_imgurl("ugjsOJLH52o")),
+                new carddata("Internet",gen_yt_imgurl("ET8mqVGDQ1s")),
                 new carddata("Internet","https://img.youtube.com/vi/bMknfKXIFA8/maxresdefault.jpg"),*/
     //  };
     String crashcoursetype = "CrashCourse";
@@ -29,56 +29,56 @@ public class cardviewdata {
     String frameworkstype = "frameworks";
 
     public carddata[] Recommended = new carddata[]{
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
     };
     public carddata[] language = new carddata[]{
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
     };
     public carddata[] inyourlanguage = new carddata[]{
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
     };
     public carddata[] programming = new carddata[]{
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),programmingtype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),programmingtype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),programmingtype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),programmingtype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),programmingtype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),programmingtype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),programmingtype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),programmingtype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),programmingtype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),programmingtype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),programmingtype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),programmingtype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),programmingtype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),programmingtype),
     };
     public carddata[] frameworks = new carddata[]{
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
     };
     public carddata[] CrashCourse = new carddata[]{
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"), crashcoursetype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),crashcoursetype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),crashcoursetype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),crashcoursetype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),crashcoursetype),
-            new carddata("Internet", gen_yt_imgurl("ugjsOJLH52o"),crashcoursetype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"), crashcoursetype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),crashcoursetype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),crashcoursetype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),crashcoursetype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),crashcoursetype),
+            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),crashcoursetype),
             new carddata("Internet", gen_yt_imgurl("zN8YNNHcaZc"), crashcoursetype),
     };
 

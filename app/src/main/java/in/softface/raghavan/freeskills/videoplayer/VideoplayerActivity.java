@@ -27,6 +27,7 @@ public class VideoplayerActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private ImageView imagetype;
     private String imageUrl;
+    String cardName;
 
     private ArrayList<String> data;
     private String type;
@@ -40,7 +41,7 @@ public class VideoplayerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_videoplayer);
 
-        String cardName = getIntent().getStringExtra("cardName");
+        cardName = getIntent().getStringExtra("cardName");
         imageUrl = getIntent().getStringExtra("imageUrl");
         type = getIntent().getStringExtra("type");
         data = getIntent().getStringArrayListExtra("array");
@@ -51,7 +52,6 @@ public class VideoplayerActivity extends AppCompatActivity {
 
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
-        setupTabIcons();
 
         imagetype = findViewById(R.id.imagetype);
         if (Objects.equals(type, "CrashCourse")) {
@@ -83,8 +83,9 @@ public class VideoplayerActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         Player_Fragment playerFragment = Player_Fragment.newInstance(imageUrl, data);
+        Topic_Fragment topic_fragment = Topic_Fragment.newInstance(cardName);
         adapter.addFragment(playerFragment, "HOME");
-        adapter.addFragment(new Topic_Fragment(), "TOPIC");
+        adapter.addFragment(topic_fragment, "TOPIC");
         viewPager.setAdapter(adapter);
     }
 
