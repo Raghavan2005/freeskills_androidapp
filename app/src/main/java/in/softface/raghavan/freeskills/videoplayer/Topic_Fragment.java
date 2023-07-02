@@ -10,12 +10,15 @@
 
 package in.softface.raghavan.freeskills.videoplayer;
 
+import static android.content.Intent.getIntent;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,18 +42,16 @@ public class Topic_Fragment extends Fragment {
     private RecyclerView topicRecyclerView;
     private TopicAdapter topicAdapter;
 
-    private String mParam1;
-    private String mParam2;
+    private  String cardname;
 
     public Topic_Fragment() {
         // Required empty public constructor
     }
 
-    public static Topic_Fragment newInstance(String param1, String param2) {
+    public static Topic_Fragment newInstance(String cardname) {
         Topic_Fragment fragment = new Topic_Fragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putString("cardName", cardname);
         fragment.setArguments(args);
         return fragment;
     }
@@ -59,8 +60,7 @@ public class Topic_Fragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            cardname = getArguments().getString("cardName");
         }
     }
 
@@ -70,9 +70,8 @@ public class Topic_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_topic, container, false);
         topicRecyclerView = view.findViewById(R.id.topicRecyclerView);
         topicRecyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
-
-        topicviewdata td = new topicviewdata();
-        topicAdapter = new TopicAdapter(td.Internet,getContext());
+        topicviewdata td = new topicviewdata(cardname);
+        topicAdapter = new TopicAdapter(td.topicdata(),getContext());
         topicRecyclerView.setAdapter(topicAdapter);
 
         return view;

@@ -54,7 +54,7 @@ ImageView profileimage;
                 .load(imageurl)
                 .into(profileimage);
         button=findViewById(R.id.clear);
-         snackbarCaller sc = new snackbarCaller(this,button,"Done",0);
+        snackbarCaller sc = new snackbarCaller(getApplicationContext(),button,"Done",0);
 
 button.setOnClickListener(new View.OnClickListener() {
     @Override
