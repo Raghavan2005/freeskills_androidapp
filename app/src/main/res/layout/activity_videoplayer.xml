@@ -35,19 +35,10 @@
                 android:layout_gravity="start"
                 android:backgroundTint="@color/black"
                 android:src="@drawable/back" />
-
-            <TextView
-                android:id="@+id/coursetitile"
+            <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:fontFamily="@font/robotobold"
-                android:gravity="center"
-                android:text="CSS Preprocessors"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="23sp" />
-
+                android:layout_weight="1" />
             <ImageView
                 android:id="@+id/imagetype"
                 android:layout_width="50dp"
@@ -64,7 +55,7 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:layout_height="54dp"
+        android:layout_height="35dp"
         android:background="@color/black"
         app:tabGravity="fill"
         app:tabMode="fixed"

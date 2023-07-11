@@ -13,11 +13,6 @@ package in.softface.raghavan.freeskills.videoplayer;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,14 +21,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-import in.softface.raghavan.freeskills.HomeActivity;
 import in.softface.raghavan.freeskills.R;
-import in.softface.raghavan.freeskills.eachcardview.CardlistDisplayonRecycleview;
-import in.softface.raghavan.freeskills.eachcardview.cardviewdata;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -45,7 +39,7 @@ public class Player_Fragment extends Fragment {
     private String imageurl;
     private ImageView imageView;
     private View view;
-    TextView videotime;
+    TextView videotime, title;
     Button play;
     private ArrayList<String> array;
 
@@ -80,6 +74,8 @@ public class Player_Fragment extends Fragment {
         Log.d("error", "onCreateView: " + imageurl);
         Picasso.get().load(imageurl).into(imageView);
         videotime = view.findViewById(R.id.videotime);
+        title = view.findViewById(R.id.coursetitile);
+        title.setText(array.get(0));
         play = view.findViewById(R.id.play);
         String url = array.get(1);
         play.setOnClickListener(new View.OnClickListener() {

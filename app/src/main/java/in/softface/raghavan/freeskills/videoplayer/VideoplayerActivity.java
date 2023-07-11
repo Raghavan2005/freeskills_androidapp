@@ -1,11 +1,8 @@
 package in.softface.raghavan.freeskills.videoplayer;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -18,7 +15,6 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.Vector;
 
 import in.softface.raghavan.freeskills.R;
 
@@ -45,7 +41,6 @@ public class VideoplayerActivity extends AppCompatActivity {
         imageUrl = getIntent().getStringExtra("imageUrl");
         type = getIntent().getStringExtra("type");
         data = getIntent().getStringArrayListExtra("array");
-        TextView title = findViewById(R.id.coursetitile);
         ImageButton backButton = findViewById(R.id.backButton);
         viewPager = findViewById(R.id.viewpager);
         tabLayout = findViewById(R.id.tabs);
@@ -62,7 +57,6 @@ public class VideoplayerActivity extends AppCompatActivity {
             imagetype.setImageResource(R.drawable.framework);
         }
 
-        title.setText(cardName);
         backButton.setOnClickListener(v -> {
             onBackPressed();
             finish();

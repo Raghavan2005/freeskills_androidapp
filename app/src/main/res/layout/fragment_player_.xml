@@ -19,8 +19,9 @@
         <ImageView
             android:id="@+id/displayvideoimage"
             android:layout_width="match_parent"
-            android:layout_height="215dp"
-            android:src="@drawable/image_1"
+            android:layout_height="205dp"
+            android:cropToPadding="true"
+            android:src="@color/teal_200"
             android:transitionName="@string/blue_name" />
 
         <LinearLayout
@@ -29,9 +30,20 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="10dp"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:padding="5dp"
             android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/coursetitile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/robotobold"
+                android:gravity="center"
+                android:text="CSS Preprocessors"
+                android:textColor="@color/white"
+                android:textSize="23sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,10 +52,10 @@
                 android:text="No.Of.Hours"
                 android:textAlignment="textStart"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="12sp" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="14dp"
                 android:fontFamily="@font/robotothin"
@@ -52,7 +64,7 @@
                 android:text="1:43:54"
                 android:textAlignment="textStart"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="10sp" />
 
         </LinearLayout>
 

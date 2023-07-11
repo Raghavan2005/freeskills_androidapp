@@ -65,12 +65,12 @@ public class cardviewdata {
             new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),programmingtype),
     };
     public carddata[] frameworks = new carddata[]{
-            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
+            new carddata("Interne1t", gen_yt_imgurl("ET8mqVGDQ1s"), frameworkstype),
+            new carddata("Interne23t", gen_yt_imgurl("ET8mqVGDQ1s"), frameworkstype),
+            new carddata("Intern23et", gen_yt_imgurl("ET8mqVGDQ1s"), frameworkstype),
+            new carddata("Intern2et", gen_yt_imgurl("ET8mqVGDQ1s"), frameworkstype),
+            new carddata("Inter34net", gen_yt_imgurl("ET8mqVGDQ1s"), frameworkstype),
+            new carddata("Inter23net", gen_yt_imgurl("ET8mqVGDQ1s"), frameworkstype),
     };
     public carddata[] CrashCourse = new carddata[]{
             new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"), crashcoursetype),

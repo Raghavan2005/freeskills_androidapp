@@ -25,13 +25,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.AnimationTypes;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.squareup.picasso.Picasso;
-
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -44,6 +42,7 @@ import in.softface.raghavan.freeskills.setting.SettingsActivity;
 public class HomeActivity extends AppCompatActivity {
     ImageSlider mainslider;
     TextView usernameview;
+
     SharedPreferences sharedPreferences;
     RecyclerView ContinuerecyclerView, RecommendedrecyclerView, watchlanguagerecyclerView, inyourlanguagerecyclerView, programmingrecyclerView, frameworksrecyclerView, CrashCourserecyclerView;
 

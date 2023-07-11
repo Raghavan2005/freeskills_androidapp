@@ -28,10 +28,17 @@ public class conditiondataset {
             arrayList.add(1, gen_yt_videourl("zN8YNNHcaZc"));
             arrayList.add(2, "1:42:42");
             arrayList.add(3, gen_channel_name("freecodecamp"));
-            arrayList.add(3, gen_channel_url("freecodecamp"));
+            arrayList.add(4, gen_channel_url("freecodecamp"));
             return arrayList;
+        } else {
+            arrayList.add(0, "Not Found");
+            arrayList.add(1, "Not Found");
+            arrayList.add(2, "Not Found");
+            arrayList.add(3, "Not Found");
+            arrayList.add(4, "Not Found");
+            return arrayList;
+
         }
-        return null;
     }
 
     @NonNull
