@@ -18,9 +18,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.EditText;
-
-import com.google.android.material.textfield.TextInputEditText;
 
 import in.softface.raghavan.freeskills.R;
 
@@ -48,7 +45,6 @@ public class CustomDialogClass extends Dialog implements
         no = (Button) findViewById(R.id.btn_no);
         yes.setOnClickListener(this);
         no.setOnClickListener(this);
-
 
         sharedPreferences = getContext().getSharedPreferences("UsersData", Context.MODE_PRIVATE);
 

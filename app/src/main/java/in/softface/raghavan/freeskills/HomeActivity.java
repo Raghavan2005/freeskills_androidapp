@@ -11,6 +11,7 @@
 package in.softface.raghavan.freeskills;
 
 
+import android.annotation.SuppressLint;
 import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
@@ -34,9 +35,10 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.Objects;
 
+import in.softface.raghavan.freeskills.dateset.cardviewdata;
 import in.softface.raghavan.freeskills.eachcardview.CardlistDisplayonRecycleview;
-import in.softface.raghavan.freeskills.eachcardview.cardviewdata;
 import in.softface.raghavan.freeskills.login.profile.CreateProfile;
+import in.softface.raghavan.freeskills.messageshower.dialog_loading;
 import in.softface.raghavan.freeskills.setting.SettingsActivity;
 
 public class HomeActivity extends AppCompatActivity {
@@ -46,16 +48,19 @@ public class HomeActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     RecyclerView ContinuerecyclerView, RecommendedrecyclerView, watchlanguagerecyclerView, inyourlanguagerecyclerView, programmingrecyclerView, frameworksrecyclerView, CrashCourserecyclerView;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         sharedPreferences = getSharedPreferences("UsersData", Context.MODE_PRIVATE);
         String username = sharedPreferences.getString("username", null);
-        if (username==null){
+        if (username == null) {
             Intent i = new Intent(HomeActivity.this, CreateProfile.class);
             startActivity(i);
         }
         setContentView(R.layout.activity_home);
+        dialog_loading dl = new dialog_loading(HomeActivity.this);
+        dl.show();
         cardviewdata cvd = new cardviewdata();
         Objects.requireNonNull(getSupportActionBar()).setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.action_bar);

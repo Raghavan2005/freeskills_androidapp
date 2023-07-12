@@ -1,20 +1,22 @@
 /*
  *   *************************************************************
- *   Created by Raghavan at softface.in on 6/24/23, 10:57 PM
+ *   Created by Raghavan at softface.in on 12/07/23, 9:30 pm
  *    funwithmetamil@gmail.com
- *     Last modified 6/24/23, 10:57 PM
+ *     Last modified 11/07/23, 10:59 pm
  *     Copyright (c) 2023.
  *     All rights reserved.
  *   *************************************************************
  */
 
-package in.softface.raghavan.freeskills.videoplayer.topics;
+package in.softface.raghavan.freeskills.dateset;
 
 import androidx.annotation.NonNull;
 
 import org.jetbrains.annotations.Contract;
 
 import java.util.Objects;
+
+import in.softface.raghavan.freeskills.videoplayer.topics.topicdata;
 
 public class topicviewdata {
 

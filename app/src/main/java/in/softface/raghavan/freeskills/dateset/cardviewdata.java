@@ -1,18 +1,20 @@
 /*
  *   *************************************************************
- *   Created by Raghavan at softface.in on 6/18/23, 4:19 PM
+ *   Created by Raghavan at softface.in on 12/07/23, 9:29 pm
  *    funwithmetamil@gmail.com
- *     Last modified 6/18/23, 4:19 PM
+ *     Last modified 11/07/23, 10:59 pm
  *     Copyright (c) 2023.
  *     All rights reserved.
  *   *************************************************************
  */
 
-package in.softface.raghavan.freeskills.eachcardview;
+package in.softface.raghavan.freeskills.dateset;
 
 import androidx.annotation.NonNull;
 
 import org.jetbrains.annotations.Contract;
+
+import in.softface.raghavan.freeskills.eachcardview.carddata;
 
 public class cardviewdata {
     /*    public carddata[]  Continue = new carddata[]{
