@@ -37,7 +37,7 @@ import java.util.Objects;
 
 import in.softface.raghavan.freeskills.dateset.cardviewdata;
 import in.softface.raghavan.freeskills.eachcardview.CardlistDisplayonRecycleview;
-import in.softface.raghavan.freeskills.login.profile.CreateProfile;
+import in.softface.raghavan.freeskills.login.profile.createprofilepackage.CreateProfile;
 import in.softface.raghavan.freeskills.messageshower.dialog_loading;
 import in.softface.raghavan.freeskills.setting.SettingsActivity;
 

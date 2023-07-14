@@ -18,14 +18,21 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.FreeSkills"
-
-
         tools:targetApi="31">
+        <activity
+            android:name=".login.profile.createprofilepackage.CreateProfile3"
+            android:exported="false" />
+        <activity
+            android:name=".login.profile.createprofilepackage.CreateProfile2"
+            android:exported="false" />
+        <activity
+            android:name=".login.profile.createprofilepackage.CreateProfile1"
+            android:exported="false" />
         <activity
             android:name=".setting.SettingsActivity"
             android:exported="false"
             android:label="@string/title_activity_settings"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".videoplayer.VideoplayerActivity"
             android:exported="false"
@@ -70,7 +77,7 @@
         <activity
             android:name=".login.Sign_up_Activity"
             android:configChanges="orientation|screenSize" />
-        <activity android:name=".login.profile.CreateProfile" />
+        <activity android:name=".login.profile.createprofilepackage.CreateProfile" />
         <activity android:name=".onboarding.NavigationActivity" />
         <activity android:name=".onboarding.GetStarted" />
         <activity

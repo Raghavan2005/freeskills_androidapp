@@ -10,8 +10,6 @@
 
 package in.softface.raghavan.freeskills.joblist;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -24,9 +22,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import in.softface.raghavan.freeskills.HomeActivity;
 import in.softface.raghavan.freeskills.R;
-import in.softface.raghavan.freeskills.login.profile.CreateProfile;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 

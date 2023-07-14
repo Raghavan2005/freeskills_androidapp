@@ -39,7 +39,6 @@ public class dialog_loading extends Dialog implements
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-
                 dismiss();
             }
         }, 3000);

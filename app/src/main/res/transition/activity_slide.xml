@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~   *************************************************************
+  ~   Created by Raghavan at softface.in on 13/07/23, 10:11 pm
+  ~    funwithmetamil@gmail.com
+  ~     Last modified 13/07/23, 10:11 pm
+  ~     Copyright (c) 2023.
+  ~     All rights reserved.
+  ~   *************************************************************
+  -->
+
+
+<slide xmlns:android="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:duration="1000"
+    tools:ignore="NamespaceTypo" />

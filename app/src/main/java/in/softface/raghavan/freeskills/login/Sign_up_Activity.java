@@ -30,7 +30,7 @@ import java.util.Objects;
 
 import in.softface.raghavan.freeskills.HomeActivity;
 import in.softface.raghavan.freeskills.R;
-import in.softface.raghavan.freeskills.login.profile.CreateProfile;
+import in.softface.raghavan.freeskills.login.profile.createprofilepackage.CreateProfile;
 
 public class Sign_up_Activity extends AppCompatActivity {
     private GoogleSignInClient client;
