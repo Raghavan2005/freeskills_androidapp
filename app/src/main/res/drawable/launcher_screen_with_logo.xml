@@ -15,9 +15,10 @@
     <!--Also available: @drawable:launcher_screen_with_background-->
 
     <!--Background color of your Splash Screen-->
-    <item android:drawable="@android:color/white" />
+    <item android:drawable="@android:color/black" />
 
     <item
         android:gravity="center"  android:drawable="@drawable/app_logo"  />
+
 
 </layer-list>

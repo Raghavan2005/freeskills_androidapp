@@ -46,7 +46,7 @@ public class Sign_up_Activity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
         signinbtn = findViewById(R.id.bt_sign_in);
         progressBar = findViewById(R.id.progressBar);
-        sharedPreferences = getSharedPreferences("UsersData", Context.MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE);
 
         GoogleSignInOptions options = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -81,7 +81,7 @@ public class Sign_up_Activity extends AppCompatActivity {
                             @Override
                             public void onComplete(Task task1) {
                                 progressBar.setVisibility(View.VISIBLE);
-                                CUserid = sharedPreferences.getString("Userid", null);
+                                CUserid = sharedPreferences.getString("Username", null);
 
                                 if (task1.isSuccessful()) {
                                     Intent intent;

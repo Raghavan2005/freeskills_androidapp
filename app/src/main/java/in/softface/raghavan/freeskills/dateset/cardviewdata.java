@@ -48,15 +48,6 @@ public class cardviewdata {
             new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
             new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
     };
-    public carddata[] inyourlanguage = new carddata[]{
-            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
-            new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),frameworkstype),
-    };
     public carddata[] programming = new carddata[]{
             new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),programmingtype),
             new carddata("Internet", gen_yt_imgurl("ET8mqVGDQ1s"),programmingtype),

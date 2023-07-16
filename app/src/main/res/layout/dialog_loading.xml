@@ -7,12 +7,19 @@
   ~     All rights reserved.
   ~   *************************************************************
   -->
-
-
-<ProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/loading_image"
-    android:layout_width="70dp"
-    android:layout_height="70dp"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:background="@color/background_color"
-    android:padding="10dp" />
+    android:padding="10dp">
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/loading_image"
+        style="@style/SpinKitView.Circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/white" />
+</LinearLayout>

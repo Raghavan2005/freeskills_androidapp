@@ -14,8 +14,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -35,7 +33,7 @@ public class FirebaseDataSave{
 
      public FirebaseDataSave(Context context) {
          db = FirebaseFirestore.getInstance();
-         sharedPreferences = context.getSharedPreferences("UsersData", Context.MODE_PRIVATE);
+         sharedPreferences = context.getSharedPreferences("UserData", Context.MODE_PRIVATE);
 
     }
 
@@ -70,18 +68,10 @@ public class FirebaseDataSave{
 
         // Save the values in shared preferences
         editor.putString("Userid",userID);
-        editor.putString("educational", savedEducational);
-        editor.putString("currentLevel", savedCurrentLevel);
-        editor.putString("language", savedLanguage);
-        editor.putString("username", savedUsername);
-        editor.putString("profileImage", savedProfileImage);
-        editor.putBoolean("notifications", savedNotifications);
-        editor.putBoolean("userPolicy", savedUserPolicy);
         editor.putString("email",email);
 
         // Apply the changes
         editor.apply();
-        Log.d("DataSAVED","datasaved"+savedUsername);
 
     }
 

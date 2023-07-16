@@ -45,6 +45,7 @@ public class VideoplayerActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewpager);
         tabLayout = findViewById(R.id.tabs);
 
+
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
 

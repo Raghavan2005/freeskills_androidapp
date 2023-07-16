@@ -52,14 +52,14 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        sharedPreferences = getSharedPreferences("UsersData", Context.MODE_PRIVATE);
-        String username = sharedPreferences.getString("username", null);
+        sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE);
+        String username = sharedPreferences.getString("Username", null);
         if (username == null) {
             Intent i = new Intent(HomeActivity.this, CreateProfile.class);
             startActivity(i);
         }
         setContentView(R.layout.activity_home);
-        dialog_loading dl = new dialog_loading(HomeActivity.this);
+        dialog_loading dl = new dialog_loading(HomeActivity.this, 3000);
         dl.show();
         cardviewdata cvd = new cardviewdata();
         Objects.requireNonNull(getSupportActionBar()).setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
@@ -139,12 +139,6 @@ public class HomeActivity extends AppCompatActivity {
         watchlanguagerecyclerView.setAdapter(watchlanguageImageAdapter);
         watchlanguagerecyclerView.scrollToPosition(watchlanguageImageAdapter.getItemCount() - 1);
 
-////in your language
-        inyourlanguagerecyclerView = findViewById(R.id.inyourlanguagerecyclerView);
-        inyourlanguagerecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true));
-        CardlistDisplayonRecycleview inyourlanguageImageAdapter = new CardlistDisplayonRecycleview(cvd.inyourlanguage, HomeActivity.this);
-        inyourlanguagerecyclerView.setAdapter(inyourlanguageImageAdapter);
-        inyourlanguagerecyclerView.scrollToPosition(inyourlanguageImageAdapter.getItemCount() - 1);
 ////programming languages
 
         programmingrecyclerView = findViewById(R.id.programmingrecyclerView);

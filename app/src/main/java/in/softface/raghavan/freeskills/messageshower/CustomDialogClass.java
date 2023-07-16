@@ -12,12 +12,12 @@ package in.softface.raghavan.freeskills.messageshower;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.TextView;
 
 import in.softface.raghavan.freeskills.R;
 
@@ -26,14 +26,19 @@ public class CustomDialogClass extends Dialog implements
 
     public Activity c;
     public Dialog d;
+    String text_dis, btn_text1, btn_text2;
     public Button yes, no;
-    String changedusername,inputText;
-    SharedPreferences sharedPreferences ;
+    TextView textdis;
+    String changedusername, inputText;
+    SharedPreferences sharedPreferences;
 
-    public CustomDialogClass(Activity a) {
+    public CustomDialogClass(Activity a, String text_dis, String btn1, String btn2) {
         super(a);
         // TODO Auto-generated constructor stub
         this.c = a;
+        this.text_dis = text_dis;
+        this.btn_text1 = btn1;
+        this.btn_text2 = btn2;
     }
 
     @Override
@@ -43,10 +48,12 @@ public class CustomDialogClass extends Dialog implements
         setContentView(R.layout.custom_with_textedit_dialog);
         yes = (Button) findViewById(R.id.btn_yes);
         no = (Button) findViewById(R.id.btn_no);
+        textdis = findViewById(R.id.txt_dia);
+        textdis.setText(text_dis);
+        yes.setText(btn_text1);
+        no.setText(btn_text2);
         yes.setOnClickListener(this);
         no.setOnClickListener(this);
-
-        sharedPreferences = getContext().getSharedPreferences("UsersData", Context.MODE_PRIVATE);
 
 
     }

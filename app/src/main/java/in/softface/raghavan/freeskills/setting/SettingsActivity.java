@@ -24,7 +24,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.squareup.picasso.Picasso;
 
 import in.softface.raghavan.freeskills.R;
-import in.softface.raghavan.freeskills.login.profile.createprofilepackage.CreateProfile;
+import in.softface.raghavan.freeskills.joblist.Joblist;
 import in.softface.raghavan.freeskills.messageshower.snackbarCaller;
 
 public class SettingsActivity extends AppCompatActivity {
@@ -36,28 +36,28 @@ ImageView profileimage;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
         setTitle("Settings");
-      SharedPreferences sharedPreferences = getSharedPreferences("UsersData", Context.MODE_PRIVATE);
-      String   UserName = sharedPreferences.getString("username", "Not Found");
-      String  imageurl = sharedPreferences.getString("profileImage", "");
-      username=findViewById(R.id.username);
+        SharedPreferences sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE);
+        String UserName = sharedPreferences.getString("Username", "Not Found");
+        String imageurl = sharedPreferences.getString("profileImage", "");
+        username = findViewById(R.id.username);
 
-      profileimage=findViewById(R.id.profileimg);
-      username.setText(UserName);
+        profileimage = findViewById(R.id.profileimg);
+        username.setText(UserName);
         Picasso.get()
                 .load(imageurl)
                 .into(profileimage);
-        button=findViewById(R.id.clear);
-        snackbarCaller sc = new snackbarCaller(getApplicationContext(),button,"Done",0);
+        button = findViewById(R.id.clear);
+        snackbarCaller sc = new snackbarCaller(getApplicationContext(), button, "Done", 0);
 
-button.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        //   CustomDialogClass cdc = new CustomDialogClass(SettingsActivity.this);
-        //  cdc.show();
-        Intent i = new Intent(SettingsActivity.this, CreateProfile.class);
-        startActivity(i);
-        finish();
-    }
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   CustomDialogClass cdc = new CustomDialogClass(SettingsActivity.this);
+                //  cdc.show();
+                Intent i = new Intent(SettingsActivity.this, Joblist.class);
+                startActivity(i);
+                finish();
+            }
 });
 
 

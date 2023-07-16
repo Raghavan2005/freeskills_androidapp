@@ -18,7 +18,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.transition.Slide;
 import android.util.Log;
-import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -37,6 +36,7 @@ import java.util.Objects;
 import java.util.Random;
 
 import in.softface.raghavan.freeskills.R;
+import in.softface.raghavan.freeskills.messageshower.dialog_loading;
 
 public class CreateProfile extends AppCompatActivity {
     EditText editText;
@@ -69,18 +69,16 @@ public class CreateProfile extends AppCompatActivity {
         i = new Intent(CreateProfile.this, CreateProfile1.class);
         editText = findViewById(R.id.editUsername);
         Summit = findViewById(R.id.Summit);
+        dialog_loading dl = new dialog_loading(CreateProfile.this, 2000);
+        dl.show();
+
         InputMethodManager keyboard = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         profileimage = findViewById(R.id.profileimage);
         sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE);
-        progressBar2 = findViewById(R.id.progressBar2);
+
         randomProfileImage = ProfileImageGenerator.generateRandomProfileImage();
         boolean n = randomProfileImage.isEmpty();
         Log.d("asdasdasda", "onCreate: " + n);
-
-        if (!randomProfileImage.isEmpty()) {
-
-            progressBar2.setVisibility(View.GONE);
-        }
         setupWindowAnimations();
         Picasso.get()
                 .load(randomProfileImage)
@@ -127,7 +125,7 @@ public class CreateProfile extends AppCompatActivity {
     public void onButtonClick() {
 
         if (Username != null) {
-            USharedPreferences(this.Username);
+            USharedPreferences(this.Username, this.randomProfileImage);
             startActivity(i);
             finish();
         } else {
@@ -149,8 +147,9 @@ public class CreateProfile extends AppCompatActivity {
         }
     }
 
-    private void USharedPreferences(@NotNull String username) {
+    private void USharedPreferences(@NotNull String username, @NotNull String images) {
         @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("profileImage", images);
         editor.putString("Username", username);
         editor.apply();
     }

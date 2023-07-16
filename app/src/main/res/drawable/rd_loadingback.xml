@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~   *************************************************************
+  ~   Created by Raghavan at softface.in on 15/07/23, 9:01 pm
+  ~    funwithmetamil@gmail.com
+  ~     Last modified 15/07/23, 9:01 pm
+  ~     Copyright (c) 2023.
+  ~     All rights reserved.
+  ~   *************************************************************
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#F0EAEA" />
+    <corners android:radius="8dp" /> <!-- Change the radius value as desired -->
+</shape>

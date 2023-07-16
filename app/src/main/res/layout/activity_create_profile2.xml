@@ -11,17 +11,87 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@color/background_color"
     tools:context=".login.profile.createprofilepackage.CreateProfile2">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@drawable/language" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="6dp"
+        android:drawableEnd="@drawable/languageimg"
+        android:fontFamily="@font/dancebold"
+        android:text="Select Your Language"
+        android:textColor="@color/white"
+        android:textSize="35sp" />
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rd_loadingback"
         android:layout_gravity="center"
         android:layout_margin="6dp"
-        android:textAlignment="center"
+        android:textAlignment="center" />
+
+    <Switch
+        android:id="@+id/Notificationtg"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:layout_gravity="left"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:checked="true"
+        android:defaultFocusHighlightEnabled="true"
+        android:gravity="center"
+        android:onClick="checkswitchandcheckbox"
+        android:padding="5dp"
+        android:text="Would you like to enable Notifications"
+        android:textColor="@color/white"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <CheckBox
+        android:id="@+id/user_policy"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:onClick="checkswitchandcheckbox"
+        android:padding="5dp"
+        android:text="Please acknowledge your agreement to our user policy."
+        android:textAlignment="viewStart"
         android:textColor="@color/white" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/finalSummit"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:text="Summit" />
+
+        <ProgressBar
+            android:id="@+id/loadingpg"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
 
 </LinearLayout>

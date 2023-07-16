@@ -10,29 +10,20 @@
 
 package in.softface.raghavan.freeskills.login.profile;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.util.Log;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.squareup.picasso.Picasso;
 
-import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
-import in.softface.raghavan.freeskills.BackgroundTask;
 import in.softface.raghavan.freeskills.R;
 import in.softface.raghavan.freeskills.joblist.Joblist;
 
@@ -62,13 +53,13 @@ public class PCreatedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pcreated);
-        sharedPreferences = getSharedPreferences("UsersData", Context.MODE_PRIVATE);
-        UserName = sharedPreferences.getString("username", "Not Found");
+        sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE);
+        UserName = sharedPreferences.getString("Username", "Not Found");
         imageurl = sharedPreferences.getString("profileImage", "");
         profile = findViewById(R.id.profileimage);
         username = findViewById(R.id.username);
         textquotes = findViewById(R.id.quotes);
-       // Log.d("sdasdas", UserName + "  " + imageurl);
+        // Log.d("sdasdas", UserName + "  " + imageurl);
 
         Random random = new Random();
         int index = random.nextInt(quotes.length);
