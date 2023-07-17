@@ -30,6 +30,8 @@ public class conditiondataset {
             arrayList.add(3, gen_channel_name("freecodecamp"));
             arrayList.add(4, gen_channel_url("freecodecamp"));
             arrayList.add(5, "English");
+            arrayList.add(6, "This course will help someone with no technical knowledge");
+            arrayList.add(7, "This course will help someone with no technical knowledge to understand how the internet works and learn fundamentals of computer networking. \n Test your knowledge with these questions for each section of the course: https://drive.google.com/drive/folder... \n Course developed by Ian Frost. \n Check out more of his courses on Udemy: https://www.udemy.com/user/ian-frost-9");
             return arrayList;
         } else {
             arrayList.add(0, "Not Found");
@@ -37,6 +39,9 @@ public class conditiondataset {
             arrayList.add(2, "Not Found");
             arrayList.add(3, "Not Found");
             arrayList.add(4, "Not Found");
+            arrayList.add(5, "Not Found");
+            arrayList.add(6, "Not Found");
+            arrayList.add(7, "Not Found");
             return arrayList;
 
         }

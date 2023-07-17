@@ -18,6 +18,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -39,8 +40,9 @@ public class Player_Fragment extends Fragment {
     private String imageurl;
     private ImageView imageView;
     private View view;
-    TextView videotime, title;
-    Button play;
+    TextView videotime, title, dis_title, full_dis, lang;
+    ImageButton play;
+    Button whitelist;
     private ArrayList<String> array;
 
     public Player_Fragment() {
@@ -75,9 +77,38 @@ public class Player_Fragment extends Fragment {
         Picasso.get().load(imageurl).into(imageView);
         videotime = view.findViewById(R.id.videotime);
         title = view.findViewById(R.id.coursetitile);
+        dis_title = view.findViewById(R.id.dis_title);
+        whitelist = view.findViewById(R.id.whitelist);
+        full_dis = view.findViewById(R.id.full_dis);
         title.setText(array.get(0));
+        lang = view.findViewById(R.id.lang);
+        lang.setText(array.get(5));
+        String dishalf = array.get(6) + "......";
+        dis_title.setText(array.get(6) + ".....");
+        full_dis.setText(array.get(7));
         play = view.findViewById(R.id.play);
         String url = array.get(1);
+
+        dis_title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (dis_title.getVisibility() == view.VISIBLE) {
+                    dis_title.setText("Description");
+                    full_dis.setVisibility(view.VISIBLE);
+
+                }
+
+            }
+        });
+        full_dis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (full_dis.getVisibility() == view.VISIBLE) {
+                    dis_title.setText(dishalf);
+                    full_dis.setVisibility(view.GONE);
+                }
+            }
+        });
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

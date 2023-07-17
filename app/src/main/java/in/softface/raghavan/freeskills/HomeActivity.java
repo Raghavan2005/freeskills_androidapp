@@ -30,6 +30,7 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.AnimationTypes;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -38,7 +39,6 @@ import java.util.Objects;
 import in.softface.raghavan.freeskills.dateset.cardviewdata;
 import in.softface.raghavan.freeskills.eachcardview.CardlistDisplayonRecycleview;
 import in.softface.raghavan.freeskills.login.profile.createprofilepackage.CreateProfile;
-import in.softface.raghavan.freeskills.messageshower.dialog_loading;
 import in.softface.raghavan.freeskills.setting.SettingsActivity;
 
 public class HomeActivity extends AppCompatActivity {
@@ -59,15 +59,31 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(i);
         }
         setContentView(R.layout.activity_home);
-        dialog_loading dl = new dialog_loading(HomeActivity.this, 3000);
-        dl.show();
+        //menu
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.home:
+                    return true;
+                case R.id.whitelist:
+                    startActivity(new Intent(getApplicationContext(), WhitelistActivity.class));
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    //  finish();
+                    return true;
+
+            }
+            return false;
+        });
+        //end
+        // dialog_loading dl = new dialog_loading(HomeActivity.this, 2000);
+        // dl.show();
         cardviewdata cvd = new cardviewdata();
         Objects.requireNonNull(getSupportActionBar()).setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.action_bar);
         mainslider = findViewById(R.id.main_slider);
         ImageView proimage = findViewById(R.id.action_bar_image);
         usernameview = findViewById(R.id.username);
-        overridePendingTransition(R.transition.explode, 0);
 
         String imageurl = sharedPreferences.getString("profileImage", null);
 

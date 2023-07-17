@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~   *************************************************************
+  ~   Created by Raghavan at softface.in on 17/07/23, 12:57 pm
+  ~    funwithmetamil@gmail.com
+  ~     Last modified 17/07/23, 12:57 pm
+  ~     Copyright (c) 2023.
+  ~     All rights reserved.
+  ~   *************************************************************
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/Oranger" android:state_selected="true" />
+    <item android:color="@color/gray" android:state_selected="false" />
+</selector>

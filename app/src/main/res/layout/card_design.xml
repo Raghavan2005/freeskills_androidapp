@@ -23,7 +23,7 @@
         android:layout_width="200dp"
         android:id="@+id/cardimage"
         android:layout_height="120dp"
-        android:transitionName="@string/blue_name"
+        android:transitionName="@string/blue_namemain"
         android:scaleType="centerCrop"
         android:src="@drawable/image_3"
         android:contentDescription="TODO" />

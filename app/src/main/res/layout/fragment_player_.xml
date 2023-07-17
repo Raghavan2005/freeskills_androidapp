@@ -6,24 +6,41 @@
 
     tools:context=".videoplayer.Player_Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/mainScroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#292828"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/action_settings"
+        android:scrollbars="none">
+        <!-- TODO: Update blank fragment layout -->
 
-        <ImageView
-            android:id="@+id/displayvideoimage"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="205dp"
-            android:cropToPadding="true"
-            android:src="@color/teal_200"
-            android:transitionName="@string/blue_name" />
+            android:layout_height="match_parent"
+            android:background="#292828"
+            android:orientation="vertical">
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/displayvideoimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="205dp"
+                    android:cropToPadding="true"
+                    android:src="@color/teal_200"
+                    android:transitionName="@string/blue_namemain" />
+
+                <ImageButton
+                    android:id="@+id/play"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:src="@drawable/play" />
+            </FrameLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,117 +51,117 @@
             android:padding="5dp"
             android:paddingTop="20dp">
 
-            <TextView
-                android:id="@+id/coursetitile"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/robotobold"
-                android:gravity="center"
-                android:text="CSS Preprocessors"
-                android:textColor="@color/white"
-                android:textSize="23sp" />
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/robotolight"
-                android:text="No.Of.Hours"
-                android:textAlignment="textStart"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
+                <TextView
+                    android:id="@+id/coursetitile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/robotobold"
+                    android:text="CSS Preprocessors"
+                    android:textColor="@color/white"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/robotobold"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:id="@+id/lang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/robotobold"
+                    android:gravity="center"
+                    android:text="English"
+                    android:textColor="@color/Oranger"
+                    android:textSize="23sp" />
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
+                android:layout_gravity="start"
                 android:fontFamily="@font/robotothin"
                 android:inputType="time"
-                android:id="@+id/videotime"
-                android:text="1:43:54"
-                android:textAlignment="textStart"
-                android:textColor="@color/white"
-                android:textSize="10sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/play"
                 android:layout_marginStart="0dp"
-                android:backgroundTint="#FF0000"
-                android:textSize="14sp"
-                android:drawableLeft="@drawable/play_circle"
-                android:text=" Play On YouTube"
-                android:textColor="@color/white" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:backgroundTint="@color/purple_500"
-                android:textSize="14sp"
-                android:drawableLeft="@drawable/whitelist_add"
-                android:text="Add To whitelist"
-                android:textColor="@color/white" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@drawable/rounded_image_view_background"
-                android:contentDescription="Hello World"
-                android:scaleType="centerCrop"
-                android:src="@drawable/launcher_screen_with_logo" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="4dp"
+                android:drawableStart="@drawable/timehos"
+                android:id="@+id/videotime"
+                android:drawableTint="@color/Oranger"
+                android:text="1:43:54"
                 android:gravity="center"
-                android:text="funwithmetamil"
-                android:textColor="@color/white" />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <!-- Subscribe Button -->
-            <Button
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/red_rounded_background"
-                android:gravity="center"
-                android:text="Subscribe"
-                android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="14sp" />
+                android:textSize="15sp" />
 
 
         </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dis_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotobold"
+                    android:text="asdasda asdas "
+                    android:textAlignment="textStart"
+
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/full_dis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Writing a good job description and a corresponding job ad requires proper separation of concerns. Posting a generic web developer job description in your ad when you are looking for an advanced front-end web developer, will bring numerous applications from people who are specialized in building back-end web services, or web designers who have absolutely no knowledge about programming."
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
 
 
-    </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <Button
+                    android:id="@+id/whitelist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:backgroundTint="@color/purple_500"
+                    android:textSize="14sp"
+                    android:drawableLeft="@drawable/whitelist_add"
+                    android:text="Add To whitelist"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

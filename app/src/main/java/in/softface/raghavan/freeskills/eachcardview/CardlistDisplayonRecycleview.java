@@ -1,7 +1,5 @@
 package in.softface.raghavan.freeskills.eachcardview;
 
-import static android.provider.Settings.System.getString;
-
 import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Context;
@@ -10,17 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
-import in.softface.raghavan.freeskills.HomeActivity;
 import in.softface.raghavan.freeskills.R;
 import in.softface.raghavan.freeskills.dateset.conditiondataset;
-import in.softface.raghavan.freeskills.login.profile.userlogged;
 import in.softface.raghavan.freeskills.videoplayer.VideoplayerActivity;
 
 public class CardlistDisplayonRecycleview extends RecyclerView.Adapter<CardlistDisplayonRecycleview.ViewHolder> {
@@ -60,8 +55,8 @@ public class CardlistDisplayonRecycleview extends RecyclerView.Adapter<CardlistD
                 intent.putExtra("imageUrl", card.getcardImage());
                 intent.putExtra("type", card.gettype());
                 intent.putExtra("array", cdata.data(card.getcardName()));
-                View sharedView = holder.imageView;
-                String transitionName = context.getString(R.string.blue_name);
+                ImageView sharedView = holder.imageView;
+                String transitionName = context.getString(R.string.blue_namemain);
                 ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation((Activity) context, sharedView, transitionName);
                 context.startActivity(intent, transitionActivityOptions.toBundle());
 

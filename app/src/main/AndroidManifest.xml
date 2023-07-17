@@ -10,15 +10,25 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
+    <queries>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+    </queries>
+
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.FreeSkills"
         tools:targetApi="31">
+        <activity
+            android:name=".WhitelistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchActivity"
+            android:exported="false" />
         <activity
             android:name=".login.profile.createprofilepackage.CreateProfile2"
             android:exported="false" />
@@ -70,7 +80,9 @@
         <activity
             android:name=".login.profile.PCreatedActivity"
             android:exported="false" />
-        <activity android:name=".HomeActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
         <activity
             android:name=".login.Sign_up_Activity"
             android:configChanges="orientation|screenSize" />
