@@ -14,7 +14,7 @@ android {
         minSdk 23
         targetSdk 33
         versionCode 1
-        versionName "Alpha_1.0.2"
+        versionName "Alpha_1.0.3"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -52,6 +52,7 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.github.ybq:Android-SpinKit:1.4.0'
     implementation 'com.google.firebase:firebase-firestore:24.6.1'
+    implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'com.google.firebase:firebase-database:20.2.2'
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.2'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.25'

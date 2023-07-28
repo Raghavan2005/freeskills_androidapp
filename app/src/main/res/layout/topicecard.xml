@@ -16,62 +16,76 @@
 
     <androidx.cardview.widget.CardView
         app:cardElevation="6dp"
+        android:id="@+id/card"
         app:cardCornerRadius="7dp"
         android:layout_marginTop="3dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
+
         app:cardBackgroundColor="@color/gray"
         android:layout_width="match_parent"
-        android:layout_height="80dp">
+        android:layout_height="150dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-
             android:layout_height="match_parent">
-            <TextView
-                android:id="@+id/sno"
-                android:textStyle="bold"
-                android:textSize="15sp"
-                android:gravity="center"
-                android:layout_margin="6dp"
-                android:textColor="@color/white"
-                android:text="10."
-                android:layout_width="22dp"
-                android:layout_height="wrap_content"/>
 
-            <TextView
-                android:id="@+id/topicname"
-                android:layout_width="210dp"
-                android:layout_height="69dp"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="0dp"
-                android:fontFamily="@font/robotothin"
-                android:gravity="left|center"
-                android:inputType="textMultiLine"
-                android:maxLines="2"
-                android:text="What is the router? sadas asd asdasd asda"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:textSize="13sp" />
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                />
 
-            <Button
-                android:id="@+id/topicplay"
-                android:layout_width="120dp"
+            <ImageView
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@color/black"
-                android:drawableLeft="@drawable/play_circle"
-                android:clickable="true"
-                android:textAlignment="center"
-                android:paddingStart="6dp"
-                android:text="Play Now At 12:34:345"
-                android:textColor="@color/white"
-                android:textSize="9sp" />
+                android:src="@drawable/dog" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/sno"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_margin="6dp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="10 Class"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/topicname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="69dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:fontFamily="@font/robotothin"
+                    android:gravity="center"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:text="What is the router? sadas asd asdasd asda"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:gravity="center"
+                    android:id="@+id/topicplay"
+                    android:textAlignment="center"
+                    android:paddingStart="6dp"
+                    android:text="Play Now At 12:34:345"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+
+            </LinearLayout>
+
 
         </LinearLayout>
 

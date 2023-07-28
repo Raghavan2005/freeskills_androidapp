@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +14,12 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.common.reflect.TypeToken;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 
 import in.softface.raghavan.freeskills.R;
 import in.softface.raghavan.freeskills.dateset.conditiondataset;
@@ -23,11 +30,15 @@ public class CardlistDisplayonRecycleview extends RecyclerView.Adapter<CardlistD
     private carddata[] carddata;
     private Context context;
     conditiondataset cdata;
+    SharedPreferences sh;
+    private ArrayList<String> array, lastseearray;
 
     public CardlistDisplayonRecycleview(carddata[] data, Context context) {
         this.carddata = data;
         this.context = context;
         cdata = new conditiondataset();
+        sh = context.getSharedPreferences("LastseeData", Context.MODE_PRIVATE);
+        ;
 
     }
 
@@ -51,6 +62,9 @@ public class CardlistDisplayonRecycleview extends RecyclerView.Adapter<CardlistD
             public void onClick(View v) {
                 // Handle the item click event
                 Intent intent = new Intent(context, VideoplayerActivity.class);
+                if (!getwhitelistdata().isEmpty()) {
+                    lastseearray.add(card.getcardName());
+                }
                 intent.putExtra("cardName", card.getcardName());
                 intent.putExtra("imageUrl", card.getcardImage());
                 intent.putExtra("type", card.gettype());
@@ -63,6 +77,27 @@ public class CardlistDisplayonRecycleview extends RecyclerView.Adapter<CardlistD
 
             }
         });
+    }
+
+    private void savelastseedata() {
+        Gson gson = new Gson();
+        String lastsee = gson.toJson(lastseearray);
+        SharedPreferences.Editor editor = sh.edit();
+        editor.putString("lastsee", lastsee);
+        editor.apply();
+    }
+
+    private ArrayList<String> getwhitelistdata() {
+        String json = sh.getString("lastsee", "null");
+        Gson gson = new Gson();
+        Type type = new TypeToken<ArrayList<String>>() {
+        }.getType();
+        ArrayList<String> list = gson.fromJson(json, type);
+        Log.d("list", "onClick: " + list);
+        if (list == null) {
+            list = new ArrayList<>();
+        }
+        return list;
     }
 
     @Override
@@ -79,8 +114,5 @@ public class CardlistDisplayonRecycleview extends RecyclerView.Adapter<CardlistD
             imageView = itemView.findViewById(R.id.cardimage);
         }
 
-        public ImageView getBlueIconImageView() {
-            return this.imageView;
-        }
     }
 }

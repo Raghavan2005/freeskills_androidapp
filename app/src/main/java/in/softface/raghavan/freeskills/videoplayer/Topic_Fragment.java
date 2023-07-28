@@ -16,11 +16,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import in.softface.raghavan.freeskills.R;
-import in.softface.raghavan.freeskills.dateset.topicviewdata;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,11 +59,11 @@ public class Topic_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_topic, container, false);
-        topicRecyclerView = view.findViewById(R.id.topicRecyclerView);
-        topicRecyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
-        topicviewdata td = new topicviewdata(cardname);
-        topicAdapter = new TopicAdapter(td.topicdata(),getContext());
-        topicRecyclerView.setAdapter(topicAdapter);
+        // topicRecyclerView = view.findViewById(R.id.topicRecyclerView);
+        /// topicRecyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
+        // topicviewdata td = new topicviewdata(cardname);
+        //  topicAdapter = new TopicAdapter(td.topicdata(),getContext());
+        //  topicRecyclerView.setAdapter(topicAdapter);
 
         return view;
     }

@@ -18,34 +18,20 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent">  <TextView
+
+        <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
             android:padding="5dp"
             android:layout_marginStart="5dp"
             android:textAlignment="center"
-            android:text="Hii ,There"
-    android:fontFamily="@font/robotobold"
+            android:text="FreeSkills"
+            android:fontFamily="@font/robotobold"
             android:gravity="center"
-            android:textColor="#00BCD4"
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:padding="5dp"
-            android:id="@+id/username"
-            android:drawableStart="@drawable/verified_user"
-            android:textAlignment="center"
-            android:paddingStart="7dp"
-            android:text="testing"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="15sp" />
-</LinearLayout>
-
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="40dp"

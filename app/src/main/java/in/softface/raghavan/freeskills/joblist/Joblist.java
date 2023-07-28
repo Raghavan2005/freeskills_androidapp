@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import in.softface.raghavan.freeskills.HomeActivity;
+import in.softface.raghavan.freeskills.MainActivity;
 import in.softface.raghavan.freeskills.R;
 
 public class Joblist extends AppCompatActivity {
@@ -40,7 +40,7 @@ public class Joblist extends AppCompatActivity {
 
 
         };
-        Intent intent = new Intent(Joblist.this, HomeActivity.class);
+        Intent intent = new Intent(Joblist.this, MainActivity.class);
         RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(this, data, Joblist.this, intent);
         recyclerView.setAdapter(recyclerViewAdapter);
 

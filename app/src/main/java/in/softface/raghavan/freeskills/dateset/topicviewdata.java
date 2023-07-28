@@ -20,7 +20,7 @@ import in.softface.raghavan.freeskills.videoplayer.topics.topicdata;
 
 public class topicviewdata {
 
-    public topicdata[] Internet, NotFound;
+    public topicdata[] Internet, NotFound, HTML;
     private String cardname;
 
     public topicviewdata(String cardname) {
@@ -41,6 +41,22 @@ public class topicviewdata {
                     new topicdata("Internet Service Provider ISP\nPart-1", "1h17m26s", gen_yt_timeurl("1h17m26s", "zN8YNNHcaZc")),
                     new topicdata("Internet Service Provider ISP\nPart-2", "1h32m21s", gen_yt_timeurl("1h32m21s", "zN8YNNHcaZc")),};
             return Internet;
+        } else if (Objects.equals(cardname, "HTML")) {
+            HTML = new topicdata[]{
+                    new topicdata("Intro", "00m00s", gen_yt_timeurl("00m00s", "kUMe1FH4CHE")),
+                    new topicdata("Chapter 1 - Getting Started", "00m55s", gen_yt_timeurl("00m55s", "kUMe1FH4CHE")),
+                    new topicdata("Chapter 2 - Head Element", "20m13s", gen_yt_timeurl("20m13s", "kUMe1FH4CHE")),
+                    new topicdata("Chapter 3 - Text Basics", "29m02s", gen_yt_timeurl("29m02s", "kUMe1FH4CHE")),
+                    new topicdata("Chapter 4 - List Types", "49m45s", gen_yt_timeurl("49m45s", "kUMe1FH4CHE")),
+                    new topicdata("Chapter 5 - Add Links", "59m55s", gen_yt_timeurl("59m55s", "kUMe1FH4CHE")),
+                    new topicdata("Chapter 6 - Add Images", "01h30m38s", gen_yt_timeurl("01h30m38s", "kUMe1FH4CHE")),
+                    new topicdata("Chapter 7 - Semantic Tags", "02h00m58s", gen_yt_timeurl("02h00m58s", "kUMe1FH4CHE")),
+                    new topicdata("Chapter 8 - Create Tables", "02h24m53s", gen_yt_timeurl("02h24m53s", "kUMe1FH4CHE")),
+                    new topicdata("Chapter 9 - Forms & Inputs", "02h40m42s", gen_yt_timeurl("02h40m42s", "kUMe1FH4CHE")),
+                    new topicdata("Chapter 10 - HTML Project", "03h25m16s", gen_yt_timeurl("03h25m16s", "kUMe1FH4CHE")),};
+            return HTML;
+
+
         } else {
             NotFound = new topicdata[]{
                     new topicdata("NotFound", "NotFound", "NotFound"),
@@ -48,7 +64,22 @@ public class topicviewdata {
             return NotFound;
         }
     }
+/*else if (Objects.equals(cardname,"HTML")) {
+        HTML = new topicdata[]{
+                new topicdata("", "", gen_yt_timeurl("", "")),
+                new topicdata("", "", gen_yt_timeurl("", "")),
+                new topicdata("", "", gen_yt_timeurl("", "")),
+                new topicdata("", "", gen_yt_timeurl("", "")),
+                new topicdata("", "", gen_yt_timeurl("", "")),
+                new topicdata("", "", gen_yt_timeurl("", "")),
+                new topicdata("", "", gen_yt_timeurl("", "")),
+                new topicdata("", "", gen_yt_timeurl("", "")),
+                new topicdata("", "", gen_yt_timeurl("", "")),
+                new topicdata("", "", gen_yt_timeurl("", "")),};
+        return HTML;
 
+
+    }*/
 
     @NonNull
     @Contract(pure = true)

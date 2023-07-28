@@ -15,9 +15,9 @@
         android:title="Home" />
 
     <item
-        android:id="@+id/whitelist"
-        android:icon="@drawable/whitelist"
-        android:title="Whitelist" />
+        android:id="@+id/user"
+        android:icon="@drawable/user"
+        android:title="User" />
     <!-- <item
          android:id="@+id/search"
          android:icon="@drawable/search"

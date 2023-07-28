@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~   *************************************************************
+  ~   Created by Raghavan at softface.in on 22/07/23, 10:16 am
+  ~    funwithmetamil@gmail.com
+  ~     Last modified 22/07/23, 10:16 am
+  ~     Copyright (c) 2023.
+  ~     All rights reserved.
+  ~   *************************************************************
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/whitelistcard"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:contentDescription="TODO"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_3"
+                android:transitionName="@string/blue_namemain" />
+
+            <ImageButton
+                android:id="@+id/playimg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|bottom"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rounded_bg"
+                android:backgroundTint="#7CFFFFFF"
+                android:src="@drawable/play_circle_24" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/robotobold"
+                android:text="adsdadasdasasd"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/robotobold"
+                android:text="English"
+                android:textColor="#979090" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

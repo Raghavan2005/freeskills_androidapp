@@ -28,7 +28,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 import java.util.Objects;
 
-import in.softface.raghavan.freeskills.HomeActivity;
+import in.softface.raghavan.freeskills.MainActivity;
 import in.softface.raghavan.freeskills.R;
 import in.softface.raghavan.freeskills.login.profile.createprofilepackage.CreateProfile;
 
@@ -88,7 +88,7 @@ public class Sign_up_Activity extends AppCompatActivity {
                                     if (CUserid == null) {
                                         intent = new Intent(Sign_up_Activity.this, CreateProfile.class);
                                     } else {
-                                        intent = new Intent(Sign_up_Activity.this, HomeActivity.class);
+                                        intent = new Intent(Sign_up_Activity.this, MainActivity.class);
                                     }
                                     startActivity(intent);
                                 } else {
@@ -113,7 +113,7 @@ public class Sign_up_Activity extends AppCompatActivity {
         CUserid = sharedPreferences.getString("Userid", "null");
         if (user != null) {
 
-                Intent intent = new Intent(this, HomeActivity.class);
+            Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
             }
         }

@@ -58,5 +58,6 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="blue_namemain">cardmainanimA</string>
-
+    <string name="app_version">Alpha_1.0.3</string>
+    <string name="manage_amp_setup_the_notification">Manage &amp; setup the notification</string>
 </resources>

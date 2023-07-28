@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~   *************************************************************
+  ~   Created by Raghavan at softface.in on 25/07/23, 8:36 pm
+  ~    funwithmetamil@gmail.com
+  ~     Last modified 25/07/23, 8:31 pm
+  ~     Copyright (c) 2023.
+  ~     All rights reserved.
+  ~   *************************************************************
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".setting.mainsetting">
+
+    <ScrollView
+        android:id="@+id/mainSsdcroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/action_settings"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <!-- TODO: Update blank fragment layout -->
+            <ImageView
+                android:id="@+id/profileimg"
+                android:layout_width="196dp"
+                android:layout_height="171dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:transitionName="@string/blue_name"
+                app:srcCompat="@drawable/youtube_social_icon_red"
+                tools:layout_editor_absoluteX="124dp"
+                tools:layout_editor_absoluteY="65dp" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/robotolight"
+                android:text="USername"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/baseline_notifications_24"
+                    android:gravity="center"
+                    android:text="Notification"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <View
+                    android:id="@+id/view_to_move"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="74dp"
+                    android:layout_height="26dp"
+                    android:thumb="@drawable/thumb"
+                    app:track="@drawable/track" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/whitelistlay"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="5dp"
+
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inexbold"
+
+                    android:gravity="center|start"
+                    android:text="Whitelist"
+                    android:textColor="@color/white"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/inexnormail"
+                    android:gravity="center|start"
+                    android:text="Manage Your Whitelist"
+                    android:textColor="@color/grey1"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/clearcontinue"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:fontFamily="@font/inexbold"
+                    android:gravity="center|start"
+                    android:text="Clear continue watching"
+                    android:textColor="@color/white"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:fontFamily="@font/inexnormail"
+                    android:gravity="center|start"
+                    android:text="Clear all your watching history"
+                    android:textColor="@color/grey1"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/Apply"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/inexbold"
+                    android:gravity="center|start"
+                    android:text="Apply for certificate"
+                    android:textColor="@color/white"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:fontFamily="@font/inexnormail"
+                    android:gravity="center|start"
+                    android:text="Request your certificate here"
+                    android:textColor="@color/grey1"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/notification"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/inexbold"
+                    android:gravity="center|start"
+                    android:text="Notification"
+                    android:textColor="@color/white"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:fontFamily="@font/inexnormail"
+                    android:gravity="center|start"
+                    android:text="@string/manage_amp_setup_the_notification"
+                    android:textColor="@color/grey1"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/Report"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/inexbold"
+                    android:gravity="center|start"
+                    android:text="Report a bug"
+                    android:textColor="@color/white"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:fontFamily="@font/inexnormail"
+                    android:gravity="center|start"
+                    android:text="If you , find the bug report to us"
+                    android:textColor="@color/grey1"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/aboutus"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/inexbold"
+                    android:gravity="center|start"
+                    android:text="About Us"
+                    android:textColor="@color/white"
+                    android:textSize="23sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <!--end
+            here-->
+
+            <TextView
+                android:id="@+id/appversion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="@string/app_version"
+                android:textColor="@color/grey1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="6dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
