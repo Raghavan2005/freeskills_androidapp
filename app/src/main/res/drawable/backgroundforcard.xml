@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~   *************************************************************
+  ~   Created by Raghavan at softface.in on 29/07/23, 5:49 pm
+  ~    funwithmetamil@gmail.com
+  ~     Last modified 29/07/23, 5:49 pm
+  ~     Copyright (c) 2023.
+  ~     All rights reserved.
+  ~   *************************************************************
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="90"
+        android:endColor="#00FFFFFF"
+        android:startColor="#E4000000"
+        android:type="linear" />
+</shape>

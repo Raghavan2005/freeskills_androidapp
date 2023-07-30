@@ -18,10 +18,10 @@ public class carddata {
 
     private  String type;
 
-    public carddata(String CardName, String CardImage,String type) {
+    public carddata(String CardName, String CardImage, String type) {
         this.cardName = CardName;
         this.cardImage = CardImage;
-        this.type=type;
+        this.type = type;
     }
 
     public String getcardName() {

@@ -46,43 +46,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
-                android:backgroundTint="@color/black"
-                android:fontFamily="@font/robotolight"
+                android:layout_marginBottom="5dp"
+
+                android:fontFamily="@font/inexbold"
                 android:text="USername"
                 android:textAlignment="center"
                 android:textColor="@color/white" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="5dp"
-                android:orientation="horizontal"
-                android:padding="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:drawableStart="@drawable/baseline_notifications_24"
-                    android:gravity="center"
-                    android:text="Notification"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
-
-                <View
-                    android:id="@+id/view_to_move"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <androidx.appcompat.widget.SwitchCompat
-                    android:layout_width="74dp"
-                    android:layout_height="26dp"
-                    android:thumb="@drawable/thumb"
-                    app:track="@drawable/track" />
-            </LinearLayout>
-
 
             <View
                 android:layout_width="match_parent"
@@ -229,41 +198,6 @@
 
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/gray" />
-
-            <LinearLayout
-                android:id="@+id/Report"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="5dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:fontFamily="@font/inexbold"
-                    android:gravity="center|start"
-                    android:text="Report a bug"
-                    android:textColor="@color/white"
-                    android:textSize="23sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-
-                    android:fontFamily="@font/inexnormail"
-                    android:gravity="center|start"
-                    android:text="If you , find the bug report to us"
-                    android:textColor="@color/grey1"
-                    android:textSize="17sp" />
-
-            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"

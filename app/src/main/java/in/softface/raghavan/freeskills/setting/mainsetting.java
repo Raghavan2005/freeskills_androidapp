@@ -10,6 +10,7 @@
 
 package in.softface.raghavan.freeskills.setting;
 
+import android.app.Notification;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -29,6 +30,8 @@ import com.squareup.picasso.Picasso;
 
 import in.softface.raghavan.freeskills.R;
 import in.softface.raghavan.freeskills.Whitelist_fragment;
+import in.softface.raghavan.freeskills.messageshower.snackbarCaller;
+import in.softface.raghavan.freeskills.notifications.Notification_Screen;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -41,12 +44,13 @@ public class mainsetting extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    LinearLayout whitelist;
+    LinearLayout whitelist, clearcontinue;
     TextView username, appv;
     ImageView profileimage;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    SharedPreferences lastseesh, sharedPreferences;
 
     public mainsetting() {
         // Required empty public constructor
@@ -84,12 +88,14 @@ public class mainsetting extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View mview = inflater.inflate(R.layout.fragment_mainsetting, container, false);
-        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("UserData", Context.MODE_PRIVATE);
+        sharedPreferences = getActivity().getSharedPreferences("UserData", Context.MODE_PRIVATE);
+        lastseesh = getActivity().getSharedPreferences("lastseeData", Context.MODE_PRIVATE);
         String Email = sharedPreferences.getString("email", "Not Found");
         String imageurl = sharedPreferences.getString("profileImage", "");
         username = mview.findViewById(R.id.username);
         appv = mview.findViewById(R.id.appversion);
         whitelist = mview.findViewById(R.id.whitelistlay);
+        clearcontinue = mview.findViewById(R.id.clearcontinue);
         whitelist.setOnClickListener(view -> {
             Intent i = new Intent(getActivity(), Whitelist_fragment.class);
             startActivity(i);
@@ -111,7 +117,20 @@ public class mainsetting extends Fragment {
         Picasso.get()
                 .load(imageurl)
                 .into(profileimage);
-        //snackbarCaller sc = new snackbarCaller(getActivity(), button, "Done", 0);
+        profileimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), Notification_Screen.class);
+                startActivity(i);
+            }
+        });
+        clearcontinue.setOnClickListener(view -> {
+            snackbarCaller sc = new snackbarCaller(getActivity(), clearcontinue, "Done", 0);
+            SharedPreferences.Editor editor = lastseesh.edit();
+            editor.clear();
+            editor.apply();
+        });
+
 
         return mview;
     }

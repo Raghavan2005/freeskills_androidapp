@@ -31,11 +31,11 @@ import java.util.Objects;
 import in.softface.raghavan.freeskills.MainActivity;
 import in.softface.raghavan.freeskills.R;
 import in.softface.raghavan.freeskills.login.profile.createprofilepackage.CreateProfile;
+import in.softface.raghavan.freeskills.messageshower.dialog_loading;
 
 public class Sign_up_Activity extends AppCompatActivity {
     private GoogleSignInClient client;
     SignInButton signinbtn;
-    ProgressBar progressBar;
     String CUserid;
     SharedPreferences sharedPreferences;
 
@@ -45,7 +45,6 @@ public class Sign_up_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
         Objects.requireNonNull(getSupportActionBar()).hide();
         signinbtn = findViewById(R.id.bt_sign_in);
-        progressBar = findViewById(R.id.progressBar);
         sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE);
 
         GoogleSignInOptions options = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -74,15 +73,15 @@ public class Sign_up_Activity extends AppCompatActivity {
             try {
                 Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
                 GoogleSignInAccount account = task.getResult(ApiException.class);
-
+                dialog_loading dl = new dialog_loading(this, 1000);
                 AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
                 FirebaseAuth.getInstance().signInWithCredential(credential)
                         .addOnCompleteListener(this, new OnCompleteListener() {
                             @Override
                             public void onComplete(Task task1) {
-                                progressBar.setVisibility(View.VISIBLE);
-                                CUserid = sharedPreferences.getString("Username", null);
 
+                                CUserid = sharedPreferences.getString("Username", null);
+                                dl.show();
                                 if (task1.isSuccessful()) {
                                     Intent intent;
                                     if (CUserid == null) {
@@ -95,6 +94,7 @@ public class Sign_up_Activity extends AppCompatActivity {
                                     if (isConnecting()) {
                                         Toast.makeText(Sign_up_Activity.this, Objects.requireNonNull(task1.getException()).getMessage(), Toast.LENGTH_SHORT).show();
                                     } else {
+                                        dl.dismiss();
                                         Toast.makeText(Sign_up_Activity.this, "Turn On Your Mobile Data, Just For First Time Login", Toast.LENGTH_LONG).show();
                                     }
                                 }
@@ -114,8 +114,8 @@ public class Sign_up_Activity extends AppCompatActivity {
         if (user != null) {
 
             Intent intent = new Intent(this, MainActivity.class);
-                startActivity(intent);
-            }
+            startActivity(intent);
         }
     }
+}
 

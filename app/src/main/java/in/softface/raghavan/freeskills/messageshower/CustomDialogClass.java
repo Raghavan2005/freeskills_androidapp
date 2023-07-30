@@ -10,8 +10,12 @@
 
 package in.softface.raghavan.freeskills.messageshower;
 
+import static kotlin.jvm.internal.Reflection.function;
+
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +23,9 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.function.Function;
+
+import in.softface.raghavan.freeskills.MainActivity;
 import in.softface.raghavan.freeskills.R;
 
 public class CustomDialogClass extends Dialog implements
@@ -31,20 +38,25 @@ public class CustomDialogClass extends Dialog implements
     TextView textdis;
     String changedusername, inputText;
     SharedPreferences sharedPreferences;
+    String jobname;
+    Intent i;
 
-    public CustomDialogClass(Activity a, String text_dis, String btn1, String btn2) {
+    public CustomDialogClass(Activity a, String text_dis, String btn1, String btn2, String jobname) {
         super(a);
         // TODO Auto-generated constructor stub
         this.c = a;
         this.text_dis = text_dis;
         this.btn_text1 = btn1;
         this.btn_text2 = btn2;
+        this.jobname = jobname;
+        sharedPreferences = a.getSharedPreferences("UserData", Context.MODE_PRIVATE);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        i = new Intent(c.getBaseContext(), MainActivity.class);
         setContentView(R.layout.custom_with_textedit_dialog);
         yes = (Button) findViewById(R.id.btn_yes);
         no = (Button) findViewById(R.id.btn_no);
@@ -62,8 +74,10 @@ public class CustomDialogClass extends Dialog implements
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_yes:
-
-                c.finish();
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("JobSelected", jobname);
+                editor.apply();
+                c.startActivity(i);
                 break;
             case R.id.btn_no:
                 dismiss();

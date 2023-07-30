@@ -11,13 +11,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="?actionBarSize"
+    android:layout_height="wrap_content"
     android:id="@+id/toolbar"
+    android:background="@drawable/backgroundforcard"
     app:layout_scrollFlags="scroll|enterAlways">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="?actionBarSize">
 
         <TextView
             android:id="@+id/title"

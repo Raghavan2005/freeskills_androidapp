@@ -36,13 +36,13 @@
 
             <ImageButton
                 android:id="@+id/playimg"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_gravity="start|bottom"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/rounded_bg"
-                android:backgroundTint="#7CFFFFFF"
-                android:src="@drawable/play_circle_24" />
+                android:backgroundTint="#95454545"
+                android:src="@drawable/baseline_play_arrow_24" />
         </FrameLayout>
 
         <LinearLayout

@@ -28,7 +28,7 @@ public class topicviewdata {
     }
 
     public topicdata[] topicdata() {
-        if (Objects.equals(cardname, "Internet")) {
+        if (Objects.equals(cardname, "1101")) {
             Internet = new topicdata[]{
                     new topicdata("Intro", "00m00s", gen_yt_timeurl("00m00s", "zN8YNNHcaZc")),
                     new topicdata("What is the switch and why do we need it?", "13m16s", gen_yt_timeurl("13m16s", "zN8YNNHcaZc")),
@@ -41,7 +41,7 @@ public class topicviewdata {
                     new topicdata("Internet Service Provider ISP\nPart-1", "1h17m26s", gen_yt_timeurl("1h17m26s", "zN8YNNHcaZc")),
                     new topicdata("Internet Service Provider ISP\nPart-2", "1h32m21s", gen_yt_timeurl("1h32m21s", "zN8YNNHcaZc")),};
             return Internet;
-        } else if (Objects.equals(cardname, "HTML")) {
+        } else if (Objects.equals(cardname, "1102")) {
             HTML = new topicdata[]{
                     new topicdata("Intro", "00m00s", gen_yt_timeurl("00m00s", "kUMe1FH4CHE")),
                     new topicdata("Chapter 1 - Getting Started", "00m55s", gen_yt_timeurl("00m55s", "kUMe1FH4CHE")),

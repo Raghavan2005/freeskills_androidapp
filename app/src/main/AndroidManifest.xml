@@ -3,18 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
-    <queries>
-        <intent>
-            <action android:name="android.speech.RecognitionService" />
-        </intent>
-    </queries>
 
     <application
         android:allowBackup="true"
@@ -23,6 +23,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FreeSkills"
         tools:targetApi="31">
+        <service
+            android:name=".notifications.PushNotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"></action>
+            </intent-filter>
+        </service>
+
         <activity
             android:name=".MainActivity"
             android:exported="false" />
@@ -41,34 +49,8 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".notifications.Notification_Screen"
-            android:label="Notification Screen" />
-
-        <service
-            android:name=".notifications.MyFirebaseMessagingService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-
-        <receiver
-            android:name=".notifications.AlarmReceiver"
-            android:enabled="true" />
-
-        <meta-data
-            android:name="com.google.firebase.messaging.default_notification_channel_id"
-            android:value="@string/default_notification_channel_id" /> <!-- Add the FCM token refresh receiver declaration -->
-        <receiver
-            android:name=".notifications.MyFirebaseInstanceIdReceiver"
-            android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND">
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-
-                <category android:name="com.example.yourapp" />
-            </intent-filter>
-        </receiver>
-
+            android:label="Notification Screen"
+            android:theme="@style/TimePickerTheme" />
         <activity
             android:name=".joblist.Joblist"
             android:exported="false" />
@@ -92,6 +74,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Whitelist_fragment" />
+
     </application>
+
 
 </manifest>

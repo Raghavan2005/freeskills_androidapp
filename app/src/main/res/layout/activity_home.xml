@@ -18,7 +18,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#292828"
         android:orientation="vertical">
 
 
@@ -31,32 +30,40 @@
 
 
             <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#292828"
-            android:orientation="vertical">
-
-
-            <com.denzcoskun.imageslider.ImageSlider
-                android:id="@+id/main_slider"
                 android:layout_width="match_parent"
-                app:iss_corner_radius="20"
-                android:layout_height="200dp"
-                android:layout_margin="10dp"
-                app:iss_auto_cycle="true"
-                android:clickable="false"
-                app:iss_no_dots="true"
-                app:iss_placeholder="@drawable/app_logo"
-                app:iss_selected_dot="@drawable/selected_dot"
-                app:iss_text_align="CENTER"
-                app:iss_unselected_dot="@drawable/unselected_dot" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.denzcoskun.imageslider.ImageSlider
+                        android:id="@+id/main_slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="6dp"
+                        android:clickable="false"
+                        app:iss_auto_cycle="true"
+                        app:iss_corner_radius="20"
+                        app:iss_no_dots="true"
+                        app:iss_placeholder="@drawable/app_logo"
+                        app:iss_selected_dot="@drawable/selected_dot"
+                        app:iss_text_align="CENTER"
+                        app:iss_unselected_dot="@drawable/unselected_dot" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/backgroundforcard" />
+
+                </FrameLayout>
             <!-- Continue Watching-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility="gone"
+                android:id="@+id/ContinuerecyclerViewlay"
                 android:paddingTop="20dp">
 
                 <TextView
@@ -64,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotobold"
                     android:text="Continue Watching"
-                    android:layout_marginBottom="9dp"
+                    android:layout_marginBottom="2dp"
                     android:layout_marginStart="10dp"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
@@ -78,6 +85,33 @@
                     android:paddingTop="3dp" />
             </LinearLayout>
             <!--    Recommended-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp"
+                    android:visibility="visible">
+
+
+                    <TextView
+                        android:id="@+id/jobname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/robotobold"
+                        android:text="Recommended for "
+                        android:textColor="@color/Oranger"
+                        android:textSize="20sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RecommendedrecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:paddingTop="3dp" />
+                </LinearLayout>
+            <!--    watch in your language-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -89,34 +123,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotobold"
-                    android:text="Recommended"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginBottom="9dp"
-                    android:textColor="@color/white"
-                    android:textSize="19sp" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/RecommendedrecyclerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    android:paddingTop="3dp" />
-            </LinearLayout>
-            <!--    watch in your language-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingTop="20dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/robotobold"
                     android:text="Watch in your Language"
                     android:layout_marginStart="10dp"
                     android:textColor="@color/white"
-                    android:layout_marginBottom="9dp"
+                    android:layout_marginBottom="2dp"
                     android:textSize="20sp" />
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -140,7 +150,7 @@
                     android:fontFamily="@font/robotobold"
                     android:text="Programming Languages"
                     android:layout_marginStart="10dp"
-                    android:layout_marginBottom="9dp"
+                    android:layout_marginBottom="2dp"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -165,7 +175,7 @@
                     android:text="Frameworks"
                     android:layout_marginStart="10dp"
                     android:textColor="@color/white"
-                    android:layout_marginBottom="9dp"
+                    android:layout_marginBottom="2dp"
                     android:textSize="20sp" />
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -189,7 +199,7 @@
                     android:text="CrashCourse"
                     android:layout_marginStart="10dp"
                     android:textColor="@color/white"
-                    android:layout_marginBottom="9dp"
+                    android:layout_marginBottom="2dp"
                     android:textSize="20sp" />
 
                 <androidx.recyclerview.widget.RecyclerView

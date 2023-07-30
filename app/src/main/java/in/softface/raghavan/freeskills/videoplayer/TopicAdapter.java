@@ -10,8 +10,11 @@
 
 package in.softface.raghavan.freeskills.videoplayer;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,16 +25,17 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.Random;
+
 import in.softface.raghavan.freeskills.R;
+import in.softface.raghavan.freeskills.messageshower.youtube_loading;
 import in.softface.raghavan.freeskills.videoplayer.topics.topicdata;
 
 public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ViewHolder> {
     private topicdata[] topics;
     private Context context;
-    public TopicAdapter(topicdata[] topics ,Context context) {
-        this.topics = topics;
-        this.context=context;
-    }
+    int[] colors;
+    private Random random = new Random();
 
     @NonNull
     @Override
@@ -40,16 +44,32 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ViewHolder> 
         return new ViewHolder(view);
     }
 
+    public TopicAdapter(topicdata[] topics ,Context context) {
+        this.topics = topics;
+        this.context = context;
+        colors = new int[]{
+                Color.RED,
+                Color.BLUE,
+                Color.GREEN,
+                Color.YELLOW,
+                Color.MAGENTA,
+                Color.CYAN
+        };
+    }
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         //String topic = topics.get(position);
-        final topicdata topic =  topics[position];
+        final topicdata topic = topics[position];
         holder.topicTextView.setText(topic.gettopicname());
         holder.topicTextView.setSingleLine(false);
         String formattedTime = topic.gettopictime().replaceAll("[mh]", ":").replaceAll("[s]", "");
-        holder.topicplay.setText("Play Now At\n" + formattedTime);
-
-        holder.cv.setOnClickListener(v -> context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(topic.gettopictimeurl()))));
+        holder.topicplay.setText("Play Now At " + formattedTime);
+        int randomColor = colors[random.nextInt(colors.length)];
+        //youtube_loading yl = new youtube_loading(context);
+        // holder.sno.setTextColor(randomColor);
+        holder.topicplay.setOnClickListener(v ->
+                context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(topic.gettopictimeurl()))));
 
         holder.sno.setText(String.valueOf(position + 1) + " Class");
     }

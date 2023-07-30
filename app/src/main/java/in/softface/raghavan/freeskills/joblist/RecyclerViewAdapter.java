@@ -13,6 +13,7 @@ package in.softface.raghavan.freeskills.joblist;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,17 +32,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     jobsdata[] jobdatas;
     Context context;
-    Intent intent;
     Activity a;
     View view;
+
     CustomDialogClass cd;
     //  Animation slideUpAnimation,slideDownAnimation;
 
-    public RecyclerViewAdapter(Activity a, jobsdata[] data, Joblist activity, Intent intent) {
+    public RecyclerViewAdapter(Activity a, jobsdata[] data, Joblist activity) {
         this.jobdatas = data;
         this.context = activity;
-        this.intent = intent;
         this.a = a;
+
 
         // slideUpAnimation = AnimationUtils.loadAnimation(context, R.anim.slide_up);
         //  slideDownAnimation = AnimationUtils.loadAnimation(context, R.anim.slide_down);
@@ -88,8 +89,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 //      Toast.makeText(context, jobDataList.getjobName(), Toast.LENGTH_SHORT).show();
-                cd = new CustomDialogClass(a, "Are You Sure You Selected " + jobDataList.getjobName() + " ?", "Yes,I Am Sure", "Cancel");
+                cd = new CustomDialogClass(a, "Are You Sure You Selected " + jobDataList.getjobName() + " ?", "Yes,I Am Sure", "Cancel", jobDataList.getjobName());
                 cd.show();
             }
         });

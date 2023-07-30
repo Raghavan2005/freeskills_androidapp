@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#292828"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
     android:orientation="vertical"
     tools:context=".videoplayer.Player_Fragment">
 
@@ -14,7 +15,7 @@
         android:contentDescription="@string/action_settings"
         android:scrollbars="none">
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -48,126 +49,148 @@
                         android:src="@drawable/play" />
                 </FrameLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="10dp"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:padding="5dp"
                     android:paddingTop="20dp">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="20dp"
-                        android:orientation="horizontal">
+                        android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/coursetitile"
+                        <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:fontFamily="@font/robotobold"
-                            android:gravity="center"
-                            android:text="CSS Preprocessors"
-                            android:textColor="@color/white"
-                            android:textSize="23sp" />
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <TextView
+                            <TextView
+                                android:id="@+id/coursetitile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/lilite"
+                                android:text="CSS Preprocessors"
+                                android:textColor="@color/white"
+                                android:textSize="23sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/robotobold"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="23sp" />
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
 
-                        <TextView
-                            android:id="@+id/lang"
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/lilite"
+                                android:gravity="center"
+                                android:text="Audio: "
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/lang"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/lilite"
+                                android:gravity="center"
+                                android:text="English"
+                                android:textColor="@color/purple_200"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/robotobold"
-                            android:gravity="center"
-                            android:text="English"
-                            android:textColor="@color/Oranger"
-                            android:textSize="23sp" />
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
 
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="0dp"
+                                android:fontFamily="@font/lilite"
+                                android:gravity="center"
+                                android:inputType="time"
+                                android:text="Time To Complete : "
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/videotime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="2dp"
+                                android:fontFamily="@font/lilite"
+                                android:gravity="center"
+                                android:inputType="time"
+                                android:text="1:43:54"
+                                android:textAlignment="center"
+                                android:textColor="@color/purple_200"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/dis_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/lilite"
+                                android:text="Copyright Credit to "
+                                android:textAlignment="textStart"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/sourcename"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/lilite"
+                                android:text="\@FreecodeCamp"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/purple_200"
+                                android:textSize="18sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
                     </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/videotime"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start"
-                        android:layout_marginStart="0dp"
-                        android:drawableStart="@drawable/timehos"
-                        android:drawableTint="@color/Oranger"
-                        android:fontFamily="@font/robotothin"
-                        android:gravity="center"
-                        android:inputType="time"
-                        android:text="1:43:54"
 
-                        android:textColor="@color/white"
-                        android:textSize="15sp" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/dis_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/robotobold"
-                        android:text="asdasda asdas "
-                        android:textAlignment="textStart"
-
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:visibility="visible" />
-
-                    <TextView
-                        android:id="@+id/full_dis"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Writing a good job description and a corresponding job ad requires proper separation of concerns. Posting a generic web developer job description in your ad when you are looking for an advanced front-end web developer, will bring numerous applications from people who are specialized in building back-end web services, or web designers who have absolutely no knowledge about programming."
-                        android:textAlignment="textStart"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"
-                        android:visibility="gone" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
-
-
-                    <Button
+                    <com.varunest.sparkbutton.SparkButton
                         android:id="@+id/whitelist"
-                        android:layout_width="wrap_content"
-                        android:layout_height="70dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
                         android:layout_marginStart="10dp"
-                        android:backgroundTint="@color/purple_500"
-                        android:drawableLeft="@drawable/whitelist_add"
-                        android:text="Add To whitelist"
-                        android:textColor="@color/white"
-                        android:textSize="18sp" />
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:sparkbutton_activeImage="@drawable/whitelist_added"
+                        app:sparkbutton_animationSpeed="1.5"
+                        app:sparkbutton_iconSize="40dp"
+                        app:sparkbutton_inActiveImage="@drawable/whitelist_add"
+                        app:sparkbutton_primaryColor="@color/white"
+                        app:sparkbutton_secondaryColor="@color/Oranger" />
 
-                </LinearLayout>
+                </RelativeLayout>
+
 
                 <!-- Add your RecyclerView below the TextView -->
                 <androidx.recyclerview.widget.RecyclerView

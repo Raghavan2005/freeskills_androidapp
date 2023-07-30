@@ -16,21 +16,28 @@
         <item name="android:textColor">@android:color/white</item>
         <item name="windowActionBar">false</item>
 
-            <item name="android:windowBackground">@color/background_color</item>
+        <item name="android:windowBackground">@color/background_color</item>
 
 
     </style>
 
 
-    <style name="TimePickerTheme" parent="ThemeOverlay.MaterialComponents.Dialog">
-        <item name="colorControlActivated">#E91E63</item>
-        <item name="android:fontFamily">@font/robotolight</item>
+    <style name="TimePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:headerBackground">#E65100</item>
+        <item name="android:numbersTextColor">#FFFFFF</item>
+        <item name="android:numbersSelectorColor">#000000</item>
+        <item name="android:numbersBackgroundColor">#535152</item>
+        <item name="android:background">#E65100</item>
     </style>
+
+    <!-- Style for the TimePickerDialog -->
+
 
     <style name="MaterialAnimations" parent="@style/Theme.AppCompat.Light.NoActionBar">
 
         <item name="android:windowContentTransitions">true</item>
 
     </style>
+
 
 </resources>

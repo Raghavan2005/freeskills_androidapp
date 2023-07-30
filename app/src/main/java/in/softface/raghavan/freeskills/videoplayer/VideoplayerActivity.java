@@ -15,7 +15,7 @@ public class VideoplayerActivity extends AppCompatActivity {
 
     private ImageView imagetype;
     private String imageUrl;
-    String cardName;
+
 
     private ArrayList<String> data;
     private String type;
@@ -26,7 +26,6 @@ public class VideoplayerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_videoplayer);
 
-        cardName = getIntent().getStringExtra("cardName");
         imageUrl = getIntent().getStringExtra("imageUrl");
         type = getIntent().getStringExtra("type");
         data = getIntent().getStringArrayListExtra("array");

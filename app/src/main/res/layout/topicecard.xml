@@ -12,6 +12,7 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
+    android:layout_margin="10dp"
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
@@ -21,70 +22,62 @@
         android:layout_marginTop="3dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
-
         app:cardBackgroundColor="@color/gray"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:padding="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
 
 
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/dog" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="6dp"
-                android:orientation="vertical"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/sno"
-                    android:textStyle="bold"
-                    android:textSize="15sp"
-                    android:gravity="center"
-                    android:layout_margin="6dp"
-                    android:textColor="@color/white"
-                    android:layout_width="wrap_content"
-                    android:layout_gravity="center"
+            <TextView
+                android:id="@+id/sno"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="6dp"
+                android:fontFamily="@font/lilite"
+                android:gravity="center"
+                android:textColor="@color/purple_200"
+                android:textSize="15sp"
+                android:textStyle="bold"
                     android:text="10 Class"
                     android:layout_height="wrap_content" />
 
-                <TextView
-                    android:id="@+id/topicname"
-                    android:layout_width="wrap_content"
-                    android:layout_height="69dp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginEnd="0dp"
-                    android:fontFamily="@font/robotothin"
-                    android:gravity="center"
-                    android:inputType="textMultiLine"
-                    android:maxLines="2"
-                    android:text="What is the router? sadas asd asdasd asda"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
+            <TextView
+                android:id="@+id/topicname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:fontFamily="@font/lilite"
+                android:gravity="center"
+                android:inputType="textMultiLine"
+                android:maxLines="2"
+                android:padding="6dp"
+                android:text="What is the router? sadas asd asdasd asda"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
                     android:textSize="13sp" />
 
                 <TextView
 
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@color/Oranger"
                     android:layout_marginStart="0dp"
                     android:gravity="center"
                     android:id="@+id/topicplay"
+                    android:fontFamily="@font/lilite"
                     android:textAlignment="center"
-                    android:paddingStart="6dp"
+                    android:padding="5dp"
                     android:text="Play Now At 12:34:345"
                     android:textColor="@color/white"
-                    android:textSize="9sp" />
-
-
-            </LinearLayout>
+                    android:textSize="13sp" />
 
 
         </LinearLayout>
