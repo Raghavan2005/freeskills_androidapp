@@ -14,8 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
-
 import in.softface.raghavan.freeskills.R;
 import in.softface.raghavan.freeskills.dateset.conditiondataset;
 import in.softface.raghavan.freeskills.videoplayer.VideoplayerActivity;
@@ -46,6 +44,8 @@ public class CardlistDisplayonRecycleview extends RecyclerView.Adapter<CardlistD
         final carddata card = carddata[position];
         Picasso.get()
                 .load(card.getcardImage())
+                .placeholder(R.drawable.loading_background)
+                .error(R.drawable.loadingerror)
                 .into(holder.imageView);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
 

@@ -51,7 +51,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
 
     private void checkProcessExecution() {
-        SharedPreferences sharedPreferences = getSharedPreferences("app_data", Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE);
         long lastExecutionTime = sharedPreferences.getLong("last_execution_time", 0);
 
         long currentTime = System.currentTimeMillis();

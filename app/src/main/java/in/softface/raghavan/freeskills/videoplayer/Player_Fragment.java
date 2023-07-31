@@ -3,15 +3,12 @@ package in.softface.raghavan.freeskills.videoplayer;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -44,7 +41,7 @@ public class Player_Fragment extends Fragment {
     LinearLayout dis_title;
     ImageButton play;
     String listofwhitelist, lastseelist;
-    SharedPreferences sharedPreferences, lastsee;
+    SharedPreferences sharedPreferences;
     private RecyclerView topicRecyclerView;
     private TopicAdapter topicAdapter;
 
@@ -70,8 +67,7 @@ public class Player_Fragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        sharedPreferences = getActivity().getSharedPreferences("WhitelistData", Context.MODE_PRIVATE);
-        lastsee = getActivity().getSharedPreferences("lastseeData", Context.MODE_PRIVATE);
+        sharedPreferences = getActivity().getSharedPreferences("UserData", Context.MODE_PRIVATE);
         if (getArguments() != null) {
             imageurl = getArguments().getString("imageUrl");
             array = (ArrayList<String>) getArguments().getSerializable("array");
@@ -83,7 +79,11 @@ public class Player_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_player_, container, false);
         imageView = view.findViewById(R.id.displayvideoimage);
-        Picasso.get().load(imageurl).into(imageView);
+        Picasso.get()
+                .load(imageurl)
+                .placeholder(R.drawable.loading_background)
+                .error(R.drawable.loadingerror)
+                .into(imageView);
         videotime = view.findViewById(R.id.videotime);
         title = view.findViewById(R.id.coursetitile);
         dis_title = view.findViewById(R.id.dis_title);
@@ -96,28 +96,10 @@ public class Player_Fragment extends Fragment {
         sourcename.setText(array.get(3));
         topicRecyclerView = view.findViewById(R.id.topicRecyclerView);
         topicRecyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
-        topicviewdata td = new topicviewdata(cardname);
+        topicviewdata td = new topicviewdata(array.get(7));
         topicAdapter = new TopicAdapter(td.topicdata(), getContext());
-        topicRecyclerView.setNestedScrollingEnabled(false);
+        //  topicRecyclerView.setNestedScrollingEnabled(false);
         topicRecyclerView.setAdapter(topicAdapter);
-
-// Add a ViewTreeObserver to the RecyclerView to calculate the height after it's laid out
-        topicRecyclerView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                // Calculate the height of all items in the RecyclerView
-                int totalHeight = calculateRecyclerViewHeight(topicRecyclerView);
-
-                // Set the height of the RecyclerView to the calculated height
-                ViewGroup.LayoutParams layoutParams = topicRecyclerView.getLayoutParams();
-                layoutParams.height = totalHeight;
-                topicRecyclerView.setLayoutParams(layoutParams);
-
-                // Remove the listener to avoid redundant calculations
-                topicRecyclerView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-            }
-        });
-
 
         videotime.setText(array.get(2));
         play = view.findViewById(R.id.play);
@@ -127,7 +109,7 @@ public class Player_Fragment extends Fragment {
         lastseearray = getlastseelistdata();
         whitelistarray = getwhitelistdata();
         youtube_loading yl = new youtube_loading(getActivity());
-        boolean isTextFound = getwhitelistdata().contains(array.get(0));
+        boolean isTextFound = getwhitelistdata().contains(array.get(7));
         if (isTextFound) {
             whitelist.setChecked(true);
         } else {
@@ -187,7 +169,7 @@ public class Player_Fragment extends Fragment {
     private void savelastvideo() {
         Gson gson = new Gson();
         lastseelist = gson.toJson(lastseearray);
-        SharedPreferences.Editor editor = lastsee.edit();
+        SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("lastseedata", lastseelist);
         Log.d("loging", "savelastvideo: " + lastseelist);
         editor.apply();
@@ -207,7 +189,7 @@ public class Player_Fragment extends Fragment {
     }
 
     private ArrayList<String> getlastseelistdata() {
-        String json = lastsee.getString("lastseedata", "null");
+        String json = sharedPreferences.getString("lastseedata", "null");
         Gson gson = new Gson();
         Type type = new TypeToken<ArrayList<String>>() {
         }.getType();

@@ -72,6 +72,8 @@ public class lastseeRecycleview extends RecyclerView.Adapter<lastseeRecycleview.
         Log.d("asafsdfdsfsdf", "onBindViewHolder: url " + url1);
         Picasso.get()
                 .load(url1)
+                .placeholder(R.drawable.loading_background)
+                .error(R.drawable.loadingerror)
                 .into(holder.imageView);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

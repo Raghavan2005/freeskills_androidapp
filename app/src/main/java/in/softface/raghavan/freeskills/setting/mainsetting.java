@@ -10,7 +10,6 @@
 
 package in.softface.raghavan.freeskills.setting;
 
-import android.app.Notification;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -50,7 +49,7 @@ public class mainsetting extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    SharedPreferences lastseesh, sharedPreferences;
+    SharedPreferences sharedPreferences;
 
     public mainsetting() {
         // Required empty public constructor
@@ -89,7 +88,6 @@ public class mainsetting extends Fragment {
         // Inflate the layout for this fragment
         View mview = inflater.inflate(R.layout.fragment_mainsetting, container, false);
         sharedPreferences = getActivity().getSharedPreferences("UserData", Context.MODE_PRIVATE);
-        lastseesh = getActivity().getSharedPreferences("lastseeData", Context.MODE_PRIVATE);
         String Email = sharedPreferences.getString("email", "Not Found");
         String imageurl = sharedPreferences.getString("profileImage", "");
         username = mview.findViewById(R.id.username);
@@ -125,8 +123,8 @@ public class mainsetting extends Fragment {
             }
         });
         clearcontinue.setOnClickListener(view -> {
-            snackbarCaller sc = new snackbarCaller(getActivity(), clearcontinue, "Done", 0);
-            SharedPreferences.Editor editor = lastseesh.edit();
+            snackbarCaller sc = new snackbarCaller(getActivity(), clearcontinue, "All Data Cleared", 0);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.clear();
             editor.apply();
         });

@@ -47,7 +47,7 @@
                         app:iss_auto_cycle="true"
                         app:iss_corner_radius="20"
                         app:iss_no_dots="true"
-                        app:iss_placeholder="@drawable/app_logo"
+                        app:iss_placeholder="@drawable/loading_background"
                         app:iss_selected_dot="@drawable/selected_dot"
                         app:iss_text_align="CENTER"
                         app:iss_unselected_dot="@drawable/unselected_dot" />

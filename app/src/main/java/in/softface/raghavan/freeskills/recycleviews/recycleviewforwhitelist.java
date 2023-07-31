@@ -1,7 +1,6 @@
 package in.softface.raghavan.freeskills.recycleviews;
 
 import android.app.Activity;
-import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -56,6 +55,8 @@ public class recycleviewforwhitelist extends RecyclerView.Adapter<recycleviewfor
         holder.lang.setText(selectedlist.get(5));
         Picasso.get()
                 .load(getYouTubeVideoID(selectedlist.get(1)))
+                .placeholder(R.drawable.loading_background)
+                .error(R.drawable.loadingerror)
                 .into(holder.image);
         Intent intent = new Intent(context, VideoplayerActivity.class);
         holder.playimag.setOnClickListener(new View.OnClickListener() {
@@ -64,15 +65,13 @@ public class recycleviewforwhitelist extends RecyclerView.Adapter<recycleviewfor
 
                 // Handle the item click event
                 //   dl.show();
-
-                intent.putExtra("cardName", selectedlist.get(0));
                 intent.putExtra("imageUrl", getYouTubeVideoID(selectedlist.get(1)));
                 intent.putExtra("type", selectedlist.get(6));
-                intent.putExtra("array", cds.data(selectedlist.get(0)));
-                //ImageView sharedView = holder.itemView;
+                intent.putExtra("array", cds.data(selectedlist.get(7)));
+//                ImageView sharedView = (ImageView) holder.itemView;
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 // String transitionName = context.getString(R.string.blue_namemain);
-                //ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation((Activity) context, sharedView, transitionName);
+                // ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation((Activity) context, sharedView, transitionName);
                 context.startActivity(intent);
             }
         });

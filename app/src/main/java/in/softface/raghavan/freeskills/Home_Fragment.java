@@ -36,7 +36,7 @@ public class Home_Fragment extends Fragment {
     ImageSlider mainslider;
     TextView usernameview, job;
     ImageView proimage;
-    SharedPreferences lastseesh, sharedPreferences;
+    SharedPreferences sharedPreferences;
     String jobnames;
     LinearLayout ContinuerecyclerViewlay;
     RecyclerView ContinuerecyclerView, RecommendedrecyclerView, watchlanguagerecyclerView, inyourlanguagerecyclerView, programmingrecyclerView, frameworksrecyclerView, CrashCourserecyclerView;
@@ -47,7 +47,6 @@ public class Home_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View mView = inflater.inflate(R.layout.activity_home, container, false);
-        lastseesh = getActivity().getSharedPreferences("lastseeData", Context.MODE_PRIVATE);
         sharedPreferences = getActivity().getSharedPreferences("UserData", Context.MODE_PRIVATE);
         jobnames = getjobname();
         cardviewdata cvd = new cardviewdata();
@@ -129,7 +128,7 @@ public class Home_Fragment extends Fragment {
 
 
     private ArrayList<String> getlastseelistdata() {
-        String json = lastseesh.getString("lastseedata", "null");
+        String json = sharedPreferences.getString("lastseedata", "null");
         Gson gson = new Gson();
         Type type = new TypeToken<ArrayList<String>>() {
         }.getType();

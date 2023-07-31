@@ -50,7 +50,7 @@ public class Whitelist_fragment extends AppCompatActivity {
         setContentView(R.layout.fragment_whitelist_fragment);
         setTitle("Whitelist");
         //dl = new dialog_loading(getActivity(),2000);
-        sharedPreferences = getSharedPreferences("WhitelistData", Context.MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE);
         //dl.dismiss();
         clearall = findViewById(R.id.clearall);
         count = findViewById(R.id.count);

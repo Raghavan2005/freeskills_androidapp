@@ -57,6 +57,8 @@ public class recommendedrecycleview extends RecyclerView.Adapter<recommendedrecy
         Log.d("asafsdfdsfsdf", "onBindViewHolder: url " + url1);
         Picasso.get()
                 .load(url1)
+                .placeholder(R.drawable.loading_background)
+                .error(R.drawable.loadingerror)
                 .into(holder.imageView);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
