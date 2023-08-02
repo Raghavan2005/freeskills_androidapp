@@ -25,6 +25,7 @@ import com.google.gson.Gson;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import in.softface.raghavan.freeskills.dateset.cardviewdata;
 import in.softface.raghavan.freeskills.dateset.jobromdata;
@@ -137,6 +138,7 @@ public class Home_Fragment extends Fragment {
         if (list == null) {
             list = new ArrayList<>();
         }
+        Collections.reverse(list);
         return list;
     }
 

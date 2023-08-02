@@ -125,7 +125,7 @@ public class mainsetting extends Fragment {
         clearcontinue.setOnClickListener(view -> {
             snackbarCaller sc = new snackbarCaller(getActivity(), clearcontinue, "All Data Cleared", 0);
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.clear();
+            editor.remove("lastseedata");
             editor.apply();
         });
 

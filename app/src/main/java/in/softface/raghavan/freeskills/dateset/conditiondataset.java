@@ -206,6 +206,266 @@ public class conditiondataset {
             arrayList.add(6, cc);
             arrayList.add(7, "1118");
             return arrayList;
+        } else if (Objects.equals(name, "1120")) {
+            arrayList.add(0, "Python");
+            arrayList.add(1, gen_yt_videourl("sxTmJE4k0ho"));
+            arrayList.add(2, "6:21:13");
+            arrayList.add(3, gen_channel_name("TechWithTim"));
+            arrayList.add(4, gen_channel_url("TechWithTim"));
+            arrayList.add(5, english);
+            arrayList.add(6, p);
+            arrayList.add(7, "1120");
+            return arrayList;
+        } else if (Objects.equals(name, "1122")) {
+            arrayList.add(0, "Terminal_usage");
+            arrayList.add(1, gen_yt_videourl("ZtqBQ68cfJc"));
+            arrayList.add(2, "5:00:16");
+            arrayList.add(3, gen_channel_name("freecodecamp"));
+            arrayList.add(4, gen_channel_url("freecodecamp"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1122");
+            return arrayList;
+        } else if (Objects.equals(name, "1123")) {
+            arrayList.add(0, "POSIX_Basics");
+            arrayList.add(1, gen_yt_videourl("U0GbJtnfqSM"));
+            arrayList.add(2, "0:19:21");
+            arrayList.add(3, gen_channel_name("hak5"));
+            arrayList.add(4, gen_channel_url("hak5"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1123");
+            return arrayList;
+        } else if (Objects.equals(name, "1124")) {
+            arrayList.add(0, "PostgreSQL");
+            arrayList.add(1, gen_yt_videourl("qw--VYLpxG4"));
+            arrayList.add(2, "4:19:34");
+            arrayList.add(3, gen_channel_name("freecodecamp"));
+            arrayList.add(4, gen_channel_url("freecodecamp"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1124");
+            return arrayList;
+        } else if (Objects.equals(name, "1125")) {
+            arrayList.add(0, "MongoDB-Document_databases");
+            arrayList.add(1, gen_yt_videourl("c2M-rlkkT5o"));
+            arrayList.add(2, "1:00:00");
+            arrayList.add(3, gen_channel_name("BroCodez"));
+            arrayList.add(4, gen_channel_url("BroCodez"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1125");
+            return arrayList;
+        } else if (Objects.equals(name, "1126")) {
+            arrayList.add(0, "InfluxDB-Timeseries_databases");
+            arrayList.add(1, gen_yt_videourl("Vq4cDIdz_M8"));
+            arrayList.add(2, "7:48");
+            arrayList.add(3, gen_channel_name("DevOpsJourney"));
+            arrayList.add(4, gen_channel_url("DevOpsJourney"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1126");
+            return arrayList;
+        } else if (Objects.equals(name, "1127")) {
+            arrayList.add(0, "firebase-Realtime_databases");
+            arrayList.add(1, gen_yt_videourl("fgdpvwEWJ9M"));
+            arrayList.add(2, "3:44:50");
+            arrayList.add(3, gen_channel_name("freecodecamp"));
+            arrayList.add(4, gen_channel_url("freecodecamp"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1127");
+            return arrayList;
+        } else if (Objects.equals(name, "1128")) {
+            arrayList.add(0, "Apache_Cassandra-Column_Databases");
+            arrayList.add(1, gen_yt_videourl("J-cSy5MeMOA"));
+            arrayList.add(2, "1:08:40");
+            arrayList.add(3, gen_channel_name("freecodecamp"));
+            arrayList.add(4, gen_channel_url("freecodecamp"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1128");
+            return arrayList;
+        } else if (Objects.equals(name, "1129")) {
+            arrayList.add(0, "Redis-Key-Value_Databases");
+            arrayList.add(1, gen_yt_videourl("XCsS_NVAa1g"));
+            arrayList.add(2, "1:26:59");
+            arrayList.add(3, gen_channel_name("freecodecamp"));
+            arrayList.add(4, gen_channel_url("freecodecamp"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1129");
+            return arrayList;
+        } else if (Objects.equals(name, "1130")) {
+            arrayList.add(0, "futuristic_databases");
+            arrayList.add(1, gen_yt_videourl("jb2AvF8XzII"));
+            arrayList.add(2, "0:08:42");
+            arrayList.add(3, gen_channel_name("Fireship"));
+            arrayList.add(4, gen_channel_url("Fireship"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1130");
+            return arrayList;
+        } else if (Objects.equals(name, "1131")) {
+            arrayList.add(0, "scaling_database");
+            arrayList.add(1, gen_yt_videourl("dkhOZOmV7Fo"));
+            arrayList.add(2, "0:06:52");
+            arrayList.add(3, gen_channel_name("Udacity"));
+            arrayList.add(4, gen_channel_url("Udacity"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1131");
+            return arrayList;
+        } else if (Objects.equals(name, "1132")) {
+            arrayList.add(0, "Authentication");
+            arrayList.add(1, gen_yt_videourl("rhi1eIjSbvk"));
+            arrayList.add(2, "0:05:06");
+            arrayList.add(3, gen_channel_name("OktaDev"));
+            arrayList.add(4, gen_channel_url("OktaDev"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1132");
+            return arrayList;
+        } else if (Objects.equals(name, "1133")) {
+            arrayList.add(0, "REST");
+            arrayList.add(1, gen_yt_videourl("lsMQRaeKNDk"));
+            arrayList.add(2, "0:09:12");
+            arrayList.add(3, gen_channel_name("IBMTechnology"));
+            arrayList.add(4, gen_channel_url("IBMTechnology"));
+            arrayList.add(5, english);
+            arrayList.add(6, f);
+            arrayList.add(7, "1133");
+            return arrayList;
+        } else if (Objects.equals(name, "1134")) {
+            arrayList.add(0, "JSON_APIs");
+            arrayList.add(1, gen_yt_videourl("uxf0--uiX0I"));
+            arrayList.add(2, "0:16:21");
+            arrayList.add(3, gen_channel_name("TheCodingTrain"));
+            arrayList.add(4, gen_channel_url("TheCodingTrain"));
+            arrayList.add(5, english);
+            arrayList.add(6, f);
+            arrayList.add(7, "1134");
+            return arrayList;
+        } else if (Objects.equals(name, "1135")) {
+            arrayList.add(0, "Client_Side_Caching");
+            arrayList.add(1, gen_yt_videourl("iAnttA0O1Xg"));
+            arrayList.add(2, "0:06:02");
+            arrayList.add(3, gen_channel_name("mulesoftvids"));
+            arrayList.add(4, gen_channel_url("mulesoftvids"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1135");
+            return arrayList;
+        } else if (Objects.equals(name, "1136")) {
+            arrayList.add(0, "CDN_(Content_Delivery_Network)");
+            arrayList.add(1, gen_yt_videourl("Bsq5cKkS33I"));
+            arrayList.add(2, "0:04:36");
+            arrayList.add(3, gen_channel_name("IBMTechnology"));
+            arrayList.add(4, gen_channel_url("IBMTechnology"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1136");
+            return arrayList;
+        } else if (Objects.equals(name, "1137")) {
+            arrayList.add(0, "web_security_knowledge_");
+            arrayList.add(1, gen_yt_videourl("qjrkV4RjgIU"));
+            arrayList.add(2, "0:56:25");
+            arrayList.add(3, gen_channel_name("freecodecamp"));
+            arrayList.add(4, gen_channel_url("freecodecamp"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1137");
+            return arrayList;
+        } else if (Objects.equals(name, "1138")) {
+            arrayList.add(0, "Design_and_Development_Principles");
+            arrayList.add(1, gen_yt_videourl("XQzEo1qag4A"));
+            arrayList.add(2, "0:14:37");
+            arrayList.add(3, gen_channel_name("TechWithTim"));
+            arrayList.add(4, gen_channel_url("TechWithTim"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1138");
+            return arrayList;
+        } else if (Objects.equals(name, "1139")) {
+            arrayList.add(0, "Architectural_Patterns");
+            arrayList.add(1, gen_yt_videourl("BrT3AO8bVQY"));
+            arrayList.add(2, "0:11:00");
+            arrayList.add(3, gen_channel_name("CodingTech"));
+            arrayList.add(4, gen_channel_url("CodingTech"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1139");
+            return arrayList;
+        } else if (Objects.equals(name, "1140")) {
+            arrayList.add(0, "Message_Brokers");
+            arrayList.add(1, gen_yt_videourl("7rkeORD4jSw"));
+            arrayList.add(2, "0:10:09");
+            arrayList.add(3, gen_channel_name("IBMTechnology"));
+            arrayList.add(4, gen_channel_url("IBMTechnology"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1140");
+            return arrayList;
+        } else if (Objects.equals(name, "1141")) {
+            arrayList.add(0, "Containerization_vs._Virtualization");
+            arrayList.add(1, gen_yt_videourl("eyNBf1sqdBQ"));
+            arrayList.add(2, "0:08:57");
+            arrayList.add(3, gen_channel_name("PowerCertAnimatedVideos"));
+            arrayList.add(4, gen_channel_url("PowerCertAnimatedVideos"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1141");
+            return arrayList;
+        } else if (Objects.equals(name, "1142")) {
+            arrayList.add(0, "Web_sockets");
+            arrayList.add(1, gen_yt_videourl("8ARodQ4Wlf4"));
+            arrayList.add(2, "0:29:26");
+            arrayList.add(3, gen_channel_name("freecodecamp "));
+            arrayList.add(4, gen_channel_url("freecodecamp "));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1142");
+            return arrayList;
+        } else if (Objects.equals(name, "1143")) {
+            arrayList.add(0, "Server_Sent_Events");
+            arrayList.add(1, gen_yt_videourl("4HlNv1qpZFY"));
+            arrayList.add(2, "0:29:48");
+            arrayList.add(3, gen_channel_name("hnasr"));
+            arrayList.add(4, gen_channel_url("hnasr"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1143");
+            return arrayList;
+        } else if (Objects.equals(name, "1144")) {
+            arrayList.add(0, "Nginx");
+            arrayList.add(1, gen_yt_videourl("7VAI73roXaY"));
+            arrayList.add(2, "0:50:52");
+            arrayList.add(3, gen_channel_name("laithacademy"));
+            arrayList.add(4, gen_channel_url("laithacademy"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1144");
+            return arrayList;
+        } else if (Objects.equals(name, "1145")) {
+            arrayList.add(0, "Instrumentation,_Monitoring,_and_Telemetry");
+            arrayList.add(1, gen_yt_videourl("r8UvWSX3KA8"));
+            arrayList.add(2, "1:08:47");
+            arrayList.add(3, gen_channel_name("freecodecamp"));
+            arrayList.add(4, gen_channel_url("freecodecamp"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1145");
+            return arrayList;
+        } else if (Objects.equals(name, "1146")) {
+            arrayList.add(0, "Mitigation_Strategies");
+            arrayList.add(1, gen_yt_videourl("PMe_uMtZvMI"));
+            arrayList.add(2, "0:54:15");
+            arrayList.add(3, gen_channel_name("Webagesolutionsinc"));
+            arrayList.add(4, gen_channel_url("Webagesolutionsinc"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1146");
+            return arrayList;
         } else {
             arrayList.add(0, "Not Found");
             arrayList.add(1, "Not Found");

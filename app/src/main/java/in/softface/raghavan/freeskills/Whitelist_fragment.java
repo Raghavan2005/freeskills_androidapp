@@ -59,7 +59,7 @@ public class Whitelist_fragment extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.clear();
+                editor.remove("whitelist");
                 editor.apply();
                 recreateActivity();
             }

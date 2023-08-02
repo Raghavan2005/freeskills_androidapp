@@ -10,16 +10,12 @@
 
 package in.softface.raghavan.freeskills.joblist;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import in.softface.raghavan.freeskills.MainActivity;
 import in.softface.raghavan.freeskills.R;
 
 public class Joblist extends AppCompatActivity {
@@ -37,6 +33,7 @@ public class Joblist extends AppCompatActivity {
 
         jobsdata[] data = new jobsdata[]{
                 new jobsdata("Frontend Developer", "As a frontend developer, your primary focus is on designing and developing the user interface (UI) and user experience (UX) of a website or web application. ", R.drawable.fed),
+                new jobsdata("Backend Developer", "As a Backend developer, your primary focus is on designing and developing the Functional  of a website or web application. ", R.drawable.fed),
 
 
         };

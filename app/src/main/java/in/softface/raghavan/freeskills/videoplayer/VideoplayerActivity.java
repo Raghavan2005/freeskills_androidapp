@@ -45,17 +45,18 @@ public class VideoplayerActivity extends AppCompatActivity {
         }
 
         backButton.setOnClickListener(v -> {
-            onBackPressed();
+            // onBackPressed();
             finish();
         });
     }
 
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        finish(); // Close the current activity and return to the previous one
-    }
+    // @Override
+    // public void onBackPressed() {
+    //    super.onBackPressed();
+    //    finish();
+    // Close the current activity and return to the previous one
+    // }
 
 
 }

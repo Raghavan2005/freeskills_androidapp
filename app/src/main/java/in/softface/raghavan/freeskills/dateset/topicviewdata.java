@@ -485,6 +485,369 @@ public class topicviewdata {
             return data;
 
 
+        } else if (Objects.equals(cardname, "1120")) {
+            data = new topicdata[]{
+                    new topicdata("Introduction", "00m00s", gen_yt_timeurl("00m00s", "sxTmJE4k0ho")),
+                    new topicdata("Variables & Data Types", "01m12s", gen_yt_timeurl("01m12s", "sxTmJE4k0ho")),
+                    new topicdata("Basic Operators & Input", "12m21s", gen_yt_timeurl("12m21s", "sxTmJE4k0ho")),
+                    new topicdata("Conditions", "24m11s", gen_yt_timeurl("24m11s", "sxTmJE4k0ho")),
+                    new topicdata("if-elif-else", "32m54s", gen_yt_timeurl("32m54s", "sxTmJE4k0ho")),
+                    new topicdata("Chained Conditionals & Nested Statements", "45m56s", gen_yt_timeurl("45m56s", "sxTmJE4k0ho")),
+                    new topicdata("For Loops", "53m29s", gen_yt_timeurl("53m29s", "sxTmJE4k0ho")),
+                    new topicdata("While Loops", "59m29s", gen_yt_timeurl("59m29s", "sxTmJE4k0ho")),
+                    new topicdata("List's and Tuples", "01h05m51s", gen_yt_timeurl("01h05m51s", "sxTmJE4k0ho")),
+                    new topicdata("Iteration by Item", "01h14m09s", gen_yt_timeurl("01h14m09s", "sxTmJE4k0ho")),
+                    new topicdata("String Methods", "01h20m13s", gen_yt_timeurl("01h20m13s", "sxTmJE4k0ho")),
+                    new topicdata("Slice Operator", "01h26m38s", gen_yt_timeurl("01h26m38s", "sxTmJE4k0ho")),
+                    new topicdata("Functions", "01h33m41s", gen_yt_timeurl("01h33m41s", "sxTmJE4k0ho")),
+                    new topicdata("How to Read a Text File", "01h42m10s", gen_yt_timeurl("01h42m10s", "sxTmJE4k0ho")),
+                    new topicdata("Writing to a Text File", "01h50m31s", gen_yt_timeurl("01h50m31s", "sxTmJE4k0ho")),
+                    new topicdata("Using .count() and .find()", "01h54m50s", gen_yt_timeurl("01h54m50s", "sxTmJE4k0ho")),
+                    new topicdata("Introduction to Modular Programming", "02h01m47s", gen_yt_timeurl("02h01m47s", "sxTmJE4k0ho")),
+                    new topicdata("Optional Parameters", "02h09m28s", gen_yt_timeurl("02h09m28s", "sxTmJE4k0ho")),
+                    new topicdata("Try and Except (Error Handling)", "02h15m36s", gen_yt_timeurl("02h15m36s", "sxTmJE4k0ho")),
+                    new topicdata("Global vs Local Variables", "02h20m29s", gen_yt_timeurl("02h20m29s", "sxTmJE4k0ho")),
+                    new topicdata("Introduction to Objects", "02h29m16s", gen_yt_timeurl("02h29m16s", "sxTmJE4k0ho")),
+                    new topicdata("Creating Classes", "02h39m02s", gen_yt_timeurl("02h39m02s", "sxTmJE4k0ho")),
+                    new topicdata("Inheritance", "02h50m37s", gen_yt_timeurl("02h50m37s", "sxTmJE4k0ho")),
+                    new topicdata("Overloading Methods", "03h03m13s", gen_yt_timeurl("03h03m13s", "sxTmJE4k0ho")),
+                    new topicdata("Static Methods and Class Methods", "03h16m01s", gen_yt_timeurl("03h16m01s", "sxTmJE4k0ho")),
+                    new topicdata("Private and Public Classes", "03h25m44s", gen_yt_timeurl("03h25m44s", "sxTmJE4k0ho")),
+                    new topicdata("Optional Parameters", "03h31m40s", gen_yt_timeurl("03h31m40s", "sxTmJE4k0ho")),
+                    new topicdata("Static and Class Methods", "03h41m13s", gen_yt_timeurl("03h41m13s", "sxTmJE4k0ho")),
+                    new topicdata("Map Function", "03h50m24s", gen_yt_timeurl("03h50m24s", "sxTmJE4k0ho")),
+                    new topicdata("Filter Function", "03h56m15s", gen_yt_timeurl("03h56m15s", "sxTmJE4k0ho")),
+                    new topicdata("Lambda Function", "04h03m12s", gen_yt_timeurl("04h03m12s", "sxTmJE4k0ho")),
+                    new topicdata("Introduction to Collections", "04h10m12s", gen_yt_timeurl("04h10m12s", "sxTmJE4k0ho")),
+                    new topicdata("Named Tuple", "04h22m17s", gen_yt_timeurl("04h22m17s", "sxTmJE4k0ho")),
+                    new topicdata("Deque", "04h30m20s", gen_yt_timeurl("04h30m20s", "sxTmJE4k0ho")),
+                    new topicdata("Overview of Python", "04h40m12s", gen_yt_timeurl("04h40m12s", "sxTmJE4k0ho")),
+                    new topicdata("Dunder/Magic Methods", "04h58m34s", gen_yt_timeurl("04h58m34s", "sxTmJE4k0ho")),
+                    new topicdata("Metaclasses", "05h12m23s", gen_yt_timeurl("05h12m23s", "sxTmJE4k0ho")),
+                    new topicdata("Decorators", "05h34m10s", gen_yt_timeurl("05h34m10s", "sxTmJE4k0ho")),
+                    new topicdata("Generators", "05h50m29s", gen_yt_timeurl("05h50m29s", "sxTmJE4k0ho")),
+                    new topicdata("Context Managers", "06h04m32s", gen_yt_timeurl("06h04m32s", "sxTmJE4k0ho")),
+            };
+            return data;
+        } else if (Objects.equals(cardname, "1122")) {
+            data = new topicdata[]{
+                    new topicdata("Introduction", "00m00s", gen_yt_timeurl("00m00s", "ZtqBQ68cfJc")),
+                    new topicdata("Why use the command line?", "04m37s", gen_yt_timeurl("04m37s", "ZtqBQ68cfJc")),
+                    new topicdata("The world of operating systems", "06m56s", gen_yt_timeurl("06m56s", "ZtqBQ68cfJc")),
+                    new topicdata("What is Linux?", "10m56s", gen_yt_timeurl("10m56s", "ZtqBQ68cfJc")),
+                    new topicdata("Shells and Bash", "16m58s", gen_yt_timeurl("16m58s", "ZtqBQ68cfJc")),
+                    new topicdata("Setup For Linux Users", "19m28s", gen_yt_timeurl("19m28s", "ZtqBQ68cfJc")),
+                    new topicdata("Setup For Mac Users", "20m28s", gen_yt_timeurl("20m28s", "ZtqBQ68cfJc")),
+                    new topicdata("Setup For Windows (WSL)", "21m05s", gen_yt_timeurl("21m05s", "ZtqBQ68cfJc")),
+                    new topicdata("Using The Terminal", "29m43s", gen_yt_timeurl("29m43s", "ZtqBQ68cfJc")),
+                    new topicdata("whoami", "31m12s", gen_yt_timeurl("31m12s", "ZtqBQ68cfJc")),
+                    new topicdata("man", "32m34s", gen_yt_timeurl("32m34s", "ZtqBQ68cfJc")),
+                    new topicdata("clear", "33m40s", gen_yt_timeurl("33m40s", "ZtqBQ68cfJc")),
+                    new topicdata("intro to options", "36m42s", gen_yt_timeurl("36m42s", "ZtqBQ68cfJc")),
+                    new topicdata("pwd", "39m05s", gen_yt_timeurl("39m05s", "ZtqBQ68cfJc")),
+                    new topicdata("ls", "41m07s", gen_yt_timeurl("41m07s", "ZtqBQ68cfJc")),
+                    new topicdata("cd", "49m21s", gen_yt_timeurl("49m21s", "ZtqBQ68cfJc")),
+                    new topicdata("mkdir", "1h00m40s", gen_yt_timeurl("1h00m40s", "ZtqBQ68cfJc")),
+                    new topicdata("touch", "1h06m33s", gen_yt_timeurl("1h06m33s", "ZtqBQ68cfJc")),
+                    new topicdata("rmdir", "1h12m03s", gen_yt_timeurl("1h12m03s", "ZtqBQ68cfJc")),
+                    new topicdata("rm", "1h13m05s", gen_yt_timeurl("1h13m05s", "ZtqBQ68cfJc")),
+                    new topicdata("open", "1h21m26s", gen_yt_timeurl("1h21m26s", "ZtqBQ68cfJc")),
+                    new topicdata("mv", "1h23m55s", gen_yt_timeurl("1h23m55s", "ZtqBQ68cfJc")),
+                    new topicdata("cp", "1h27m51s", gen_yt_timeurl("1h27m51s", "ZtqBQ68cfJc")),
+                    new topicdata("head", "1h31m56s", gen_yt_timeurl("1h31m56s", "ZtqBQ68cfJc")),
+                    new topicdata("tail", "1h33m02s", gen_yt_timeurl("1h33m02s", "ZtqBQ68cfJc")),
+                    new topicdata("date", "1h35m27s", gen_yt_timeurl("1h35m27s", "ZtqBQ68cfJc")),
+                    new topicdata("redirecting standard output", "1h36m02s", gen_yt_timeurl("1h36m02s", "ZtqBQ68cfJc")),
+                    new topicdata("cat", "1h41m48s", gen_yt_timeurl("1h41m48s", "ZtqBQ68cfJc")),
+                    new topicdata("less", "1h46m15s", gen_yt_timeurl("1h46m15s", "ZtqBQ68cfJc")),
+                    new topicdata("echo", "1h49m17s", gen_yt_timeurl("1h49m17s", "ZtqBQ68cfJc")),
+                    new topicdata("wc", "1h51m38s", gen_yt_timeurl("1h51m38s", "ZtqBQ68cfJc")),
+                    new topicdata("piping", "1h53m52s", gen_yt_timeurl("1h53m52s", "ZtqBQ68cfJc")),
+                    new topicdata("sort", "1h56m43s", gen_yt_timeurl("1h56m43s", "ZtqBQ68cfJc")),
+                    new topicdata("uniq", "2h01m09s", gen_yt_timeurl("2h01m09s", "ZtqBQ68cfJc")),
+                    new topicdata("expansions", "2h06m59s", gen_yt_timeurl("2h06m59s", "ZtqBQ68cfJc")),
+                    new topicdata("diff", "2h17m08s", gen_yt_timeurl("2h17m08s", "ZtqBQ68cfJc")),
+                    new topicdata("find", "2h21m01s", gen_yt_timeurl("2h21m01s", "ZtqBQ68cfJc")),
+                    new topicdata("grep", "2h32m10s", gen_yt_timeurl("2h32m10s", "ZtqBQ68cfJc")),
+                    new topicdata("du", "2h36m52s", gen_yt_timeurl("2h36m52s", "ZtqBQ68cfJc")),
+                    new topicdata("df", "2h40m55s", gen_yt_timeurl("2h40m55s", "ZtqBQ68cfJc")),
+                    new topicdata("history", "2h44m04s", gen_yt_timeurl("2h44m04s", "ZtqBQ68cfJc")),
+                    new topicdata("ps", "2h47m32s", gen_yt_timeurl("2h47m32s", "ZtqBQ68cfJc")),
+                    new topicdata("top", "2h51m50s", gen_yt_timeurl("2h51m50s", "ZtqBQ68cfJc")),
+                    new topicdata("kill", "2h54m02s", gen_yt_timeurl("2h54m02s", "ZtqBQ68cfJc")),
+                    new topicdata("killall", "3h00m13s", gen_yt_timeurl("3h00m13s", "ZtqBQ68cfJc")),
+                    new topicdata("jobs, bg, and fg", "3h01m37s", gen_yt_timeurl("3h01m37s", "ZtqBQ68cfJc")),
+                    new topicdata("gzip", "3h09m40s", gen_yt_timeurl("3h09m40s", "ZtqBQ68cfJc")),
+                    new topicdata("gunzip", "3h12m18s", gen_yt_timeurl("3h12m18s", "ZtqBQ68cfJc")),
+                    new topicdata("tar", "3h15m27s", gen_yt_timeurl("3h15m27s", "ZtqBQ68cfJc")),
+                    new topicdata("nano", "3h23m36s", gen_yt_timeurl("3h23m36s", "ZtqBQ68cfJc")),
+                    new topicdata("alias", "3h31m17s", gen_yt_timeurl("3h31m17s", "ZtqBQ68cfJc")),
+                    new topicdata("xargs", "3h42m48s", gen_yt_timeurl("3h42m48s", "ZtqBQ68cfJc")),
+                    new topicdata("ln", "3h50m57s", gen_yt_timeurl("3h50m57s", "ZtqBQ68cfJc")),
+                    new topicdata("who", "4h01m49s", gen_yt_timeurl("4h01m49s", "ZtqBQ68cfJc")),
+                    new topicdata("su", "4h03m47s", gen_yt_timeurl("4h03m47s", "ZtqBQ68cfJc")),
+                    new topicdata("sudo", "4h08m32s", gen_yt_timeurl("4h08m32s", "ZtqBQ68cfJc")),
+                    new topicdata("passwd", "4h18m36s", gen_yt_timeurl("4h18m36s", "ZtqBQ68cfJc")),
+                    new topicdata("chown", "4h21m54s", gen_yt_timeurl("4h21m54s", "ZtqBQ68cfJc")),
+                    new topicdata("Understanding permissions", "4h31m08s", gen_yt_timeurl("4h31m08s", "ZtqBQ68cfJc")),
+                    new topicdata("chmod", "4h47m15s", gen_yt_timeurl("4h47m15s", "ZtqBQ68cfJc")),
+            };
+            return data;
+
+
+        } else if (Objects.equals(cardname, "1124")) {
+            data = new topicdata[]{
+                    new topicdata("What is a Database", "03m16s", gen_yt_timeurl("03m16s", "qw--VYLpxG4")),
+                    new topicdata("What is SQL And Relational Database", "05m17s", gen_yt_timeurl("05m17s", "qw--VYLpxG4")),
+                    new topicdata("What is PostreSQL AKA Postrgres", "09m10s", gen_yt_timeurl("09m10s", "qw--VYLpxG4")),
+                    new topicdata("PostgreSQL Installation (Mac OS)", "10m53s", gen_yt_timeurl("10m53s", "qw--VYLpxG4")),
+                    new topicdata("PostgreSQL Installation (Windows)", "14m21s", gen_yt_timeurl("14m21s", "qw--VYLpxG4")),
+                    new topicdata("GUI Clients vs Terminal/CMD Clients", "17m38s", gen_yt_timeurl("17m38s", "qw--VYLpxG4")),
+                    new topicdata("Setup PSQL (MAC OS)", "21m39s", gen_yt_timeurl("21m39s", "qw--VYLpxG4")),
+                    new topicdata("Setup PSQL (Windows)", "25m22s", gen_yt_timeurl("25m22s", "qw--VYLpxG4")),
+                    new topicdata("How to Create Database", "30m15s", gen_yt_timeurl("30m15s", "qw--VYLpxG4")),
+                    new topicdata("How to Connect to Databases", "33m35s", gen_yt_timeurl("33m35s", "qw--VYLpxG4")),
+                    new topicdata("A Very Dangerous Command", "38m12s", gen_yt_timeurl("38m12s", "qw--VYLpxG4")),
+                    new topicdata("How To Create Tables", "41m37s", gen_yt_timeurl("41m37s", "qw--VYLpxG4")),
+                    new topicdata("Creating Tables Without Constraints", "45m46s", gen_yt_timeurl("45m46s", "qw--VYLpxG4")),
+                    new topicdata("Creating Tables with Constraints", "49m12s", gen_yt_timeurl("49m12s", "qw--VYLpxG4")),
+                    new topicdata("Insert Into", "55m55s", gen_yt_timeurl("55m55s", "qw--VYLpxG4")),
+                    new topicdata("Insert Into Example", "59m14s", gen_yt_timeurl("59m14s", "qw--VYLpxG4")),
+                    new topicdata("Generate 1000 Rows with Mockaroo", "1h02m36s", gen_yt_timeurl("1h02m36s", "qw--VYLpxG4")),
+                    new topicdata("Select From", "1h12m28s", gen_yt_timeurl("1h12m28s", "qw--VYLpxG4")),
+                    new topicdata("Order By", "1h15m18s", gen_yt_timeurl("1h15m18s", "qw--VYLpxG4")),
+                    new topicdata("Distinct", "1h19m53s", gen_yt_timeurl("1h19m53s", "qw--VYLpxG4")),
+                    new topicdata("Where Clause and AND", "1h21m59s", gen_yt_timeurl("1h21m59s", "qw--VYLpxG4")),
+                    new topicdata("Comparison Operators", "1h25m29s", gen_yt_timeurl("1h25m29s", "qw--VYLpxG4")),
+                    new topicdata("Limit, Offset & Fetch", "1h29m35s", gen_yt_timeurl("1h29m35s", "qw--VYLpxG4")),
+                    new topicdata("IN", "1h32m43s", gen_yt_timeurl("1h32m43s", "qw--VYLpxG4")),
+                    new topicdata("Between", "1h35m43s", gen_yt_timeurl("1h35m43s", "qw--VYLpxG4")),
+                    new topicdata("Like And iLike", "1h37m45s", gen_yt_timeurl("1h37m45s", "qw--VYLpxG4")),
+                    new topicdata("Group By", "1h43m10s", gen_yt_timeurl("1h43m10s", "qw--VYLpxG4")),
+                    new topicdata("Group By Having", "1h46m41s", gen_yt_timeurl("1h46m41s", "qw--VYLpxG4")),
+                    new topicdata("Adding New Table And Data Using Mockaroo", "1h52m08s", gen_yt_timeurl("1h52m08s", "qw--VYLpxG4")),
+                    new topicdata("Calculating Min, Max & Average", "1h55m40s", gen_yt_timeurl("1h55m40s", "qw--VYLpxG4")),
+                    new topicdata("Sum", "1h59m48s", gen_yt_timeurl("1h59m48s", "qw--VYLpxG4")),
+                    new topicdata("Basics of Arithmetic Operators", "2h01m55s", gen_yt_timeurl("2h01m55s", "qw--VYLpxG4")),
+                    new topicdata("Arithmetic Operators (ROUND)", "2h05m59s", gen_yt_timeurl("2h05m59s", "qw--VYLpxG4")),
+                    new topicdata("Alias", "2h09m43s", gen_yt_timeurl("2h09m43s", "qw--VYLpxG4")),
+                    new topicdata("Coalesce", "2h12m32s", gen_yt_timeurl("2h12m32s", "qw--VYLpxG4")),
+                    new topicdata("NULLIF", "2h16m15s", gen_yt_timeurl("2h16m15s", "qw--VYLpxG4")),
+                    new topicdata("Timestamps And Dates Course", "2h20m21s", gen_yt_timeurl("2h20m21s", "qw--VYLpxG4")),
+                    new topicdata("Adding And Subtracting With Dates", "2h23m21s", gen_yt_timeurl("2h23m21s", "qw--VYLpxG4")),
+                    new topicdata("Extracting Fields From Timestamp", "2h25m58s", gen_yt_timeurl("2h25m58s", "qw--VYLpxG4")),
+                    new topicdata("Age Function", "2h27m28s", gen_yt_timeurl("2h27m28s", "qw--VYLpxG4")),
+                    new topicdata("What Are Primary Keys", "2h29m24s", gen_yt_timeurl("2h29m24s", "qw--VYLpxG4")),
+                    new topicdata("Understanding Primary Keys", "2h31m23s", gen_yt_timeurl("2h31m23s", "qw--VYLpxG4")),
+                    new topicdata("Adding Primary Key", "2h36m26s", gen_yt_timeurl("2h36m26s", "qw--VYLpxG4")),
+                    new topicdata("Unique Constraints", "2h40m55s", gen_yt_timeurl("2h40m55s", "qw--VYLpxG4")),
+                    new topicdata("Check Constraints", "2h49m15s", gen_yt_timeurl("2h49m15s", "qw--VYLpxG4")),
+                    new topicdata("How to Delete Records", "2h54m45s", gen_yt_timeurl("2h54m45s", "qw--VYLpxG4")),
+                    new topicdata("How to Update Records", "3h01m36s", gen_yt_timeurl("3h01m36s", "qw--VYLpxG4")),
+                    new topicdata("On Conflict Do Nothing", "3h05m55s", gen_yt_timeurl("3h05m55s", "qw--VYLpxG4")),
+                    new topicdata("Upsert", "3h11m09s", gen_yt_timeurl("3h11m09s", "qw--VYLpxG4")),
+                    new topicdata("What Is A Relationship/Foreign Keys", "3h16m41s", gen_yt_timeurl("3h16m41s", "qw--VYLpxG4")),
+                    new topicdata("Adding Relationship Between Tables", "3h19m48s", gen_yt_timeurl("3h19m48s", "qw--VYLpxG4")),
+                    new topicdata("Updating Foreign Keys Columns", "3h25m04s", gen_yt_timeurl("3h25m04s", "qw--VYLpxG4")),
+                    new topicdata("Inner Joins", "3h29m30s", gen_yt_timeurl("3h29m30s", "qw--VYLpxG4")),
+                    new topicdata("Left Joins", "3h35m17s", gen_yt_timeurl("3h35m17s", "qw--VYLpxG4")),
+                    new topicdata("Deleting Records With Foreign Keys", "3h40m53s", gen_yt_timeurl("3h40m53s", "qw--VYLpxG4")),
+                    new topicdata("Exporting Query Results to CSV", "3h47m27s", gen_yt_timeurl("3h47m27s", "qw--VYLpxG4")),
+                    new topicdata("Serial & Sequences", "3h50m42s", gen_yt_timeurl("3h50m42s", "qw--VYLpxG4")),
+                    new topicdata("Extensions", "3h57m18s", gen_yt_timeurl("3h57m18s", "qw--VYLpxG4")),
+                    new topicdata("Understanding UUID Data Type", "3h59m39s", gen_yt_timeurl("3h59m39s", "qw--VYLpxG4")),
+                    new topicdata("UUID As Primary Keys", "4h05m54s", gen_yt_timeurl("4h05m54s", "qw--VYLpxG4")),
+                    new topicdata("Conclusion", "4h16m30s", gen_yt_timeurl("4h16m30s", "qw--VYLpxG4")),
+
+            };
+            return data;
+        } else if (Objects.equals(cardname, "1125")) {
+            data = new topicdata[]{
+                    new topicdata("MongoDB tutorial for beginners", "00m00s", gen_yt_timeurl("00m00s", "c2M-rlkkT5o")),
+                    new topicdata("MongoDB installation", "02m08s", gen_yt_timeurl("02m08s", "c2M-rlkkT5o")),
+                    new topicdata("MongoShell installation", "03m56s", gen_yt_timeurl("03m56s", "c2M-rlkkT5o")),
+                    new topicdata("Set Environment variable PATH", "04m32s", gen_yt_timeurl("04m32s", "c2M-rlkkT5o")),
+                    new topicdata("How to use Mongsh", "05m24s", gen_yt_timeurl("05m24s", "c2M-rlkkT5o")),
+                    new topicdata("VSCode w/ Mongosh", "06m02s", gen_yt_timeurl("06m02s", "c2M-rlkkT5o")),
+                    new topicdata("databases", "06m59s", gen_yt_timeurl("06m59s", "c2M-rlkkT5o")),
+                    new topicdata("insert", "09m43s", gen_yt_timeurl("09m43s", "c2M-rlkkT5o")),
+                    new topicdata("data types", "15m40s", gen_yt_timeurl("15m40s", "c2M-rlkkT5o")),
+                    new topicdata("sorting and limiting", "20m44s", gen_yt_timeurl("20m44s", "c2M-rlkkT5o")),
+                    new topicdata("find", "24m51s", gen_yt_timeurl("24m51s", "c2M-rlkkT5o")),
+                    new topicdata("update", "29m26s", gen_yt_timeurl("29m26s", "c2M-rlkkT5o")),
+                    new topicdata("delete", "38m07s", gen_yt_timeurl("38m07s", "c2M-rlkkT5o")),
+                    new topicdata("comparison operators", "41m26s", gen_yt_timeurl("41m26s", "c2M-rlkkT5o")),
+                    new topicdata("logical operators", "46m49s", gen_yt_timeurl("46m49s", "c2M-rlkkT5o")),
+                    new topicdata("indexes", "52m00s", gen_yt_timeurl("52m00s", "c2M-rlkkT5o")),
+                    new topicdata("collections", "56m15s", gen_yt_timeurl("56m15s", "c2M-rlkkT5o")),
+
+            };
+            return data;
+
+
+        } else if (Objects.equals(cardname, "1127")) {
+            data = new topicdata[]{
+                    new topicdata("Introduction", "0m00s", gen_yt_timeurl("0m00s", "fgdpvwEWJ9M")),
+                    new topicdata("Authentication", "1m02s", gen_yt_timeurl("1m02s", "fgdpvwEWJ9M")),
+                    new topicdata("Firestore Database", "13m24s", gen_yt_timeurl("13m24s", "fgdpvwEWJ9M")),
+                    new topicdata("Firebase Storage", "27m24s", gen_yt_timeurl("27m24s", "fgdpvwEWJ9M")),
+                    new topicdata("Firebase Realtime Updates", "38m10s", gen_yt_timeurl("38m10s", "fgdpvwEWJ9M")),
+                    new topicdata("Firebase Firestore Queries", "41m10s", gen_yt_timeurl("41m10s", "fgdpvwEWJ9M")),
+                    new topicdata("Firebase Hosting", "44m48s", gen_yt_timeurl("44m48s", "fgdpvwEWJ9M")),
+                    new topicdata("Firebase Security Rules", "47m39s", gen_yt_timeurl("47m39s", "fgdpvwEWJ9M")),
+                    new topicdata("Firebase onAuthStateChanged", "52m46s", gen_yt_timeurl("52m46s", "fgdpvwEWJ9M")),
+                    new topicdata("Firebase with Vanilla JavaScript", "56m23s", gen_yt_timeurl("56m23s", "fgdpvwEWJ9M")),
+                    new topicdata("Firebase with Angular 13", "1h24m35s", gen_yt_timeurl("1h24m35s", "fgdpvwEWJ9M")),
+                    new topicdata("Firebase with React", "1h56m28s", gen_yt_timeurl("1h56m28s", "fgdpvwEWJ9M")),
+                    new topicdata("Firebase with Next JS", "2h29m50s", gen_yt_timeurl("2h29m50s", "fgdpvwEWJ9M")),
+
+            };
+            return data;
+
+
+        } else if (Objects.equals(cardname, "1128")) {
+            data = new topicdata[]{
+                    new topicdata("Module 1: Cassandra Intro and Background", "00m30s", gen_yt_timeurl("00m30s", "J-cSy5MeMOA")),
+                    new topicdata("Module 2: Collections, User Defined Types, and Counters", "21m53s", gen_yt_timeurl("21m53s", "J-cSy5MeMOA")),
+                    new topicdata("Module 3: Data Modeling", "31m29s", gen_yt_timeurl("31m29s", "J-cSy5MeMOA")),
+                    new topicdata("Module 4: Practical Applications", "1h04m22s", gen_yt_timeurl("1h04m22s", "J-cSy5MeMOA")),
+
+            };
+            return data;
+
+
+        } else if (Objects.equals(cardname, "1129")) {
+            data = new topicdata[]{
+                    new topicdata("Intro", "00m00s", gen_yt_timeurl("00m00s", "XCsS_NVAa1g")),
+                    new topicdata("Installing Redis", "02m26s", gen_yt_timeurl("02m26s", "XCsS_NVAa1g")),
+                    new topicdata("Redis Strings", "04m01s", gen_yt_timeurl("04m01s", "XCsS_NVAa1g")),
+                    new topicdata("Redis Lists", "11m24s", gen_yt_timeurl("11m24s", "XCsS_NVAa1g")),
+                    new topicdata("Redis Sets", "22m16s", gen_yt_timeurl("22m16s", "XCsS_NVAa1g")),
+                    new topicdata("Redis Sorted Sets", "29m46s", gen_yt_timeurl("29m46s", "XCsS_NVAa1g")),
+                    new topicdata("Redis HyperLogLog", "37m01s", gen_yt_timeurl("37m01s", "XCsS_NVAa1g")),
+                    new topicdata("Redis Hashes", "39m43s", gen_yt_timeurl("39m43s", "XCsS_NVAa1g")),
+                    new topicdata("Redis Transactions", "45m23s", gen_yt_timeurl("45m23s", "XCsS_NVAa1g")),
+                    new topicdata("Redis PubSub", "48m47s", gen_yt_timeurl("48m47s", "XCsS_NVAa1g")),
+                    new topicdata("Redis Scripts", "56m25s", gen_yt_timeurl("56m25s", "XCsS_NVAa1g")),
+                    new topicdata("Redis Connection & Security", "01h05m20s", gen_yt_timeurl("01h05m20s", "XCsS_NVAa1g")),
+                    new topicdata("Redis Geospatial", "01h11m09s", gen_yt_timeurl("01h11m09s", "XCsS_NVAa1g")),
+                    new topicdata("Redis Benchmark", "01h22m11s", gen_yt_timeurl("01h22m11s", "XCsS_NVAa1g")),
+
+            };
+            return data;
+
+
+        } else if (Objects.equals(cardname, "1130")) {
+            data = new topicdata[]{
+                    new topicdata("Planetscale", "0m45s", gen_yt_timeurl("0m45s", "jb2AvF8XzII")),
+                    new topicdata("Yugabyte", "1m32s", gen_yt_timeurl("1m32s", "jb2AvF8XzII")),
+                    new topicdata("Neon", "1m51s", gen_yt_timeurl("1m51s", "jb2AvF8XzII")),
+                    new topicdata("Dolt", "2m08s", gen_yt_timeurl("2m08s", "jb2AvF8XzII")),
+                    new topicdata("CockroachDB", "2m43s", gen_yt_timeurl("2m43s", "jb2AvF8XzII")),
+                    new topicdata("Cloudflare D1", "3m08s", gen_yt_timeurl("3m08s", "jb2AvF8XzII")),
+                    new topicdata("Xata", "3m48s", gen_yt_timeurl("3m48s", "jb2AvF8XzII")),
+                    new topicdata("8Base", "4m26s", gen_yt_timeurl("4m26s", "jb2AvF8XzII")),
+                    new topicdata("EdgeDB", "4m47s", gen_yt_timeurl("4m47s", "jb2AvF8XzII")),
+                    new topicdata("SurrealDB", "5m22s", gen_yt_timeurl("5m22s", "jb2AvF8XzII")),
+                    new topicdata("Fauna", "5m55s", gen_yt_timeurl("5m55s", "jb2AvF8XzII")),
+                    new topicdata("Mem Graph", "6m23s", gen_yt_timeurl("6m23s", "jb2AvF8XzII")),
+                    new topicdata("KeyDB", "6m47s", gen_yt_timeurl("6m47s", "jb2AvF8XzII")),
+                    new topicdata("MeiliSearch", "7m20s", gen_yt_timeurl("7m20s", "jb2AvF8XzII")),
+                    new topicdata("Mindsdb", "7m49s", gen_yt_timeurl("7m49s", "jb2AvF8XzII")),
+
+            };
+            return data;
+
+
+        } else if (Objects.equals(cardname, "1138")) {
+            data = new topicdata[]{
+                    new topicdata("Intro", "00m00s", gen_yt_timeurl("00m00s", "XQzEo1qag4A")),
+                    new topicdata("Divide & Conquer", "01m22s", gen_yt_timeurl("01m22s", "XQzEo1qag4A")),
+                    new topicdata("Increase Cohesion", "02m39s", gen_yt_timeurl("02m39s", "XQzEo1qag4A")),
+                    new topicdata("Reducing Coupling", "03m48s", gen_yt_timeurl("03m48s", "XQzEo1qag4A")),
+                    new topicdata("Increase Abstraction", "04m59s", gen_yt_timeurl("04m59s", "XQzEo1qag4A")),
+                    new topicdata("Increase Reusability", "06m31s", gen_yt_timeurl("06m31s", "XQzEo1qag4A")),
+                    new topicdata("Design For Flexibility", "07m30s", gen_yt_timeurl("07m30s", "XQzEo1qag4A")),
+                    new topicdata("Anticipate Obsolescence", "08m50s", gen_yt_timeurl("08m50s", "XQzEo1qag4A")),
+                    new topicdata("Design For Portability", "09m56s", gen_yt_timeurl("09m56s", "XQzEo1qag4A")),
+                    new topicdata("Design For Testability", "11m04s", gen_yt_timeurl("11m04s", "XQzEo1qag4A")),
+                    new topicdata("Design Defensively", "12m31s", gen_yt_timeurl("12m31s", "XQzEo1qag4A")),
+
+            };
+            return data;
+
+
+        } else if (Objects.equals(cardname, "1139")) {
+            data = new topicdata[]{
+                    new topicdata("Layered Pattern / n-tier architecture", "0m33s", gen_yt_timeurl("0m33s", "BrT3AO8bVQY")),
+                    new topicdata("Pipe Filter Pattern", "1m40s", gen_yt_timeurl("1m40s", "BrT3AO8bVQY")),
+                    new topicdata("Client Server Pattern", "2m49s", gen_yt_timeurl("2m49s", "BrT3AO8bVQY")),
+                    new topicdata("Model View Controller Pattern", "3m48s", gen_yt_timeurl("3m48s", "BrT3AO8bVQY")),
+                    new topicdata("Event Bus Pattern", "4m48s", gen_yt_timeurl("4m48s", "BrT3AO8bVQY")),
+                    new topicdata("Microservices Pattern", "5m48s", gen_yt_timeurl("5m48s", "BrT3AO8bVQY")),
+                    new topicdata("Broker Pattern", "6m45s", gen_yt_timeurl("6m45s", "BrT3AO8bVQY")),
+                    new topicdata("Peer to Peer Pattern", "7m46s", gen_yt_timeurl("7m46s", "BrT3AO8bVQY")),
+                    new topicdata("Blackboard Pattern", "8m54s", gen_yt_timeurl("8m54s", "BrT3AO8bVQY")),
+                    new topicdata("Master Slave Pattern", "10m00s", gen_yt_timeurl("10m00s", "BrT3AO8bVQY")),
+
+            };
+            return data;
+
+
+        } else if (Objects.equals(cardname, "1143")) {
+            data = new topicdata[]{
+                    new topicdata("Intro", "0m00s", gen_yt_timeurl("0m00s", "4HlNv1qpZFY")),
+                    new topicdata("HTTP 1.0/1.1", "1m50s", gen_yt_timeurl("1m50s", "4HlNv1qpZFY")),
+                    new topicdata("WebSockets", "3m40s", gen_yt_timeurl("3m40s", "4HlNv1qpZFY")),
+                    new topicdata("Server Sent Events", "5m00s", gen_yt_timeurl("5m00s", "4HlNv1qpZFY")),
+                    new topicdata("SSE Use Cases", "7m30s", gen_yt_timeurl("7m30s", "4HlNv1qpZFY")),
+                    new topicdata("SSE Code Example", "9m00s", gen_yt_timeurl("9m00s", "4HlNv1qpZFY")),
+                    new topicdata("SSE Pros & Cons", "18m00s", gen_yt_timeurl("18m00s", "4HlNv1qpZFY")),
+                    new topicdata("Do You Need SSE?", "25m20s", gen_yt_timeurl("25m20s", "4HlNv1qpZFY")),
+                    new topicdata("Summary", "28m30s", gen_yt_timeurl("28m30s", "4HlNv1qpZFY")),
+
+            };
+            return data;
+
+
+        } else if (Objects.equals(cardname, "1144")) {
+            data = new topicdata[]{
+                    new topicdata("What is NGINX", "0m00s", gen_yt_timeurl("0m00s", "7VAI73roXaY")),
+                    new topicdata("NGINX Installation", "8m02s", gen_yt_timeurl("8m02s", "7VAI73roXaY")),
+                    new topicdata("NGINX Terminology", "10m55s", gen_yt_timeurl("10m55s", "7VAI73roXaY")),
+                    new topicdata("Serving Static Content", "13m00s", gen_yt_timeurl("13m00s", "7VAI73roXaY")),
+                    new topicdata("Mime Types", "17m18s", gen_yt_timeurl("17m18s", "7VAI73roXaY")),
+                    new topicdata("Location Context", "22m32s", gen_yt_timeurl("22m32s", "7VAI73roXaY")),
+                    new topicdata("Rewrites and Redirect", "33m30s", gen_yt_timeurl("33m30s", "7VAI73roXaY")),
+                    new topicdata("NGINX as a Load Balancer", "37m37s", gen_yt_timeurl("37m37s", "7VAI73roXaY")),
+
+            };
+            return data;
+
+
+        } else if (Objects.equals(cardname, "1145")) {
+            data = new topicdata[]{
+                    new topicdata("What is OpenTelemetry", "00m00s", gen_yt_timeurl("00m00s", "r8UvWSX3KA8")),
+                    new topicdata("Course Outline", "03m04s", gen_yt_timeurl("03m04s", "r8UvWSX3KA8")),
+                    new topicdata("Let’s go!", "03m40s", gen_yt_timeurl("03m40s", "r8UvWSX3KA8")),
+                    new topicdata("What are Microservices?", "04m49s", gen_yt_timeurl("04m49s", "r8UvWSX3KA8")),
+                    new topicdata("What is Observability?", "07m11s", gen_yt_timeurl("07m11s", "r8UvWSX3KA8")),
+                    new topicdata("M.E.L.T", "07m55s", gen_yt_timeurl("07m55s", "r8UvWSX3KA8")),
+                    new topicdata("History", "09m57s", gen_yt_timeurl("09m57s", "r8UvWSX3KA8")),
+                    new topicdata("Setting up our Project", "11m22s", gen_yt_timeurl("11m22s", "r8UvWSX3KA8")),
+                    new topicdata("What is Tracing?", "21m43s", gen_yt_timeurl("21m43s", "r8UvWSX3KA8")),
+                    new topicdata("Context and Propagation", "25m33s", gen_yt_timeurl("25m33s", "r8UvWSX3KA8")),
+                    new topicdata("Setting up our Tracing", "27m33s", gen_yt_timeurl("27m33s", "r8UvWSX3KA8")),
+                    new topicdata("What are Metrics?", "33m26s", gen_yt_timeurl("33m26s", "r8UvWSX3KA8")),
+                    new topicdata("Use cases for OpenTelemetry", "43m37s", gen_yt_timeurl("43m37s", "r8UvWSX3KA8")),
+                    new topicdata("Setting up Distributed Tracing", "45m29s", gen_yt_timeurl("45m29s", "r8UvWSX3KA8")),
+                    new topicdata("Using other Analysis Tools - New Relic", "1h01m04s", gen_yt_timeurl("1h01m04s", "r8UvWSX3KA8")),
+                    new topicdata("Where to go next", "1h07m44s", gen_yt_timeurl("1h07m44s", "r8UvWSX3KA8")),
+
+            };
+            return data;
+
+
         } else {
             NotFound = new topicdata[]{
                     new topicdata("NotFound", "NotFound", "NotFound"),
@@ -492,22 +855,15 @@ public class topicviewdata {
             return NotFound;
         }
     }
-/*else if (Objects.equals(cardname,"HTML")) {
-        data = new topicdata[]{
-                new topicdata("", "", gen_yt_timeurl("", "")),
-                new topicdata("", "", gen_yt_timeurl("", "")),
-                new topicdata("", "", gen_yt_timeurl("", "")),
-                new topicdata("", "", gen_yt_timeurl("", "")),
-                new topicdata("", "", gen_yt_timeurl("", "")),
-                new topicdata("", "", gen_yt_timeurl("", "")),
-                new topicdata("", "", gen_yt_timeurl("", "")),
-                new topicdata("", "", gen_yt_timeurl("", "")),
-                new topicdata("", "", gen_yt_timeurl("", "")),
-                new topicdata("", "", gen_yt_timeurl("", "")),};
-        return data;
+/*else if (Objects.equals(cardname,"")) {
+            data = new topicdata[]{
+                    new topicdata("Intro", "00m00s", gen_yt_timeurl("00m00s", "XQzEo1qag4A")),
+
+            };
+            return data;
 
 
-    }*/
+        }*/
 
     @NonNull
     @Contract(pure = true)

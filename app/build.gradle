@@ -13,7 +13,7 @@ android {
         applicationId "in.softface.raghavan.freeskills"
         minSdk 23
         targetSdk 33
-        versionCode 2
+        versionCode 1
         versionName "Alpha_1.0.5"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
