@@ -17,23 +17,24 @@ import android.util.Log;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class FirebaseDataSave{
+public class FirebaseDataSave {
 
 
     private FirebaseFirestore db;
     private String userID;
-    SharedPreferences sharedPreferences ;
-    String savedEducational,savedCurrentLevel,savedLanguage,savedUsername,savedProfileImage;
-    boolean savedNotifications,savedUserPolicy;
+    SharedPreferences sharedPreferences;
+    String savedEducational, savedCurrentLevel, savedLanguage, savedUsername, savedProfileImage, token;
+    boolean savedNotifications, savedUserPolicy;
     String email;
 
-     public FirebaseDataSave(Context context) {
-         db = FirebaseFirestore.getInstance();
-         sharedPreferences = context.getSharedPreferences("UserData", Context.MODE_PRIVATE);
+    public FirebaseDataSave(Context context) {
+        db = FirebaseFirestore.getInstance();
+        sharedPreferences = context.getSharedPreferences("UserData", Context.MODE_PRIVATE);
 
     }
 
@@ -45,23 +46,42 @@ public class FirebaseDataSave{
         email = currentUser.getEmail();
 
         userID = currentUser.getUid();
-       savedEducational = educational;
-       savedCurrentLevel = currentLevel;
-       savedLanguage = language;
-       savedUsername = username;
-       savedProfileImage = ProfileImage;
-       savedNotifications = notifications;
-       savedUserPolicy = userPolicy;
-        Savedinlocal();
-        db.collection("UsersData").document(userID)
-                .set(hashmap())
-                .addOnSuccessListener(aVoid -> {
-                    Log.d("Firebase", "DocumentSnapshot written with ID: " + userID);
-                })
-                .addOnFailureListener(e -> {
-                    Log.w("Firebase", "Error adding document", e);
-                });
+        savedEducational = educational;
+        savedCurrentLevel = currentLevel;
+        savedLanguage = language;
+        savedUsername = username;
+        savedProfileImage = ProfileImage;
+        savedNotifications = notifications;
+        savedUserPolicy = userPolicy;
+
+        getFBM(token -> {
+            // Save the FBM token in the data map
+            Map<String, Object> data = new HashMap<>();
+            data.put("UserID", userID);
+            data.put("Username", savedUsername);
+            data.put("Educational", savedEducational);
+            data.put("CurrentLevel", savedCurrentLevel);
+            data.put("Language", savedLanguage);
+            data.put("ProfileImageURL", savedProfileImage);
+            data.put("Notifications", savedNotifications);
+            data.put("UserPolicy", savedUserPolicy);
+            data.put("Email", email);
+            data.put("FBM", token);
+
+            // Now, after obtaining the token, you can proceed to save the data in Firestore.
+            db.collection("UsersData").document(userID)
+                    .set(data)
+                    .addOnSuccessListener(aVoid -> {
+                        Log.d("Firebase", "DocumentSnapshot written with ID: " + userID);
+                    })
+                    .addOnFailureListener(e -> {
+                        Log.w("Firebase", "Error adding document", e);
+                    });
+
+            // Save the FBM token in shared preferences
+        });
     }
+
 
     private void Savedinlocal(){
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -75,19 +95,26 @@ public class FirebaseDataSave{
 
     }
 
-    private Map<String, Object> hashmap(){       // Add a new document with a generated id.
-        Map<String, Object> data = new HashMap<>();
-        data.put("UserID", userID);
-        data.put("Username", savedUsername);
-        data.put("Educational", savedEducational);
-        data.put("CurrentLevel", savedCurrentLevel);
-        data.put("Language", savedLanguage);
-        data.put("ProfileImageURL", savedProfileImage);
-        data.put("Notifications", savedNotifications);
-        data.put("UserPolicy", savedUserPolicy);
-        data.put("Email",email);
-        return data;
+
+    private void getFBM(FirebaseMessagingCallback callback) {
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        // Get the token from the task
+                        String token = task.getResult();
+                        Log.d("FMC", "FCM Token: " + token);
+                        callback.onTokenReceived(token);
+                    } else {
+                        Log.d("FMC", "Failed to get FCM token.");
+                        callback.onTokenReceived(null); // Handle failure
+                    }
+                });
     }
+
+    interface FirebaseMessagingCallback {
+        void onTokenReceived(String token);
+    }
+
 //get data from firebase
        /* public void getUserData() {
             FirebaseUser currentUser1 = FirebaseAuth.getInstance().getCurrentUser();
