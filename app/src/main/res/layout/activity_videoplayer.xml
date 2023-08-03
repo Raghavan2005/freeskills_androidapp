@@ -17,40 +17,7 @@
     android:orientation="vertical"
     tools:context=".videoplayer.VideoplayerActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:background="@color/black">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageButton
-                android:id="@+id/backButton"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="start"
-                android:backgroundTint="@color/black"
-                android:src="@drawable/back" />
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
-            <ImageView
-                android:id="@+id/imagetype"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:cropToPadding="true"
-                android:layout_gravity="end"
-                android:paddingStart="10dp"
-                android:backgroundTint="@color/black"
-                android:layout_marginEnd="5dp"
-                android:padding="5dp"
-                android:src="@drawable/youtube_social_icon_red" />
-        </LinearLayout>
-    </androidx.appcompat.widget.Toolbar>
 
     <FrameLayout
         android:id="@+id/fragment_container"

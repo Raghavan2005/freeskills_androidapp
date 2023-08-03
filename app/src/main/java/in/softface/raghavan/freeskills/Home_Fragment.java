@@ -92,6 +92,7 @@ public class Home_Fragment extends Fragment {
         RecommendedrecyclerView = mView.findViewById(R.id.RecommendedrecyclerView);
         RecommendedrecyclerView.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false));
         recommendedrecycleview recommendedImageAdapter = new recommendedrecycleview(getjobviewlist(), getActivity());
+        Log.d("listss", "onCreateView: " + getjobviewlist());
         RecommendedrecyclerView.setAdapter(recommendedImageAdapter);
         RecommendedrecyclerView.scrollToPosition(recommendedImageAdapter.getItemCount() + 1);
 //

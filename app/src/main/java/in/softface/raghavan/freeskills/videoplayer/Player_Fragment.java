@@ -27,6 +27,8 @@ import com.varunest.sparkbutton.SparkButton;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import in.softface.raghavan.freeskills.R;
 import in.softface.raghavan.freeskills.dateset.topicviewdata;
@@ -55,10 +57,9 @@ public class Player_Fragment extends Fragment {
         // Required empty public constructor
     }
 
-    public static Player_Fragment newInstance(String imageUrl, ArrayList<String> array) {
+    public static Player_Fragment newInstance(ArrayList<String> array) {
         Player_Fragment fragment = new Player_Fragment();
         Bundle args = new Bundle();
-        args.putString("imageUrl", imageUrl);
         args.putSerializable("array", array);
         fragment.setArguments(args);
         return fragment;
@@ -69,7 +70,6 @@ public class Player_Fragment extends Fragment {
         super.onCreate(savedInstanceState);
         sharedPreferences = getActivity().getSharedPreferences("UserData", Context.MODE_PRIVATE);
         if (getArguments() != null) {
-            imageurl = getArguments().getString("imageUrl");
             array = (ArrayList<String>) getArguments().getSerializable("array");
         }
 
@@ -79,6 +79,7 @@ public class Player_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_player_, container, false);
         imageView = view.findViewById(R.id.displayvideoimage);
+        imageurl = getYouTubeVideoID(array.get(1));
         Picasso.get()
                 .load(imageurl)
                 .placeholder(R.drawable.loading_background)
@@ -231,4 +232,22 @@ public class Player_Fragment extends Fragment {
         bottomSheetDialog.show();
     }
 
+    public String getYouTubeVideoID(String youtubeURL) {
+        String videoID = null;
+        if (youtubeURL != null && youtubeURL.length() > 0) {
+            String pattern = "(?<=watch\\?v=|/videos/|embed\\/|youtu.be\\/|\\/v\\/|watch\\?v%3D|watch\\?feature=player_embedded&v=|%2Fvideos%2F|embed%\u200C\u200B2F|youtu.be%\u200C\u200B2F|%2Fv%2F)[^#\\&\\?\\n]*";
+            Pattern compiledPattern = Pattern.compile(pattern);
+            Matcher matcher = compiledPattern.matcher(youtubeURL);
+            if (matcher.find()) {
+                videoID = matcher.group();
+            }
+        }
+        return gen_yt_imgurl(videoID);
+    }
+
+    private String gen_yt_imgurl(String videoid) {
+        String imageurl = "https://img.youtube.com/vi/";
+        String imageres = "/maxresdefault.jpg";
+        return imageurl + videoid + imageres;
+    }
 }

@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,10 +50,9 @@ public class recommendedrecycleview extends RecyclerView.Adapter<recommendedrecy
         int ir = position;
         String count = "" + (ir + 1);
         holder.count.setText(count);
-        Log.d("asafsdfdsfsdf", "onBindViewHolder: " + card);
+
         name = cdata.data(card);
         String url1 = getYouTubeVideoID(name.get(1));
-        Log.d("asafsdfdsfsdf", "onBindViewHolder: url " + url1);
         Picasso.get()
                 .load(url1)
                 .placeholder(R.drawable.loading_background)
@@ -64,11 +62,9 @@ public class recommendedrecycleview extends RecyclerView.Adapter<recommendedrecy
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                name = cdata.data(card);
                 // Handle the item click event
                 Intent intent = new Intent(context, VideoplayerActivity.class);
-                intent.putExtra("cardName", name.get(0));
-                intent.putExtra("imageUrl", url1);
-                intent.putExtra("type", name.get(6));
                 intent.putExtra("array", name);
                 ImageView sharedView = holder.imageView;
                 String transitionName = context.getString(R.string.blue_namemain);
@@ -80,11 +76,6 @@ public class recommendedrecycleview extends RecyclerView.Adapter<recommendedrecy
         });
     }
 
-    private String gen_yt_imgurl(String videoid) {
-        String imageurl = "https://img.youtube.com/vi/";
-        String imageres = "/maxresdefault.jpg";
-        return imageurl + videoid + imageres;
-    }
 
     @Override
     public int getItemCount() {
@@ -102,6 +93,12 @@ public class recommendedrecycleview extends RecyclerView.Adapter<recommendedrecy
             }
         }
         return gen_yt_imgurl(videoID);
+    }
+
+    private String gen_yt_imgurl(String videoid) {
+        String imageurl = "https://img.youtube.com/vi/";
+        String imageres = "/maxresdefault.jpg";
+        return imageurl + videoid + imageres;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
