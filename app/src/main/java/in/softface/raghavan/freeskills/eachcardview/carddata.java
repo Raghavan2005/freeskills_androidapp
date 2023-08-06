@@ -14,26 +14,15 @@ public class carddata {
 
     private String cardName;
 
-    private String cardImage;
 
-    private  String type;
-
-    public carddata(String CardName, String CardImage, String type) {
+    public carddata(String CardName) {
         this.cardName = CardName;
-        this.cardImage = CardImage;
-        this.type = type;
+
     }
 
     public String getcardName() {
         return cardName;
     }
 
-
-    public String getcardImage() {
-        return cardImage;
-    }
-    public String gettype() {
-        return type;
-    }
 
 }

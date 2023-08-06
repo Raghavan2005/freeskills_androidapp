@@ -24,6 +24,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.sanojpunchihewa.updatemanager.UpdateManager;
+import com.sanojpunchihewa.updatemanager.UpdateManagerConstant;
 import com.squareup.picasso.Picasso;
 
 import java.util.Objects;
@@ -37,8 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
     SharedPreferences sharedPreferences;
     ImageView proimage;
+    UpdateManager mUpdateManager;
     private in.softface.raghavan.freeskills.setting.mainsetting mainsetting;
     private Home_Fragment Home_Fragment;
+    private SearchFragment searchFragment;
 
     public static String capitalizeFirstLetter(String str) {
         if (str == null || str.isEmpty()) {
@@ -59,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE);
         String username = sharedPreferences.getString("Username", null);
         String jobname = sharedPreferences.getString("JobSelected", null);
+        mUpdateManager = UpdateManager.Builder(this).mode(UpdateManagerConstant.IMMEDIATE);
+        mUpdateManager.start();
 
         if (username == null) {
             Intent i = new Intent(this, CreateProfile.class);
@@ -74,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setCustomView(R.layout.action_bar);
         proimage = findViewById(R.id.action_bar_image);
         titleview = findViewById(R.id.title);
+// Set up updateLauncher
 
 
         //menu
@@ -93,6 +100,17 @@ public class MainActivity extends AppCompatActivity {
                     titleview.setText("FreeSkills");
                     return true;
 
+                case R.id.search:
+                    if (searchFragment == null) {
+                        searchFragment = new SearchFragment();
+                    }
+                    proimage.setVisibility(View.INVISIBLE);
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, searchFragment, "searchFragment")
+                            .commit();
+                    proimage.setVisibility(View.VISIBLE);
+                    titleview.setText("FreeSkills");
+                    return true;
                 case R.id.user:
                     if (mainsetting == null) {
                         mainsetting = new mainsetting();
@@ -133,7 +151,9 @@ public class MainActivity extends AppCompatActivity {
         );
 
 
+
     }
+
 
     private void recreateActivity() {
         Intent intent = getIntent();
@@ -154,6 +174,11 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
 
         finishAffinity();
+    }
+
+
+    private void checkForAppUpdate() {
+
     }
 
 }

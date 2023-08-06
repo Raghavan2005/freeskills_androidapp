@@ -13,15 +13,15 @@
         android:id="@+id/home"
         android:icon="@drawable/home"
         android:title="Home" />
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/search"
+        android:title="Search" />
 
     <item
         android:id="@+id/user"
         android:icon="@drawable/user"
         android:title="User" />
-    <!-- <item
-         android:id="@+id/search"
-         android:icon="@drawable/search"
-         android:title="Search" />-->
 
 
 </menu>

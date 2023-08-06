@@ -10,8 +10,7 @@
 
 package in.softface.raghavan.freeskills.videoplayer;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -22,7 +21,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.Random;
@@ -64,14 +62,16 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ViewHolder> 
         holder.topicTextView.setText(topic.gettopicname());
         holder.topicTextView.setSingleLine(false);
         String formattedTime = topic.gettopictime().replaceAll("[mh]", ":").replaceAll("[s]", "");
-        holder.topicplay.setText("Play Now At " + formattedTime);
+        holder.topicplay.setText(" On Video -  " + formattedTime);
         int randomColor = colors[random.nextInt(colors.length)];
-        //youtube_loading yl = new youtube_loading(context);
+        youtube_loading yl = new youtube_loading((Activity) context);
         // holder.sno.setTextColor(randomColor);
-        holder.topicplay.setOnClickListener(v ->
-                context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(topic.gettopictimeurl()))));
+        holder.topicplay.setOnClickListener(v -> {
+            yl.startLoadingdialog();
+            context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(topic.gettopictimeurl())));
+        });
 
-        holder.sno.setText(String.valueOf(position + 1) + " Class");
+        holder.sno.setText(String.valueOf(position + 1));
     }
 
     @Override
@@ -83,14 +83,14 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ViewHolder> 
 
         TextView topicTextView, sno;
         TextView topicplay;
-        CardView cv;
+
 
         public ViewHolder(View itemView) {
             super(itemView);
             topicTextView = itemView.findViewById(R.id.topicname);
             sno = itemView.findViewById(R.id.sno);
-            cv = itemView.findViewById(R.id.card);
             topicplay = itemView.findViewById(R.id.topicplay);
+
         }
     }
 }
