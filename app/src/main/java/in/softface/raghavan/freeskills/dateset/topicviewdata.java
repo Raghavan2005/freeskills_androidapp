@@ -852,7 +852,7 @@ public class topicviewdata {
             NotFound = new topicdata[]{
                     new topicdata("NotFound", "NotFound", "NotFound"),
             };
-            return NotFound;
+            return null;
         }
     }
 /*else if (Objects.equals(cardname,"")) {

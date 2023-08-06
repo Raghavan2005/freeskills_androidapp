@@ -168,6 +168,7 @@
                                 android:textAlignment="textStart"
                                 android:textColor="@color/purple_200"
                                 android:textSize="18sp"
+                                android:layout_marginBottom="6dp"
                                 android:visibility="visible" />
                         </LinearLayout>
                     </LinearLayout>
@@ -193,11 +194,24 @@
 
 
                 <!-- Add your RecyclerView below the TextView -->
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/topicRecyclerView"
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="1000dp" />
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
             </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/topicRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ray"
+                android:layout_width="match_parent"
+                android:layout_height="2500dp"
+                android:layout_margin="6dp"
+                android:layout_marginTop="20dp"
+                android:nestedScrollingEnabled="false" />
         </LinearLayout>
 
     </ScrollView>

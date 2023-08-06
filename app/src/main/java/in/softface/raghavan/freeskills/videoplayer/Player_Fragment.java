@@ -27,12 +27,18 @@ import com.varunest.sparkbutton.SparkButton;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import in.softface.raghavan.freeskills.R;
+import in.softface.raghavan.freeskills.dateset.jobromdata;
 import in.softface.raghavan.freeskills.dateset.topicviewdata;
 import in.softface.raghavan.freeskills.messageshower.youtube_loading;
+import in.softface.raghavan.freeskills.recycleviews.redvideos;
 
 public class Player_Fragment extends Fragment {
 
@@ -86,6 +92,8 @@ public class Player_Fragment extends Fragment {
                 .error(R.drawable.loadingerror)
                 .into(imageView);
         videotime = view.findViewById(R.id.videotime);
+        redvideos rw;
+        RecyclerView re = view.findViewById(R.id.ray);
         title = view.findViewById(R.id.coursetitile);
         dis_title = view.findViewById(R.id.dis_title);
         whitelist = view.findViewById(R.id.whitelist);
@@ -98,9 +106,19 @@ public class Player_Fragment extends Fragment {
         topicRecyclerView = view.findViewById(R.id.topicRecyclerView);
         topicRecyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         topicviewdata td = new topicviewdata(array.get(7));
-        topicAdapter = new TopicAdapter(td.topicdata(), getContext());
-        //  topicRecyclerView.setNestedScrollingEnabled(false);
-        topicRecyclerView.setAdapter(topicAdapter);
+        if (td.topicdata() == null) {
+            topicRecyclerView.setVisibility(view.GONE);
+            re.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+            rw = new redvideos(getActivity(), getContext(), getalllist());
+            re.setAdapter(rw);
+            re.scrollToPosition(rw.getItemCount() - 1);
+
+        } else {
+            re.setVisibility(view.GONE);
+            topicAdapter = new TopicAdapter(td.topicdata(), getContext());
+            topicRecyclerView.setAdapter(topicAdapter);
+        }
+
 
         videotime.setText(array.get(2));
         play = view.findViewById(R.id.play);
@@ -202,19 +220,7 @@ public class Player_Fragment extends Fragment {
         return list;
     }
 
-    private int calculateRecyclerViewHeight(RecyclerView recyclerView) {
-        RecyclerView.Adapter<?> adapter = recyclerView.getAdapter();
-        int itemCount = adapter.getItemCount();
-        int totalHeight = 0;
-        for (int i = 0; i < itemCount; i++) {
-            View itemView = recyclerView.getChildAt(i);
-            if (itemView != null) {
-                RecyclerView.LayoutParams layoutParams = (RecyclerView.LayoutParams) itemView.getLayoutParams();
-                totalHeight += itemView.getHeight() + layoutParams.topMargin + layoutParams.bottomMargin;
-            }
-        }
-        return totalHeight;
-    }
+
 
     private void showBottomSheetDialog() {
 
@@ -250,4 +256,25 @@ public class Player_Fragment extends Fragment {
         String imageres = "/maxresdefault.jpg";
         return imageurl + videoid + imageres;
     }
+
+    private ArrayList<String> getalllist() {
+        ArrayList l1, l2, l3;
+
+        l1 = new ArrayList<>();
+        l2 = new ArrayList<>();
+        jobromdata jd = new jobromdata();
+        l1 = jd.data("Frontend Developer");
+        l2 = jd.data("Backend Developer");
+        l3 = new ArrayList<>(l1);
+        l3.addAll(l2);
+        Set<String> uniqueSet = new HashSet<>(l3);
+        List<String> finalList = new ArrayList<>(uniqueSet);
+        Collections.shuffle(finalList);
+        int limit = Math.min(10, finalList.size());
+        List<String> limitedList = finalList.subList(0, limit);
+        Log.d("listing", "getalllist: " + limitedList);
+        return new ArrayList<>(limitedList);
+
+    }
+
 }
