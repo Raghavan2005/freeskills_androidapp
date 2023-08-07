@@ -1,8 +1,8 @@
 /*
  *   *************************************************************
- *   Created by Raghavan at softface.in on 6/8/23, 11:32 PM
+ *   Created by Raghavan at softface.in on 07/08/23, 10:57 pm
  *    funwithmetamil@gmail.com
- *     Last modified 6/8/23, 11:32 PM
+ *     Last modified 10/07/23, 9:53 pm
  *     Copyright (c) 2023.
  *     All rights reserved.
  *   *************************************************************
@@ -10,11 +10,12 @@
 
 package in.softface.raghavan.freeskills.onboarding;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import in.softface.raghavan.freeskills.R;
 import in.softface.raghavan.freeskills.login.Sign_up_Activity;

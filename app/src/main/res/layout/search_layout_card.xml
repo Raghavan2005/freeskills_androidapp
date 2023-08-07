@@ -11,9 +11,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="20dp"
     android:layout_marginStart="6dp"
     android:layout_marginEnd="4dp"
-
     android:orientation="vertical">
 
     <ImageView
@@ -41,9 +41,4 @@
         android:text="English"
         android:textColor="#979090" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="4dp"
-        android:background="@color/gray" />
 </LinearLayout>

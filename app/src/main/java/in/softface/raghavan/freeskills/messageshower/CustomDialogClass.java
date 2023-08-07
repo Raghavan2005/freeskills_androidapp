@@ -1,16 +1,14 @@
 /*
  *   *************************************************************
- *   Created by Raghavan at softface.in on 6/24/23, 6:09 PM
+ *   Created by Raghavan at softface.in on 07/08/23, 10:57 pm
  *    funwithmetamil@gmail.com
- *     Last modified 6/24/23, 6:09 PM
+ *     Last modified 30/07/23, 11:21 pm
  *     Copyright (c) 2023.
  *     All rights reserved.
  *   *************************************************************
  */
 
 package in.softface.raghavan.freeskills.messageshower;
-
-import static kotlin.jvm.internal.Reflection.function;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -22,8 +20,6 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
-
-import java.util.function.Function;
 
 import in.softface.raghavan.freeskills.MainActivity;
 import in.softface.raghavan.freeskills.R;

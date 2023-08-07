@@ -1,8 +1,8 @@
 /*
  *   *************************************************************
- *   Created by Raghavan at softface.in on 13/07/23, 8:12 pm
+ *   Created by Raghavan at softface.in on 07/08/23, 10:57 pm
  *    funwithmetamil@gmail.com
- *     Last modified 13/07/23, 8:12 pm
+ *     Last modified 30/07/23, 11:21 pm
  *     Copyright (c) 2023.
  *     All rights reserved.
  *   *************************************************************
@@ -39,7 +39,6 @@ import java.util.Objects;
 
 import in.softface.raghavan.freeskills.R;
 import in.softface.raghavan.freeskills.login.profile.PCreatedActivity;
-import in.softface.raghavan.freeskills.notifications.Notification_Screen;
 
 public class CreateProfile2 extends AppCompatActivity {
     final int delayMillis = 2000;

@@ -1,8 +1,8 @@
 /*
  *   *************************************************************
- *   Created by Raghavan at softface.in on 04/08/23, 1:22 pm
+ *   Created by Raghavan at softface.in on 07/08/23, 10:57 pm
  *    funwithmetamil@gmail.com
- *     Last modified 04/08/23, 1:22 pm
+ *     Last modified 06/08/23, 11:28 pm
  *     Copyright (c) 2023.
  *     All rights reserved.
  *   *************************************************************
@@ -61,7 +61,7 @@ public class redvideos extends RecyclerView.Adapter<redvideos.ViewHolder> {
     public void onBindViewHolder(@NonNull redvideos.ViewHolder holder, int position) {
         String data = whitelist.get(position);
         selectedlist = cds.data(data);
-        holder.text.setText(selectedlist.get(0));
+        holder.text.setText(convertToTitleCase(selectedlist.get(0)));
         holder.time.setText(selectedlist.get(2));
         Picasso.get()
                 .load(getYouTubeVideoID(selectedlist.get(1)))
@@ -86,6 +86,26 @@ public class redvideos extends RecyclerView.Adapter<redvideos.ViewHolder> {
         });
     }
 
+    public String convertToTitleCase(String input) {
+        StringBuilder result = new StringBuilder();
+        boolean capitalizeNext = true;
+
+        for (char c : input.toCharArray()) {
+            if (c == '_') {
+                result.append(' ');
+                capitalizeNext = true;
+            } else {
+                if (capitalizeNext) {
+                    result.append(Character.toUpperCase(c));
+                    capitalizeNext = false;
+                } else {
+                    result.append(Character.toLowerCase(c));
+                }
+            }
+        }
+
+        return result.toString();
+    }
     @Override
     public int getItemCount() {
         return whitelist.size();

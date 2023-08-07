@@ -1,8 +1,8 @@
 /*
  *   *************************************************************
- *   Created by Raghavan at softface.in on 6/24/23, 11:27 AM
+ *   Created by Raghavan at softface.in on 07/08/23, 10:57 pm
  *    funwithmetamil@gmail.com
- *     Last modified 6/24/23, 11:27 AM
+ *     Last modified 30/07/23, 11:21 pm
  *     Copyright (c) 2023.
  *     All rights reserved.
  *   *************************************************************
@@ -15,7 +15,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 

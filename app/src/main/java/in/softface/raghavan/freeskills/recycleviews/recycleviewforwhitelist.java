@@ -1,3 +1,13 @@
+/*
+ *   *************************************************************
+ *   Created by Raghavan at softface.in on 07/08/23, 10:57 pm
+ *    funwithmetamil@gmail.com
+ *     Last modified 03/08/23, 8:02 pm
+ *     Copyright (c) 2023.
+ *     All rights reserved.
+ *   *************************************************************
+ */
+
 package in.softface.raghavan.freeskills.recycleviews;
 
 import android.app.Activity;
@@ -51,7 +61,7 @@ public class recycleviewforwhitelist extends RecyclerView.Adapter<recycleviewfor
     public void onBindViewHolder(@NonNull recycleviewforwhitelist.ViewHolder holder, int position) {
         String data = whitelist.get(position);
         selectedlist = cds.data(data);
-        holder.text.setText(selectedlist.get(0));
+        holder.text.setText(convertToTitleCase(selectedlist.get(0)));
         holder.lang.setText(selectedlist.get(5));
         Picasso.get()
                 .load(getYouTubeVideoID(selectedlist.get(1)))
@@ -74,6 +84,27 @@ public class recycleviewforwhitelist extends RecyclerView.Adapter<recycleviewfor
                 context.startActivity(intent);
             }
         });
+    }
+
+    public String convertToTitleCase(String input) {
+        StringBuilder result = new StringBuilder();
+        boolean capitalizeNext = true;
+
+        for (char c : input.toCharArray()) {
+            if (c == '_') {
+                result.append(' ');
+                capitalizeNext = true;
+            } else {
+                if (capitalizeNext) {
+                    result.append(Character.toUpperCase(c));
+                    capitalizeNext = false;
+                } else {
+                    result.append(Character.toLowerCase(c));
+                }
+            }
+        }
+
+        return result.toString();
     }
 
     @Override

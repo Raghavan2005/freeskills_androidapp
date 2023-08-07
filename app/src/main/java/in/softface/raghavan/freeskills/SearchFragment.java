@@ -1,3 +1,13 @@
+/*
+ *   *************************************************************
+ *   Created by Raghavan at softface.in on 07/08/23, 10:57 pm
+ *    funwithmetamil@gmail.com
+ *     Last modified 06/08/23, 11:28 pm
+ *     Copyright (c) 2023.
+ *     All rights reserved.
+ *   *************************************************************
+ */
+
 package in.softface.raghavan.freeskills;
 
 import android.app.Activity;
@@ -7,12 +17,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.SearchView;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.mancj.materialsearchbar.MaterialSearchBar;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -24,7 +33,7 @@ import in.softface.raghavan.freeskills.dateset.jobromdata;
 import in.softface.raghavan.freeskills.recycleviews.searchapdater;
 
 public class SearchFragment extends Fragment {
-    MaterialSearchBar searchBar;
+    SearchView searchBar;
     searchapdater Searchapdater;
     RecyclerView ev;
     LinearLayout nofound;
@@ -32,47 +41,41 @@ public class SearchFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.activity_search, container, false);
-        searchBar = (MaterialSearchBar) rootView.findViewById(R.id.searchBar);
-        searchBar.clearSuggestions();
-        searchBar.setSpeechMode(true);
+        searchBar = rootView.findViewById(R.id.searchBar);
+
 
         ev = rootView.findViewById(R.id.ray);
         ev.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false));
         nofound = rootView.findViewById(R.id.nofound);
         nofound.setVisibility(View.VISIBLE);
         ev.setVisibility(View.GONE);
-        searchBar.setOnSearchActionListener(new MaterialSearchBar.OnSearchActionListener() {
+        searchBar.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public void onSearchStateChanged(boolean enabled) {
-                // Handle search state changes
-                Log.d("Search", "onSearchConfirmed: " + enabled);
-                ev.setVisibility(View.VISIBLE);
-                nofound.setVisibility(View.GONE);
+            public boolean onQueryTextSubmit(String query) {
+
+                return false;
             }
 
-
             @Override
-            public void onSearchConfirmed(CharSequence text) {
-                if (!text.toString().trim().isEmpty()) {
-                    List<String> matchingSuggestions = Onsearchdata(text);
+            public boolean onQueryTextChange(String newText) {
+                if (!newText.trim().isEmpty()) {
+                    List<String> matchingSuggestions = Onsearchdata(newText);
                     if (!matchingSuggestions.isEmpty()) {
                         Searchapdater = new searchapdater((Activity) getActivity(), getContext(), matchingSuggestions);
                         ev.setAdapter(Searchapdater);
+                        nofound.setVisibility(View.GONE);
+                        ev.setVisibility(View.VISIBLE);
                     } else {
-                        Log.d("Search", "onSearchConfirmed:no suggestions");
+                        Log.d("Search", "onQueryTextChange: no suggestions");
                         nofound.setVisibility(View.VISIBLE);
                         ev.setVisibility(View.GONE);
                     }
                 } else {
-                    Log.d("Search", "onSearchConfirmed:invalid input");
+                    Log.d("Search", "onQueryTextChange: invalid input");
+                    nofound.setVisibility(View.GONE);
+                    ev.setVisibility(View.GONE);
                 }
-
-            }
-
-            @Override
-            public void onButtonClicked(int buttonCode) {
-                // Handle search bar button clicks (e.g., speech button)
-
+                return true;
             }
         });
         return rootView;

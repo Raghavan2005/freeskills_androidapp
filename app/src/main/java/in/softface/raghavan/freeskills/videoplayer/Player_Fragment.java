@@ -1,3 +1,13 @@
+/*
+ *   *************************************************************
+ *   Created by Raghavan at softface.in on 07/08/23, 10:57 pm
+ *    funwithmetamil@gmail.com
+ *     Last modified 04/08/23, 2:21 pm
+ *     Copyright (c) 2023.
+ *     All rights reserved.
+ *   *************************************************************
+ */
+
 package in.softface.raghavan.freeskills.videoplayer;
 
 import android.content.Context;
@@ -54,7 +64,7 @@ public class Player_Fragment extends Fragment {
     private TopicAdapter topicAdapter;
 
     SparkButton whitelist;
-    private String cardname;
+
     private boolean whitestatus;
     private ArrayList<String> array, whitelistarray, lastseearray;
 
@@ -98,10 +108,9 @@ public class Player_Fragment extends Fragment {
         dis_title = view.findViewById(R.id.dis_title);
         whitelist = view.findViewById(R.id.whitelist);
         sourcename = view.findViewById(R.id.sourcename);
-        title.setText(array.get(0));
+        title.setText(convertToTitleCase(array.get(0)));
         lang = view.findViewById(R.id.lang);
         lang.setText(array.get(5));
-        cardname = array.get(0);
         sourcename.setText(array.get(3));
         topicRecyclerView = view.findViewById(R.id.topicRecyclerView);
         topicRecyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
@@ -159,8 +168,6 @@ public class Player_Fragment extends Fragment {
                 }
             }
         });
-
-
 
 
         play.setOnClickListener(new View.OnClickListener() {
@@ -221,7 +228,6 @@ public class Player_Fragment extends Fragment {
     }
 
 
-
     private void showBottomSheetDialog() {
 
         final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(getContext());
@@ -275,6 +281,27 @@ public class Player_Fragment extends Fragment {
         Log.d("listing", "getalllist: " + limitedList);
         return new ArrayList<>(limitedList);
 
+    }
+
+    public String convertToTitleCase(String input) {
+        StringBuilder result = new StringBuilder();
+        boolean capitalizeNext = true;
+
+        for (char c : input.toCharArray()) {
+            if (c == '_') {
+                result.append(' ');
+                capitalizeNext = true;
+            } else {
+                if (capitalizeNext) {
+                    result.append(Character.toUpperCase(c));
+                    capitalizeNext = false;
+                } else {
+                    result.append(Character.toLowerCase(c));
+                }
+            }
+        }
+
+        return result.toString();
     }
 
 }

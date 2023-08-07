@@ -1,8 +1,8 @@
 /*
  *   *************************************************************
- *   Created by Raghavan at softface.in on 6/8/23, 11:32 PM
+ *   Created by Raghavan at softface.in on 07/08/23, 10:57 pm
  *    funwithmetamil@gmail.com
- *     Last modified 6/8/23, 11:32 PM
+ *     Last modified 07/08/23, 10:51 pm
  *     Copyright (c) 2023.
  *     All rights reserved.
  *   *************************************************************
@@ -72,6 +72,7 @@ public class FirebaseDataSave {
             db.collection("UsersData").document(userID)
                     .set(data)
                     .addOnSuccessListener(aVoid -> {
+                        Savedinlocal();
                         Log.d("Firebase", "DocumentSnapshot written with ID: " + userID);
                     })
                     .addOnFailureListener(e -> {
@@ -89,6 +90,7 @@ public class FirebaseDataSave {
         // Save the values in shared preferences
         editor.putString("Userid",userID);
         editor.putString("email",email);
+
 
         // Apply the changes
         editor.apply();

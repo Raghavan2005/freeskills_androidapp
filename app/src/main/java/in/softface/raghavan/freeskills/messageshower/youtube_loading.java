@@ -1,8 +1,8 @@
 /*
  *   *************************************************************
- *   Created by Raghavan at softface.in on 30/07/23, 12:09 pm
+ *   Created by Raghavan at softface.in on 07/08/23, 10:57 pm
  *    funwithmetamil@gmail.com
- *     Last modified 30/07/23, 12:08 pm
+ *     Last modified 30/07/23, 11:21 pm
  *     Copyright (c) 2023.
  *     All rights reserved.
  *   *************************************************************
@@ -10,16 +10,10 @@
 
 package in.softface.raghavan.freeskills.messageshower;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Handler;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ProgressBar;
-
-import com.github.ybq.android.spinkit.sprite.Sprite;
-import com.github.ybq.android.spinkit.style.Circle;
 
 import in.softface.raghavan.freeskills.R;
 

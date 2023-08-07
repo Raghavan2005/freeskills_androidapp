@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?><!--
   ~   *************************************************************
-  ~   Created by Raghavan at softface.in on 6/23/23, 11:12 PM
+  ~   Created by Raghavan at softface.in on 07/08/23, 10:57 pm
   ~    funwithmetamil@gmail.com
-  ~     Last modified 6/23/23, 11:12 PM
+  ~     Last modified 30/07/23, 10:15 pm
   ~     Copyright (c) 2023.
   ~     All rights reserved.
   ~   *************************************************************
   -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="50dp"

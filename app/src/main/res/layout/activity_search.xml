@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?><!--
   ~   *************************************************************
-  ~   Created by Raghavan at softface.in on 17/07/23, 1:00 pm
+  ~   Created by Raghavan at softface.in on 07/08/23, 10:57 pm
   ~    funwithmetamil@gmail.com
-  ~     Last modified 17/07/23, 1:00 pm
+  ~     Last modified 06/08/23, 11:28 pm
   ~     Copyright (c) 2023.
   ~     All rights reserved.
   ~   *************************************************************
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -24,24 +23,13 @@
         android:backgroundTint="@color/white"
         android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginStart="3dp"
-            android:backgroundTint="@color/black"
-            android:src="@drawable/search" />
-
-        <com.mancj.materialsearchbar.MaterialSearchBar
+        <SearchView
+            style="@style/CustomSearchViewStyle"
             android:id="@+id/searchBar"
-            style="@style/MaterialSearchBarLight"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:mt_hint="Search Here"
-            app:mt_maxSuggestionsCount="0"
-            app:mt_placeholder="@string/action_search"
-            app:mt_speechMode="true"
-            app:mt_textColor="@color/white" />
+            android:layout_height="match_parent"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search" />
     </LinearLayout>
 
     <LinearLayout
@@ -62,15 +50,15 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/robotobold"
             android:gravity="center"
-            android:text="Search here"
+            android:text="No Data Found"
             android:textColor="@color/white"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/ray"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="6dp"
         android:layout_marginTop="20dp"
         android:visibility="gone" />
