@@ -12,6 +12,7 @@ package in.softface.raghavan.freeskills.notifications;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
@@ -28,31 +29,36 @@ public class PushNotificationService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
-        getFirebaseMessage(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody());
 
+        String title = remoteMessage.getNotification().getTitle();
+        String msg = remoteMessage.getNotification().getBody();
+
+        Log.d("PushNotificationService", "Received FCM message:");
+        Log.d("PushNotificationService", "Title: " + title);
+        Log.d("PushNotificationService", "Message: " + msg);
+
+        getFirebaseMessage(title, msg);
     }
 
     public void getFirebaseMessage(String title, String msg) {
+        Log.d("PushNotificationService", "Creating notification...");
 
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "myFirebaseChannel")
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "PushNotification")
                 .setSmallIcon(R.drawable.app_logo)
                 .setContentTitle(title)
                 .setContentText(msg)
                 .setAutoCancel(true);
 
-
         NotificationManagerCompat manager = NotificationManagerCompat.from(this);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
+            Log.d("PushNotificationService", "No notification permission.");
+            // TODO: Request permission if needed
             return;
         }
-        manager.notify(101, builder.build());
 
+
+        manager.notify(0, builder.build());
+        Log.d("PushNotificationService", "Displaying notification...");
     }
 }
+

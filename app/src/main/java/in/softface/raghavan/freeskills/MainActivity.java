@@ -15,6 +15,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,6 +25,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.sanojpunchihewa.updatemanager.UpdateManager;
 import com.sanojpunchihewa.updatemanager.UpdateManagerConstant;
 import com.squareup.picasso.Picasso;
@@ -60,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE);
         String username = sharedPreferences.getString("Username", null);
         String jobname = sharedPreferences.getString("JobSelected", null);
@@ -81,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         proimage = findViewById(R.id.action_bar_image);
         titleview = findViewById(R.id.title);
 // Set up updateLauncher
-
+        pfm();
 
         //menu
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
@@ -179,6 +182,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkForAppUpdate() {
 
+    }
+
+    private void pfm() {
+        FirebaseMessaging.getInstance().getToken()
+
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        // Get the token from the task
+                        String token = task.getResult();
+                        Log.d("FMC", "FCM Token: " + token);
+                    } else {
+                        Log.d("FMC", "Failed to get FCM token.");
+
+                    }
+                });
     }
 
 }

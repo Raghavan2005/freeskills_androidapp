@@ -28,11 +28,9 @@ public class CustomDialogClass extends Dialog implements
         android.view.View.OnClickListener {
 
     public Activity c;
-    public Dialog d;
     String text_dis, btn_text1, btn_text2;
     public Button yes, no;
     TextView textdis;
-    String changedusername, inputText;
     SharedPreferences sharedPreferences;
     String jobname;
     Intent i;
