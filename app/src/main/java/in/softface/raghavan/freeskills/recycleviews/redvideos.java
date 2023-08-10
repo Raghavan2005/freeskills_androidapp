@@ -62,7 +62,8 @@ public class redvideos extends RecyclerView.Adapter<redvideos.ViewHolder> {
         String data = whitelist.get(position);
         selectedlist = cds.data(data);
         holder.text.setText(convertToTitleCase(selectedlist.get(0)));
-        holder.time.setText(selectedlist.get(2));
+        holder.time.setText("•" + selectedlist.get(2));
+        holder.lang.setText(selectedlist.get(5));
         Picasso.get()
                 .load(getYouTubeVideoID(selectedlist.get(1)))
                 .placeholder(R.drawable.loading_background)
@@ -137,7 +138,7 @@ public class redvideos extends RecyclerView.Adapter<redvideos.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView text, time;
+        TextView text, time, lang;
         ImageView image;
 
 
@@ -146,6 +147,7 @@ public class redvideos extends RecyclerView.Adapter<redvideos.ViewHolder> {
             text = itemView.findViewById(R.id.text);
             time = itemView.findViewById(R.id.timevideo);
             image = itemView.findViewById(R.id.whitelistcard);
+            lang = itemView.findViewById(R.id.lang);
         }
     }
 

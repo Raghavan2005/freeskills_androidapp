@@ -63,7 +63,7 @@ public class Player_Fragment extends Fragment {
     private RecyclerView topicRecyclerView;
     private TopicAdapter topicAdapter;
 
-    SparkButton whitelist;
+    SparkButton whitelist, sharebtn;
 
     private boolean whitestatus;
     private ArrayList<String> array, whitelistarray, lastseearray;
@@ -108,6 +108,7 @@ public class Player_Fragment extends Fragment {
         dis_title = view.findViewById(R.id.dis_title);
         whitelist = view.findViewById(R.id.whitelist);
         sourcename = view.findViewById(R.id.sourcename);
+        sharebtn = view.findViewById(R.id.sharebtn);
         title.setText(convertToTitleCase(array.get(0)));
         lang = view.findViewById(R.id.lang);
         lang.setText(array.get(5));
@@ -151,7 +152,15 @@ public class Player_Fragment extends Fragment {
                 }
             }
         });
-
+        sharebtn.setOnClickListener(view1 -> {
+            Intent shareIntent = new Intent(android.content.Intent.ACTION_SEND);
+            shareIntent.setType("text/plain");
+            String a = "Learning on your terms! FreeSkills lets you study anytime, anywhere. Dive into engaging content and expand your horizons.";
+            String b = "Title : " + array.get(0);
+            String app_url = a + "\n" + b + "\n" + "https://freeskills.app/share/" + array.get(7);
+            shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, app_url);
+            startActivity(Intent.createChooser(shareIntent, "Share via"));
+        });
         whitelist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -56,14 +56,27 @@
                         android:backgroundTint="#95454545"
                         android:clickable="true"
                         android:src="@drawable/play" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.varunest.sparkbutton.SparkButton
+                            android:id="@+id/sharebtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="end"
+                            android:layout_margin="10dp"
+                            app:sparkbutton_activeImage="@drawable/share"
+                            app:sparkbutton_animationSpeed="1.5"
+                            app:sparkbutton_iconSize="40dp"
+                            app:sparkbutton_primaryColor="@color/white" />
+                    </FrameLayout>
                 </FrameLayout>
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
                     android:orientation="horizontal"
                     android:padding="5dp"
                     android:paddingTop="20dp">
@@ -182,24 +195,29 @@
                         </LinearLayout>
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                    <com.varunest.sparkbutton.SparkButton
-                        android:id="@+id/whitelist"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="10dp"
-                        app:sparkbutton_activeImage="@drawable/whitelist_added"
-                        app:sparkbutton_animationSpeed="1.5"
-                        app:sparkbutton_iconSize="40dp"
-                        app:sparkbutton_inActiveImage="@drawable/whitelist_add"
-                        app:sparkbutton_primaryColor="@color/white"
-                        app:sparkbutton_secondaryColor="@color/Oranger" />
+                        <com.varunest.sparkbutton.SparkButton
+                            android:id="@+id/whitelist"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|end"
+                            android:layout_marginEnd="10dp"
+                            android:paddingBottom="6dp"
+                            app:sparkbutton_activeImage="@drawable/whitelist_added"
+                            app:sparkbutton_animationSpeed="1.5"
+                            app:sparkbutton_iconSize="40dp"
+                            app:sparkbutton_inActiveImage="@drawable/whitelist_add"
+                            app:sparkbutton_primaryColor="@color/white"
+                            app:sparkbutton_secondaryColor="@color/Oranger" />
 
-                </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
 
 
                 <!-- Add your RecyclerView below the TextView -->
