@@ -796,15 +796,15 @@ public class topicviewdata {
 
         } else if (Objects.equals(cardname, "1143")) {
             data = new topicdata[]{
-                    new topicdata("Intro", "0m00s", gen_yt_timeurl("0m00s", "4HlNv1qpZFY")),
-                    new topicdata("HTTP 1.0/1.1", "1m50s", gen_yt_timeurl("1m50s", "4HlNv1qpZFY")),
-                    new topicdata("WebSockets", "3m40s", gen_yt_timeurl("3m40s", "4HlNv1qpZFY")),
-                    new topicdata("Server Sent Events", "5m00s", gen_yt_timeurl("5m00s", "4HlNv1qpZFY")),
-                    new topicdata("SSE Use Cases", "7m30s", gen_yt_timeurl("7m30s", "4HlNv1qpZFY")),
-                    new topicdata("SSE Code Example", "9m00s", gen_yt_timeurl("9m00s", "4HlNv1qpZFY")),
-                    new topicdata("SSE Pros & Cons", "18m00s", gen_yt_timeurl("18m00s", "4HlNv1qpZFY")),
-                    new topicdata("Do You Need SSE?", "25m20s", gen_yt_timeurl("25m20s", "4HlNv1qpZFY")),
-                    new topicdata("Summary", "28m30s", gen_yt_timeurl("28m30s", "4HlNv1qpZFY")),
+                    new topicdata("Teaser", "0m00s", gen_yt_timeurl("0m00s", "KkI3yHjKjqs")),
+                    new topicdata("Data Transfer methods", "0m20s", gen_yt_timeurl("0m20s", "KkI3yHjKjqs")),
+                    new topicdata("1. HTTP Connection", "1m21s", gen_yt_timeurl("1m21s", "KkI3yHjKjqs")),
+                    new topicdata("2. Web Sockets", "1m42s", gen_yt_timeurl("1m42s", "KkI3yHjKjqs")),
+                    new topicdata("3. Polling", "2m03s", gen_yt_timeurl("2m03s", "KkI3yHjKjqs")),
+                    new topicdata("Server sent events v/s Polling", "3m21s", gen_yt_timeurl("3m21s", "KkI3yHjKjqs")),
+                    new topicdata("Advantages of SSE over Web Sockets", "4m16s", gen_yt_timeurl("4m16s", "KkI3yHjKjqs")),
+                    new topicdata("Conclusion", "5m46s", gen_yt_timeurl("5m46s", "KkI3yHjKjqs")),
+                    new topicdata("Outro", "7m04s", gen_yt_timeurl("7m04s", "KkI3yHjKjqs")),
 
             };
             return data;
@@ -843,6 +843,126 @@ public class topicviewdata {
                     new topicdata("Setting up Distributed Tracing", "45m29s", gen_yt_timeurl("45m29s", "r8UvWSX3KA8")),
                     new topicdata("Using other Analysis Tools - New Relic", "1h01m04s", gen_yt_timeurl("1h01m04s", "r8UvWSX3KA8")),
                     new topicdata("Where to go next", "1h07m44s", gen_yt_timeurl("1h07m44s", "r8UvWSX3KA8")),
+
+            };
+            return data;
+
+
+        } else if (Objects.equals(cardname, "1147")) {
+            data = new topicdata[]{
+                    new topicdata("Introduction", "00m00s", gen_yt_timeurl("00m00s", "EExSSotojVI")),
+                    new topicdata("Install Intellij IDEA", "01m06s", gen_yt_timeurl("01m06s", "EExSSotojVI")),
+                    new topicdata("Hello World", "06m23s", gen_yt_timeurl("06m23s", "EExSSotojVI")),
+                    new topicdata("Variables", "25m41s", gen_yt_timeurl("25m41s", "EExSSotojVI")),
+                    new topicdata("Window", "41m18s", gen_yt_timeurl("41m18s", "EExSSotojVI")),
+                    new topicdata("Integer Type", "42m24s", gen_yt_timeurl("42m24s", "EExSSotojVI")),
+                    new topicdata("DataType: Byte, Short and Long", "53m08s", gen_yt_timeurl("53m08s", "EExSSotojVI")),
+                    new topicdata("Float and Double", "1h04m42s", gen_yt_timeurl("1h04m42s", "EExSSotojVI")),
+                    new topicdata("Char and Boolean", "1h16m16s", gen_yt_timeurl("1h16m16s", "EExSSotojVI")),
+                    new topicdata("Operators", "1h25m55s", gen_yt_timeurl("1h25m55s", "EExSSotojVI")),
+                    new topicdata("Comments", "1h49m47s", gen_yt_timeurl("1h49m47s", "EExSSotojVI")),
+                    new topicdata("IfThenElse: Statement-Expression", "1h51m43s", gen_yt_timeurl("1h51m43s", "EExSSotojVI")),
+                    new topicdata("Less Than or Equal To Operator", "2h02m25s", gen_yt_timeurl("2h02m25s", "EExSSotojVI")),
+                    new topicdata("logical AND operator", "2h10m33s", gen_yt_timeurl("2h10m33s", "EExSSotojVI")),
+                    new topicdata("logical OR operator", "2h14m52s", gen_yt_timeurl("2h14m52s", "EExSSotojVI")),
+                    new topicdata("When Statement-Expression", "2h29m48s", gen_yt_timeurl("2h29m48s", "EExSSotojVI")),
+                    new topicdata("Null", "2h44m16s", gen_yt_timeurl("2h44m16s", "EExSSotojVI")),
+                    new topicdata("Functions", "2h59m59s", gen_yt_timeurl("2h59m59s", "EExSSotojVI")),
+                    new topicdata("Function: return and expressions", "3h15m46s", gen_yt_timeurl("3h15m46s", "EExSSotojVI")),
+                    new topicdata("Functions Overloading", "3h27m43s", gen_yt_timeurl("3h27m43s", "EExSSotojVI")),
+                    new topicdata("Functions Default Values", "3h33m57s", gen_yt_timeurl("3h33m57s", "EExSSotojVI")),
+                    new topicdata("Functions vararg keyword", "3h44m09s", gen_yt_timeurl("3h44m09s", "EExSSotojVI")),
+                    new topicdata("loops: FOR loop", "3h55m17s", gen_yt_timeurl("3h55m17s", "EExSSotojVI")),
+                    new topicdata("loops: WHILE and DO WHILE loop, Labels and continue and break", "4h05m18s", gen_yt_timeurl("4h05m18s", "EExSSotojVI")),
+                    new topicdata("loops Challenge", "4h28m26s", gen_yt_timeurl("4h28m26s", "EExSSotojVI")),
+                    new topicdata("Arrays", "4h43m14s", gen_yt_timeurl("4h43m14s", "EExSSotojVI")),
+                    new topicdata("Arrays Challenge", "4h59m56s", gen_yt_timeurl("4h59m56s", "EExSSotojVI")),
+                    new topicdata("OOP:Classes", "5h18m41s", gen_yt_timeurl("5h18m41s", "EExSSotojVI")),
+                    new topicdata("OOP:Primary Constructor", "5h37m01s", gen_yt_timeurl("5h37m01s", "EExSSotojVI")),
+                    new topicdata("OOP:Initializer Blocks", "5h51m25s", gen_yt_timeurl("5h51m25s", "EExSSotojVI")),
+                    new topicdata("OOP:Secondary Constructors", "6h07m03s", gen_yt_timeurl("6h07m03s", "EExSSotojVI")),
+                    new topicdata("OOP:Constructor Parameters Default Values", "6h23m56s", gen_yt_timeurl("6h23m56s", "EExSSotojVI")),
+                    new topicdata("OOP:Getters and Setters", "6h31m08s", gen_yt_timeurl("6h31m08s", "EExSSotojVI")),
+                    new topicdata("OOP:lateinit keyword", "6h48m00s", gen_yt_timeurl("6h48m00s", "EExSSotojVI")),
+                    new topicdata("OOP:Companion Object", "6h57m52s", gen_yt_timeurl("6h57m52s", "EExSSotojVI")),
+                    new topicdata("OOP:Singleton", "7h07m47s", gen_yt_timeurl("7h07m47s", "EExSSotojVI")),
+                    new topicdata("OOP:Lazy Initialization", "7h19m08s", gen_yt_timeurl("7h19m08s", "EExSSotojVI")),
+                    new topicdata("OOP:Enum Classes", "7h25m02s", gen_yt_timeurl("7h25m02s", "EExSSotojVI")),
+                    new topicdata("OOP:Inner Classes", "7h39m27s", gen_yt_timeurl("7h39m27s", "EExSSotojVI")),
+                    new topicdata("OOP:Challenge", "7h44m19s", gen_yt_timeurl("7h44m19s", "EExSSotojVI")),
+                    new topicdata("OOP:Inheritance 1", "8h00m16s", gen_yt_timeurl("8h00m16s", "EExSSotojVI")),
+                    new topicdata("OOP:Inheritance 2", "8h20m37s", gen_yt_timeurl("8h20m37s", "EExSSotojVI")),
+                    new topicdata("OOP:Sealed Class", "8h35m31s", gen_yt_timeurl("8h35m31s", "EExSSotojVI")),
+                    new topicdata("OOP:Abstract Classes", "8h48m57s", gen_yt_timeurl("8h48m57s", "EExSSotojVI")),
+                    new topicdata("OOP:Data Class", "8h56m29s", gen_yt_timeurl("8h56m29s", "EExSSotojVI")),
+                    new topicdata("OOP:Interfaces 1", "9h23m53s", gen_yt_timeurl("9h23m53s", "EExSSotojVI")),
+                    new topicdata("OOP:Interfaces 2", "9h35m37s", gen_yt_timeurl("9h35m37s", "EExSSotojVI")),
+                    new topicdata("OOP:Object Expression", "9h49m03s", gen_yt_timeurl("9h49m03s", "EExSSotojVI")),
+                    new topicdata("OOP:Delegation", "9h58m09s", gen_yt_timeurl("9h58m09s", "EExSSotojVI")),
+                    new topicdata("List, Set, Map", "10h05m20s", gen_yt_timeurl("10h05m20s", "EExSSotojVI")),
+                    new topicdata("Mapping", "10h22m26s", gen_yt_timeurl("10h22m26s", "EExSSotojVI")),
+                    new topicdata("Zipping and Association", "10h34m17s", gen_yt_timeurl("10h34m17s", "EExSSotojVI")),
+                    new topicdata("Flatten", "10h49m34s", gen_yt_timeurl("10h49m34s", "EExSSotojVI")),
+                    new topicdata("String Representation", "10h59m17s", gen_yt_timeurl("10h59m17s", "EExSSotojVI")),
+                    new topicdata("Filtering", "11h10m19s", gen_yt_timeurl("11h10m19s", "EExSSotojVI")),
+                    new topicdata("Test Predicates", "11h28m53s", gen_yt_timeurl("11h28m53s", "EExSSotojVI")),
+                    new topicdata("Plus and Minus Operators", "11h31m30s", gen_yt_timeurl("11h31m30s", "EExSSotojVI")),
+                    new topicdata("Grouping", "11h34m45s", gen_yt_timeurl("11h34m45s", "EExSSotojVI")),
+                    new topicdata("Retrieve Collection parts", "11h39m41s", gen_yt_timeurl("11h39m41s", "EExSSotojVI")),
+                    new topicdata("Retrieve Single Elements", "11h59m47s", gen_yt_timeurl("11h59m47s", "EExSSotojVI")),
+                    new topicdata("Aggregate Operations", "12h04m28s", gen_yt_timeurl("12h04m28s", "EExSSotojVI")),
+                    new topicdata("Comparable and Comparator", "12h09m23s", gen_yt_timeurl("12h09m23s", "EExSSotojVI")),
+                    new topicdata("Binary Search", "12h36m43s", gen_yt_timeurl("12h36m43s", "EExSSotojVI")),
+                    new topicdata("Generics: Type Parameters and Casting", "12h51m06s", gen_yt_timeurl("12h51m06s", "EExSSotojVI")),
+                    new topicdata("Generics: Upper Bounds", "13h07m28s", gen_yt_timeurl("13h07m28s", "EExSSotojVI")),
+
+
+            };
+            return data;
+
+
+        } else if (Objects.equals(cardname, "1148")) {
+            data = new topicdata[]{
+                    new topicdata("Introduction & Overview: Topics, Source", "00m16s", gen_yt_timeurl("00m16s", "bo_LP6QOUio")),
+                    new topicdata("App Design Approach: 3rd Party Library Minimalism & MV-Whatever Architecture", "02m39s", gen_yt_timeurl("02m39s", "bo_LP6QOUio")),
+                    new topicdata("Domain package: Repository Pattern, Enum, Data Class, Sealed Class, Hash Code, Interfaces", "04m50s", gen_yt_timeurl("04m50s", "bo_LP6QOUio")),
+                    new topicdata("Common package: Extension Functions & Variables, Open-Closed Principle (OCP), Abstract Class, Singleton", "34m39s", gen_yt_timeurl("34m39s", "bo_LP6QOUio")),
+                    new topicdata("Persistence (Storage) package: Clean Architecture Back End w/ Java File System Storage, Jetpack Proto Datastore", "50m20s", gen_yt_timeurl("50m20s", "bo_LP6QOUio")),
+                    new topicdata("UI package: Jetpack Compose UI Basics, Styles, Typography,  Light & Dark Themes", "1h28m07s", gen_yt_timeurl("1h28m07s", "bo_LP6QOUio")),
+                    new topicdata("UI Components package: Modifiers, Reusable Toolbar & Loading Screens", "1h39m56s", gen_yt_timeurl("1h39m56s", "bo_LP6QOUio")),
+                    new topicdata("UI Active Game Feature package: Presentation Logic & ViewModel w/ Coroutines, Kotlin Function Types", "1h52m08s", gen_yt_timeurl("1h52m08s", "bo_LP6QOUio")),
+                    new topicdata("UI Active Game Feature package: Sudoku Game with Jetpack Compose UI & Activity Container", "2h30m55s", gen_yt_timeurl("2h30m55s", "bo_LP6QOUio")),
+                    new topicdata("Computation Logic package:  Overview, design, and testing of Graph DS & Algos for n-sized square Sudokus", "3h15m58s", gen_yt_timeurl("3h15m58s", "bo_LP6QOUio")),
+
+            };
+            return data;
+
+
+        } else if (Objects.equals(cardname, "1149")) {
+            data = new topicdata[]{
+                    new topicdata("What is Gradle?", "00m00s", gen_yt_timeurl("00m00s", "o0M4f5djJTQ")),
+                    new topicdata("Gradle Groovy vs. Gradle Kotlin DSL", "03m18s", gen_yt_timeurl("03m18s", "o0M4f5djJTQ")),
+                    new topicdata("The Gradle wrapper", "05m07s", gen_yt_timeurl("05m07s", "o0M4f5djJTQ")),
+                    new topicdata("Build types", "08m38s", gen_yt_timeurl("08m38s", "o0M4f5djJTQ")),
+                    new topicdata("Product flavors", "12m42s", gen_yt_timeurl("12m42s", "o0M4f5djJTQ")),
+                    new topicdata("Source sets", "19m22s", gen_yt_timeurl("19m22s", "o0M4f5djJTQ")),
+
+
+            };
+            return data;
+
+
+        } else if (Objects.equals(cardname, "1155")) {
+            data = new topicdata[]{
+                    new topicdata("Intro", "00m00s", gen_yt_timeurl("00m00s", "5GHT4QtotE4")),
+                    new topicdata("Create Developer account", "01m02s", gen_yt_timeurl("01m02s", "5GHT4QtotE4")),
+                    new topicdata("Create an App", "02m02s", gen_yt_timeurl("02m02s", "5GHT4QtotE4")),
+                    new topicdata("The Dashboard", "02m32s", gen_yt_timeurl("02m32s", "5GHT4QtotE4")),
+                    new topicdata("Setup App Content", "04m50s", gen_yt_timeurl("04m50s", "5GHT4QtotE4")),
+                    new topicdata("Prepare Store Listing", "08m08s", gen_yt_timeurl("08m08s", "5GHT4QtotE4")),
+                    new topicdata("Create App Release", "11m16s", gen_yt_timeurl("11m16s", "5GHT4QtotE4")),
+                    new topicdata("Best practices", "12m42s", gen_yt_timeurl("12m42s", "5GHT4QtotE4")),
+
 
             };
             return data;

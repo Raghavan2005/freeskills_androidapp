@@ -24,8 +24,8 @@
         android:orientation="horizontal">
 
         <SearchView
-            style="@style/CustomSearchViewStyle"
             android:id="@+id/searchBar"
+            style="@style/CustomSearchViewStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:iconifiedByDefault="false"

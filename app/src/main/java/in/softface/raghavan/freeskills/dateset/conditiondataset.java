@@ -428,10 +428,10 @@ public class conditiondataset {
             return arrayList;
         } else if (Objects.equals(name, "1143")) {
             arrayList.add(0, "Server_Sent_Events");
-            arrayList.add(1, gen_yt_videourl("4HlNv1qpZFY"));
-            arrayList.add(2, "0:29:48");
-            arrayList.add(3, gen_channel_name("hnasr"));
-            arrayList.add(4, gen_channel_url("hnasr"));
+            arrayList.add(1, gen_yt_videourl("KkI3yHjKjqs"));
+            arrayList.add(2, "7:25");
+            arrayList.add(3, gen_channel_name("codedamn"));
+            arrayList.add(4, gen_channel_url("codedamn"));
             arrayList.add(5, english);
             arrayList.add(6, cc);
             arrayList.add(7, "1143");
@@ -466,6 +466,86 @@ public class conditiondataset {
             arrayList.add(6, cc);
             arrayList.add(7, "1146");
             return arrayList;
+        } else if (Objects.equals(name, "1147")) {
+            arrayList.add(0, "Kotlin");
+            arrayList.add(1, gen_yt_videourl("EExSSotojVI"));
+            arrayList.add(2, "13:18:15");
+            arrayList.add(3, gen_channel_name("freecodecamp"));
+            arrayList.add(4, gen_channel_url("freecodecamp"));
+            arrayList.add(5, english);
+            arrayList.add(6, p);
+            arrayList.add(7, "1147");
+            return arrayList;
+        } else if (Objects.equals(name, "1148")) {
+            arrayList.add(0, "Data Structures and Algorithms");
+            arrayList.add(1, gen_yt_videourl("bo_LP6QOUio"));
+            arrayList.add(2, "3:29:44");
+            arrayList.add(3, gen_channel_name("freecodecamp"));
+            arrayList.add(4, gen_channel_url("freecodecamp"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1148");
+            return arrayList;
+        } else if (Objects.equals(name, "1149")) {
+            arrayList.add(0, "Gradle");
+            arrayList.add(1, gen_yt_videourl("o0M4f5djJTQ"));
+            arrayList.add(2, "24:13");
+            arrayList.add(3, gen_channel_name("PhilippLackner"));
+            arrayList.add(4, gen_channel_url("PhilippLackner"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1149");
+            return arrayList;
+        } else if (Objects.equals(name, "1151")) {
+            arrayList.add(0, "Activity Lifecycle");
+            arrayList.add(1, gen_yt_videourl("UJN3AL4tiqw"));
+            arrayList.add(2, "08:30");
+            arrayList.add(3, gen_channel_name("codinginflow"));
+            arrayList.add(4, gen_channel_url("codinginflow"));
+            arrayList.add(5, english);
+            arrayList.add(6, "");
+            arrayList.add(7, "1151");
+            return arrayList;
+        } else if (Objects.equals(name, "1152")) {
+            arrayList.add(0, "fragments in Android Studio");
+            arrayList.add(1, gen_yt_videourl("PiExmkR3aps"));
+            arrayList.add(2, "24:27");
+            arrayList.add(3, gen_channel_name("ZeeshanAcademy"));
+            arrayList.add(4, gen_channel_url("ZeeshanAcademy"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1152");
+            return arrayList;
+        } else if (Objects.equals(name, "1153")) {
+            arrayList.add(0, "Jetpack Compose");
+            arrayList.add(1, gen_yt_videourl("6_wK_Ud8--0"));
+            arrayList.add(2, "48:27");
+            arrayList.add(3, gen_channel_name("PhilippLackner"));
+            arrayList.add(4, gen_channel_url("PhilippLackner"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1153");
+            return arrayList;
+        } else if (Objects.equals(name, "1154")) {
+            arrayList.add(0, "Resources & Qualifiers");
+            arrayList.add(1, gen_yt_videourl("vj1ZdUfPlJM"));
+            arrayList.add(2, "16:14");
+            arrayList.add(3, gen_channel_name("PhilippLackner"));
+            arrayList.add(4, gen_channel_url("PhilippLackner"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1154");
+            return arrayList;
+        } else if (Objects.equals(name, "1155")) {
+            arrayList.add(0, "Publish an Android App");
+            arrayList.add(1, gen_yt_videourl("5GHT4QtotE4"));
+            arrayList.add(2, "14:39");
+            arrayList.add(3, gen_channel_name("MJSDCoding"));
+            arrayList.add(4, gen_channel_url("MJSDCoding"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1155");
+            return arrayList;
         } else {
             arrayList.add(0, "Not Found");
             arrayList.add(1, "Not Found");
@@ -491,7 +571,7 @@ public class conditiondataset {
             arrayList.add(5, english);
             arrayList.add(6, "");
             arrayList.add(7, "ty");
-            arrayList.add(8, "ty");
+
             return arrayList;}*/
 
     @NonNull

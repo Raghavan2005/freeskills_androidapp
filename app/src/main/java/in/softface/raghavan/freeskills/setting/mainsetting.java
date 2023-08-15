@@ -43,7 +43,7 @@ public class mainsetting extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    LinearLayout whitelist, clearcontinue;
+    LinearLayout whitelist, clearcontinue, aboutus;
     TextView username, appv;
     ImageView profileimage;
     // TODO: Rename and change types of parameters
@@ -94,6 +94,8 @@ public class mainsetting extends Fragment {
         appv = mview.findViewById(R.id.appversion);
         whitelist = mview.findViewById(R.id.whitelistlay);
         clearcontinue = mview.findViewById(R.id.clearcontinue);
+        aboutus = mview.findViewById(R.id.aboutus);
+
         whitelist.setOnClickListener(view -> {
             Intent i = new Intent(getActivity(), Whitelist_fragment.class);
             startActivity(i);

@@ -12,6 +12,7 @@ package in.softface.raghavan.freeskills;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -46,7 +47,7 @@ import in.softface.raghavan.freeskills.recycleviews.recommendedrecycleview;
 
 public class Home_Fragment extends Fragment {
     ImageSlider mainslider;
-    TextView usernameview, job;
+    TextView usernameview, job, protext, framtext, cctext;
     ImageView proimage;
     SharedPreferences sharedPreferences;
     String jobnames;
@@ -76,6 +77,9 @@ public class Home_Fragment extends Fragment {
         frameworksrecyclerView = mView.findViewById(R.id.frameworksrecyclerView);
         CrashCourserecyclerView = mView.findViewById(R.id.CrashCourserecyclerView);
         ContinuerecyclerViewlay = mView.findViewById(R.id.ContinuerecyclerViewlay);
+        protext = mView.findViewById(R.id.protext);
+        framtext = mView.findViewById(R.id.framtext);
+        cctext = mView.findViewById(R.id.cctext);
         lastseearray = new ArrayList<>();
         lastseearray = getlastseelistdata();
         Log.d("hello", "onCreateView: " + lastseearray);
@@ -137,7 +141,25 @@ public class Home_Fragment extends Fragment {
         CardlistDisplayonRecycleview CrashCourseImageAdapter = new CardlistDisplayonRecycleview(cvd.CrashCourse, getActivity());
         CrashCourserecyclerView.setAdapter(CrashCourseImageAdapter);
         CrashCourserecyclerView.scrollToPosition(CrashCourseImageAdapter.getItemCount() + 1);
+//switch for grid view
 
+        protext.setOnClickListener(view -> {
+
+            Intent i = new Intent(getActivity(), MoreDisplay.class);
+            i.putExtra("key", "programming");
+            startActivity(i);
+        });
+        framtext.setOnClickListener(view -> {
+
+            Intent i = new Intent(getActivity(), MoreDisplay.class);
+            i.putExtra("key", "frameworks");
+            startActivity(i);
+        });
+        cctext.setOnClickListener(view -> {
+            Intent i = new Intent(getActivity(), MoreDisplay.class);
+            i.putExtra("key", "CrashCourse");
+            startActivity(i);
+        });
         return mView;
     }
 

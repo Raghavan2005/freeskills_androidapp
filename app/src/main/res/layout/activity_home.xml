@@ -144,15 +144,17 @@
                 android:orientation="vertical"
                 android:paddingTop="20dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/robotobold"
-                    android:text="Programming Languages"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginBottom="2dp"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
+    <TextView
+        android:id="@+id/protext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="2dp"
+        android:drawableEnd="@drawable/right"
+        android:fontFamily="@font/robotobold"
+        android:text="Programming Languages"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/programmingrecyclerView"
@@ -172,7 +174,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotobold"
+                    android:id="@+id/framtext"
+                    android:drawableEnd="@drawable/right"
                     android:text="Frameworks"
+
                     android:layout_marginStart="10dp"
                     android:textColor="@color/white"
                     android:layout_marginBottom="2dp"
@@ -197,7 +202,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotobold"
                     android:text="CrashCourse"
+                    android:id="@+id/cctext"
                     android:layout_marginStart="10dp"
+                    android:drawableEnd="@drawable/right"
                     android:textColor="@color/white"
                     android:layout_marginBottom="2dp"
                     android:textSize="20sp" />

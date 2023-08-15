@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.transition.Slide;
 import android.util.Log;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -99,6 +100,7 @@ public class CreateProfile extends AppCompatActivity {
                 keyboard.hideSoftInputFromWindow(editText.getWindowToken(), 0);
                 // Clear focus and hide the cursor
                 editText.clearFocus();
+                closeKeyBoard();
                 if (Username.isEmpty()) {
                     Summit.setEnabled(true);
                 }
@@ -120,7 +122,9 @@ public class CreateProfile extends AppCompatActivity {
 
         });
 
+
     }
+
 
     public void onButtonClick() {
 
@@ -154,6 +158,14 @@ public class CreateProfile extends AppCompatActivity {
         editor.apply();
     }
 
+    private void closeKeyBoard() {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager)
+                    getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+    }
 }
 
 
