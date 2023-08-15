@@ -39,6 +39,7 @@ import java.util.Objects;
 
 import in.softface.raghavan.freeskills.R;
 import in.softface.raghavan.freeskills.login.profile.PCreatedActivity;
+import in.softface.raghavan.freeskills.notifications.Notification_Screen;
 
 public class CreateProfile2 extends AppCompatActivity {
     final int delayMillis = 2000;
@@ -57,7 +58,7 @@ public class CreateProfile2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_profile2);
-        // i = new Intent(this, Notification_Screen.class);
+        i = new Intent(this, Notification_Screen.class);
         i1 = new Intent(this, PCreatedActivity.class);
         Spinner spinner = findViewById(R.id.spinner);
         sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE);
@@ -127,7 +128,7 @@ public class CreateProfile2 extends AppCompatActivity {
                     startActivity(i1);
                     finish();
                 } else {
-                    startActivity(i1);
+                    startActivity(i);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     finish();
                 }

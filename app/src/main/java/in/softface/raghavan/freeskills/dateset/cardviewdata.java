@@ -33,6 +33,7 @@ public class cardviewdata {
             new carddata("1103"),
             new carddata("1102"),
             new carddata("1120"),
+            new carddata("1147"),
     };
     public carddata[] frameworks = new carddata[]{
             new carddata("1110"),
@@ -77,6 +78,13 @@ public class cardviewdata {
             new carddata("1144"),
             new carddata("1145"),
             new carddata("1146"),
+            new carddata("1148"),
+            new carddata("1149"),
+            new carddata("1151"),
+            new carddata("1152"),
+            new carddata("1153"),
+            new carddata("1154"),
+            new carddata("1155"),
 
 
     };

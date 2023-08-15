@@ -73,6 +73,19 @@ public class jobromdata {
             arraylist.add("1146");
 
             return arraylist;
+        } else if (Objects.equals(job, "Android Developer")) {
+            arraylist.add("1147");
+            arraylist.add("1148");
+            arraylist.add("1149");
+            arraylist.add("1105");
+            arraylist.add("1151");
+            arraylist.add("1152");
+            arraylist.add("1153");
+            arraylist.add("1154");
+            arraylist.add("1155");
+
+
+            return arraylist;
         } else {
             arraylist.add("Not Found");
             return arraylist;

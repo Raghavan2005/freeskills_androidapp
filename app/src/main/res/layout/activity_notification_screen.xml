@@ -13,39 +13,90 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     tools:context=".notifications.Notification_Screen">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello"
-        android:textColor="@color/white"
-        android:textSize="30dp" />
-
-    <TimePicker
-        android:id="@+id/timePicker1"
-        style="@style/TimePickerTheme"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="vertical"
+        android:padding="10dp">
 
-        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lsblack"
+            android:text="Get On You Track"
+            android:textColor="@color/Oranger"
+            android:textSize="40sp" />
 
-        <Button
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lsblack"
+            android:text="get timely reminders sent to them to keep their learning progress on track."
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/notification_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:gravity="start"
-            android:text="asdasd" />
+            android:drawableStart="@drawable/time"
+            android:fontFamily="@font/lsblack"
+            android:text="Reminder Time"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
-        <Button
+        <LinearLayout
+            android:id="@+id/picktime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="end"
-            android:text="asdasd" />
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lsblack"
+                android:text="Time: "
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lsblack"
+                android:text="10:00"
+                android:textColor="@color/purple_500"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/picktimebtn"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@color/Oranger"
+            android:fontFamily="@font/lsblack"
+            android:padding="2dp"
+            android:text="Done"
+            android:layout_height="wrap_content"
+            android:textSize="28sp" />
     </LinearLayout>
 </LinearLayout>
