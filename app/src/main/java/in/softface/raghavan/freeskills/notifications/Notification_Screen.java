@@ -17,14 +17,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Calendar;
+import java.util.Objects;
 
 import in.softface.raghavan.freeskills.MainActivity;
 import in.softface.raghavan.freeskills.R;
@@ -47,7 +48,7 @@ public class Notification_Screen extends AppCompatActivity {
         ly = findViewById(R.id.picktime);
         time = findViewById(R.id.time);
         btn = findViewById(R.id.picktimebtn);
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
         ly.setOnClickListener(view -> {
             showTimePickerDialog();
         });
@@ -67,17 +68,14 @@ public class Notification_Screen extends AppCompatActivity {
 
         TimePickerDialog timePickerDialog = new TimePickerDialog(
                 this,// Apply custom theme here
-                new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        // Handle the selected time
-                        selectedTime = hourOfDay + ":" + minute;
-                        time.setText(selectedTime);
-                        editor.putString("noftime", selectedTime);
-                        scheduleDailyNotification(hourOfDay, minute);
-
-                        // Do something with the selectedTime, such as updating a TextView
-                    }
+                (view, hourOfDay, minute1) -> {
+                    // Handle the selected time
+                    selectedTime = hourOfDay + ":" + minute1;
+                    time.setText(selectedTime);
+                    editor.putString("noftime", selectedTime);
+                    scheduleDailyNotification(hourOfDay, minute1);
+                    Log.d("times", "onTimeSet:1  " + selectedTime);
+                    // Do something with the selectedTime, such as updating a TextView
                 },
                 hour, minute, false);
 
@@ -97,7 +95,8 @@ public class Notification_Screen extends AppCompatActivity {
 
         // Create an intent to your BroadcastReceiver
         Intent intent = new Intent(this, NotificationReceiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_IMMUTABLE);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 3242342, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        Log.d("times", "Set: " + alarmTimeMillis);
 
         // Set a repeating alarm
         alarmManager.setRepeating(
@@ -106,6 +105,7 @@ public class Notification_Screen extends AppCompatActivity {
                 AlarmManager.INTERVAL_DAY,
                 pendingIntent
         );
-
     }
+
+
 }

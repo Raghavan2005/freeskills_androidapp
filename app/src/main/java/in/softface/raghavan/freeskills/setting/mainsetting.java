@@ -10,12 +10,14 @@
 
 package in.softface.raghavan.freeskills.setting;
 
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +25,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 
 import com.squareup.picasso.Picasso;
@@ -117,6 +120,10 @@ public class mainsetting extends Fragment {
         Picasso.get()
                 .load(imageurl)
                 .into(profileimage);
+
+        aboutus.setOnClickListener(view -> {
+            showNotification();
+        });
         profileimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -133,5 +140,22 @@ public class mainsetting extends Fragment {
 
 
         return mview;
+    }
+
+    private void showNotification() {
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(getContext(), "notificationforfreeskills")
+                .setContentTitle("Daily Reminder")
+                .setContentText("It's time for your daily task!")
+                .setSmallIcon(R.drawable.framework);
+
+
+        // Create a notification manager
+        NotificationManager notificationManager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
+        Log.d("times", "notification: 3");
+
+        // Notify
+        notificationManager.notify(1223423356, builder.build());
+        builder.build();
+        Log.d("times", "notification: 4");
     }
 }

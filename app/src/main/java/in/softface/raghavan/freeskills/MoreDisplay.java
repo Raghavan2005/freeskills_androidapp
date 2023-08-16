@@ -44,20 +44,23 @@ public class MoreDisplay extends AppCompatActivity {
         if (Objects.equals(id, "programming")) {
             CourseGVAdapter adapter = new CourseGVAdapter(this, cv.programming);
             gr.setAdapter(adapter);
+            setTitle("Programming Language");
             int programmingArrayLength = cv.programming.length;
-            String ram = programmingArrayLength + "";
+            String ram = programmingArrayLength + " Items";
             no.setText(ram);
         } else if (Objects.equals(id, "frameworks")) {
             CourseGVAdapter adapter = new CourseGVAdapter(this, cv.frameworks);
             gr.setAdapter(adapter);
+            setTitle("Frameworks");
             int programmingArrayLength = cv.frameworks.length;
-            String ram = programmingArrayLength + "";
+            String ram = programmingArrayLength + " Items";
             no.setText(ram);
         } else {
             CourseGVAdapter adapter = new CourseGVAdapter(this, cv.CrashCourse);
             gr.setAdapter(adapter);
+            setTitle("CrashCourse");
             int programmingArrayLength = cv.CrashCourse.length;
-            String ram = programmingArrayLength + "";
+            String ram = programmingArrayLength + " Items";
             no.setText(ram);
         }
     }

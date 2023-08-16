@@ -54,7 +54,7 @@ public class CourseGVAdapter extends ArrayAdapter<carddata> {
             ImageView courseIV = listItemView.findViewById(R.id.whitelistcard);
             TextView tv = listItemView.findViewById(R.id.text);
             TextView date = listItemView.findViewById(R.id.language);
-            tv.setText((String) array.get(0));
+            tv.setText((String) convertToTitleCase((String) array.get(0)));
             date.setText((String) array.get(2));
             Picasso.get()
                     .load(url)
@@ -92,5 +92,26 @@ public class CourseGVAdapter extends ArrayAdapter<carddata> {
         String imageurl = "https://img.youtube.com/vi/";
         String imageres = "/maxresdefault.jpg";
         return imageurl + videoid + imageres;
+    }
+
+    public String convertToTitleCase(String input) {
+        StringBuilder result = new StringBuilder();
+        boolean capitalizeNext = true;
+
+        for (char c : input.toCharArray()) {
+            if (c == '_') {
+                result.append(' ');
+                capitalizeNext = true;
+            } else {
+                if (capitalizeNext) {
+                    result.append(Character.toUpperCase(c));
+                    capitalizeNext = false;
+                } else {
+                    result.append(Character.toLowerCase(c));
+                }
+            }
+        }
+
+        return result.toString();
     }
 }

@@ -157,7 +157,7 @@ public class Player_Fragment extends Fragment {
             shareIntent.setType("text/plain");
             String a = "Learning on your terms! FreeSkills lets you study anytime, anywhere. Dive into engaging content and expand your horizons.";
             String b = "Title : " + array.get(0);
-            String app_url = a + "\n" + b + "\n" + "https://freeskills.app/share/" + array.get(7);
+            String app_url = a + "\n" + b + "\n" + "https://freeskills.cyberspherestudio.com/share/" + array.get(7);
             shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, app_url);
             startActivity(Intent.createChooser(shareIntent, "Share via"));
         });

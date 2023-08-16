@@ -72,7 +72,7 @@ public class SearchFragment extends Fragment {
                     }
                 } else {
                     Log.d("Search", "onQueryTextChange: invalid input");
-                    nofound.setVisibility(View.GONE);
+                    nofound.setVisibility(View.VISIBLE);
                     ev.setVisibility(View.GONE);
                 }
                 return true;
