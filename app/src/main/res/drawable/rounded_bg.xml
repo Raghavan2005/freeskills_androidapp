@@ -10,7 +10,7 @@
 
 <!-- rounded_bg.xml -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-   <solid android:color="#FFFFFF" />
+   <solid android:color="#FF0000" />
     <corners android:radius="50dp" />
     <padding
         android:left="0dp"

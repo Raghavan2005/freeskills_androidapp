@@ -67,6 +67,7 @@
             android:id="@+id/picktime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -88,10 +89,11 @@
                 android:textSize="30sp" />
         </LinearLayout>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/picktimebtn"
             android:layout_width="match_parent"
             android:layout_marginBottom="10dp"
+            android:layout_margin="10dp"
             android:background="@color/Oranger"
             android:fontFamily="@font/lsblack"
             android:padding="2dp"

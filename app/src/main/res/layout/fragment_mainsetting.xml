@@ -24,7 +24,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
 
@@ -51,6 +51,20 @@
                 android:fontFamily="@font/inexbold"
                 android:text="USername"
                 android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="9dp"
+                android:background="@drawable/rounded_bg"
+                android:backgroundTint="@color/Oranger"
+                android:fontFamily="@font/lsblack"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="   Sign out  "
                 android:textColor="@color/white" />
 
             <View

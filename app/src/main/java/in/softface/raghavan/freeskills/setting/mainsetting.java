@@ -25,13 +25,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.squareup.picasso.Picasso;
 
 import in.softface.raghavan.freeskills.R;
 import in.softface.raghavan.freeskills.Whitelist_fragment;
+import in.softface.raghavan.freeskills.login.Sign_up_Activity;
+import in.softface.raghavan.freeskills.messageshower.dialog_loading;
 import in.softface.raghavan.freeskills.messageshower.snackbarCaller;
 import in.softface.raghavan.freeskills.notifications.Notification_Screen;
 
@@ -46,8 +50,9 @@ public class mainsetting extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    LinearLayout whitelist, clearcontinue, aboutus;
+    LinearLayout whitelist, clearcontinue, aboutus, not, Apply;
     TextView username, appv;
+    AppCompatButton signout;
     ImageView profileimage;
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -96,11 +101,25 @@ public class mainsetting extends Fragment {
         username = mview.findViewById(R.id.username);
         appv = mview.findViewById(R.id.appversion);
         whitelist = mview.findViewById(R.id.whitelistlay);
+        not = mview.findViewById(R.id.notification);
         clearcontinue = mview.findViewById(R.id.clearcontinue);
         aboutus = mview.findViewById(R.id.aboutus);
+        signout = mview.findViewById(R.id.signout);
+        Apply = mview.findViewById(R.id.Apply);
+        dialog_loading dl = new dialog_loading(getActivity());
+        signout.setOnClickListener(view -> {
+            dl.show();
+            FirebaseAuth.getInstance().signOut();
+            Intent i = new Intent(getActivity(), Sign_up_Activity.class);
+            startActivity(i);
+        });
 
         whitelist.setOnClickListener(view -> {
             Intent i = new Intent(getActivity(), Whitelist_fragment.class);
+            startActivity(i);
+        });
+        Apply.setOnClickListener(view -> {
+            Intent i = new Intent(getActivity(), GetCertificate.class);
             startActivity(i);
         });
         PackageManager pm = getContext().getPackageManager();
@@ -122,9 +141,12 @@ public class mainsetting extends Fragment {
                 .into(profileimage);
 
         aboutus.setOnClickListener(view -> {
-            showNotification();
+            Intent intent = new Intent(getActivity(), WebViewActivity.class);
+            String url = "https://cyberspherestudio.com";
+            intent.putExtra("urltoopen", url);
+            startActivity(intent);
         });
-        profileimage.setOnClickListener(new View.OnClickListener() {
+        not.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), Notification_Screen.class);
