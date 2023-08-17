@@ -32,9 +32,9 @@ public class Joblist extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         jobsdata[] data = new jobsdata[]{
-                new jobsdata("Frontend Developer", "As a frontend developer, your primary focus is on designing and developing the user interface (UI) and user experience (UX) of a website or web application. ", R.drawable.fed),
-                new jobsdata("Backend Developer", "As a Backend developer, your primary focus is on designing and developing the Functional  of a website or web application. ", R.drawable.fed),
-                new jobsdata("Android Developer", "As a Android Developer, your primary focus is on designing and developing the Functional  of a Android application. ", R.drawable.fed),
+                new jobsdata("Frontend Developer", "As a frontend developer, your primary focus is on designing and developing the user interface (UI) and user experience (UX) of a website or web application. ", "https://i.ibb.co/hK7YgJ1/Frontend.png"),
+                new jobsdata("Backend Developer", "As a Backend developer, your primary focus is on designing and developing the Functional  of a website or web application. ", "https://i.ibb.co/M9MkgZ1/Backend.png"),
+                new jobsdata("Android Developer", "As a Android Developer, your primary focus is on designing and developing the Functional  of a Android application. ", "https://i.ibb.co/gSRQ5gn/Android.png"),
 
 
         };

@@ -31,6 +31,7 @@
 
             <TextView
                 android:id="@+id/textName"
+                android:fontFamily="@font/lsblack"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|bottom"
@@ -43,10 +44,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"
+
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="290dp"
                     android:layout_height="130dp"
                     android:layout_gravity="center"
                     android:id="@+id/imageview"
@@ -68,6 +70,7 @@
                 android:layout_height="match_parent"
                 android:padding="6dp"
                 android:text="asdasdas"
+                android:fontFamily="@font/lsblack"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:visibility="gone" />
@@ -77,6 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center"
+                android:fontFamily="@font/lsblack"
                 android:layout_margin="7dp"
                 android:drawableEnd="@drawable/add"
                 android:text="Choose" />

@@ -14,9 +14,9 @@ public class jobsdata {
 
     private String jobName;
     private String jobDate;
-    private Integer jobImage;
+    private String jobImage;
 
-    public jobsdata(String jobName, String jobDate, Integer jobImage) {
+    public jobsdata(String jobName, String jobDate, String jobImage) {
         this.jobName = jobName;
         this.jobDate = jobDate;
         this.jobImage = jobImage;
@@ -38,11 +38,8 @@ public class jobsdata {
         this.jobDate = jobDate;
     }
 
-    public Integer getjobImage() {
+    public String getjobImage() {
         return jobImage;
     }
 
-    public void setjobImage(Integer jobImage) {
-        this.jobImage = jobImage;
-    }
 }

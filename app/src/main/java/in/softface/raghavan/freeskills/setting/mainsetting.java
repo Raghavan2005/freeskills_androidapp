@@ -108,6 +108,9 @@ public class mainsetting extends Fragment {
         Apply = mview.findViewById(R.id.Apply);
         dialog_loading dl = new dialog_loading(getActivity());
         signout.setOnClickListener(view -> {
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.clear(); // Clear all values from SharedPreferences
+            editor.apply(); // Apply the changes
             dl.show();
             FirebaseAuth.getInstance().signOut();
             Intent i = new Intent(getActivity(), Sign_up_Activity.class);
