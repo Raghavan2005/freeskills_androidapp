@@ -166,6 +166,11 @@ public class CreateProfile extends AppCompatActivity {
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
+       @Override
+    public void onBackPressed() {
+
+        finishAffinity();
+    }
 }
 
 

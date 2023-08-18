@@ -42,4 +42,9 @@ public class Joblist extends AppCompatActivity {
         recyclerView.setAdapter(recyclerViewAdapter);
 
     }
+    @Override
+    public void onBackPressed() {
+
+        finishAffinity();
+    }
 }
