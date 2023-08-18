@@ -89,10 +89,11 @@ public class Sign_up_Activity extends AppCompatActivity {
                             public void onComplete(Task task1) {
 
                                 CUserid = sharedPreferences.getString("Username", null);
+                                String m = sharedPreferences.getString("language", null);
                                 dl.show();
                                 if (task1.isSuccessful()) {
                                     Intent intent;
-                                    if (CUserid == null) {
+                                    if (CUserid == null && m == null) {
                                         intent = new Intent(Sign_up_Activity.this, CreateProfile.class);
                                     } else {
                                         intent = new Intent(Sign_up_Activity.this, MainActivity.class);

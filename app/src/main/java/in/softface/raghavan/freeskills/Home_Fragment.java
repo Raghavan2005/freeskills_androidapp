@@ -22,6 +22,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -48,6 +49,8 @@ import in.softface.raghavan.freeskills.recycleviews.recommendedrecycleview;
 public class Home_Fragment extends Fragment {
     ImageSlider mainslider;
     TextView usernameview, job, protext, framtext, cctext;
+
+    TextView topppbtn, topfbtn, topccbtn;
     ImageView proimage;
     SharedPreferences sharedPreferences;
     String jobnames;
@@ -93,7 +96,10 @@ public class Home_Fragment extends Fragment {
         mainslider.setImageList(slideModels, ScaleTypes.FIT);
         mainslider.startSliding(3000);
         mainslider.setSlideAnimation(AnimationTypes.DEPTH_SLIDE);
-
+//network
+        if (!NetworkUtils.isNetworkAvailable(getContext())) {
+            Toast.makeText(getActivity(), "Please Turn Your Network On", Toast.LENGTH_SHORT).show();
+        }
 
         // ... (rest of the code remains unchanged)
 

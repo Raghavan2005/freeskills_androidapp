@@ -169,7 +169,7 @@ public class CreateProfile extends AppCompatActivity {
        @Override
     public void onBackPressed() {
 
-        finishAffinity();
+           moveTaskToBack(true);
     }
 }
 

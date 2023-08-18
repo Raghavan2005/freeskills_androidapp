@@ -34,6 +34,7 @@ import java.util.Objects;
 
 import in.softface.raghavan.freeskills.joblist.Joblist;
 import in.softface.raghavan.freeskills.login.profile.createprofilepackage.CreateProfile;
+import in.softface.raghavan.freeskills.login.profile.createprofilepackage.CreateProfile2;
 import in.softface.raghavan.freeskills.setting.mainsetting;
 
 public class MainActivity extends AppCompatActivity {
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE);
         String username = sharedPreferences.getString("Username", null);
         String jobname = sharedPreferences.getString("JobSelected", null);
+        String Email = sharedPreferences.getString("email", null);
         mUpdateManager = UpdateManager.Builder(this).mode(UpdateManagerConstant.IMMEDIATE);
         mUpdateManager.start();
 
@@ -75,6 +77,11 @@ public class MainActivity extends AppCompatActivity {
             finish();
         } else if (jobname == null) {
             Intent i = new Intent(this, Joblist.class);
+            startActivity(i);
+            finish();
+        }
+        if (Email == null) {
+            Intent i = new Intent(this, CreateProfile2.class);
             startActivity(i);
             finish();
         }

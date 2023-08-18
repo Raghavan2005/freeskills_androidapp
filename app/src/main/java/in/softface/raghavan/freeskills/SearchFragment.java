@@ -103,18 +103,21 @@ public class SearchFragment extends Fragment {
 
 
     private ArrayList<String> getalllist() {
-        ArrayList l1, l2, l3, l4;
+        ArrayList l1, l2, l3, l4, l5;
 
         l1 = new ArrayList<>();
         l2 = new ArrayList<>();
         l4 = new ArrayList<>();
+        l5 = new ArrayList<>();
         jobromdata jd = new jobromdata();
         l1 = jd.data("Frontend Developer");
         l2 = jd.data("Backend Developer");
         l4 = jd.data("Android Developer");
+        l5 = jd.data("Full Stack Developer");
         l3 = new ArrayList<>(l1);
         l3.addAll(l2);
         l3.addAll(l4);
+        l3.addAll(l5);
         Set<String> uniqueSet = new HashSet<>(l3);
         List<String> finalList = new ArrayList<>(uniqueSet);
         return new ArrayList<>(finalList);

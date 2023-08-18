@@ -17,12 +17,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.transition.Fade;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -36,7 +36,7 @@ public class CreateProfile1 extends AppCompatActivity {
     String Educational, Current_Level;
     SharedPreferences sharedPreferences;
     Intent i;
-    Button nxt;
+    AppCompatButton nxt;
     // TODO - Save in shared
 
     @SuppressLint("MissingInflatedId")
@@ -95,5 +95,11 @@ public class CreateProfile1 extends AppCompatActivity {
         editor.putString("Educational", educational);
         editor.putString("Current_Level", current_Level);
         editor.apply();
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        moveTaskToBack(true);
     }
 }

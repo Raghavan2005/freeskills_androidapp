@@ -13,15 +13,6 @@ package in.softface.raghavan.freeskills.dateset;
 import in.softface.raghavan.freeskills.eachcardview.carddata;
 
 public class cardviewdata {
-    /*    public carddata[]  Continue = new carddata[]{
-                new carddata("Frontend_",gen_yt_imgurl("ET8mqVGDQ1s"),"asdas");
-                new carddata("Internet",gen_yt_imgurl("ET8mqVGDQ1s")),
-                new carddata("Internet","https://img.youtube.com/vi/bMknfKXIFA8/maxresdefault.jpg"),
-                new carddata("Internet",gen_yt_imgurl("ET8mqVGDQ1s")),
-                new carddata("Internet","https://img.youtube.com/vi/bMknfKXIFA8/maxresdefault.jpg"),
-                new carddata("Internet",gen_yt_imgurl("ET8mqVGDQ1s")),
-                new carddata("Internet","https://img.youtube.com/vi/bMknfKXIFA8/maxresdefault.jpg"),*/
-    //  };
 
 
     public carddata[] language = new carddata[]{
@@ -45,6 +36,7 @@ public class cardviewdata {
             new carddata("1133"),
             new carddata("1134"),
             new carddata("1117"),
+            new carddata("1156"),
     };
     public carddata[] CrashCourse = new carddata[]{
             new carddata("1118"),
@@ -85,6 +77,11 @@ public class cardviewdata {
             new carddata("1153"),
             new carddata("1154"),
             new carddata("1155"),
+            new carddata("1157"),
+            new carddata("1158"),
+            new carddata("1159"),
+            new carddata("1160"),
+            new carddata("1161"),
 
 
     };

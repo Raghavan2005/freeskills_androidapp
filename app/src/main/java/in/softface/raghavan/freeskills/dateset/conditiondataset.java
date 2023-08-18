@@ -546,6 +546,72 @@ public class conditiondataset {
             arrayList.add(6, cc);
             arrayList.add(7, "1155");
             return arrayList;
+        } else if (Objects.equals(name, "1156")) {
+            arrayList.add(0, "Node.js and Express.js");
+            arrayList.add(1, gen_yt_videourl("Oe421EPjeBE"));
+            arrayList.add(2, "8:16:47");
+            arrayList.add(3, gen_channel_name("freecodecamp"));
+            arrayList.add(4, gen_channel_url("freecodecamp"));
+            arrayList.add(5, english);
+            arrayList.add(6, f);
+            arrayList.add(7, "1156");
+
+            return arrayList;
+        } else if (Objects.equals(name, "1157")) {
+            arrayList.add(0, "JSON Web Token");
+            arrayList.add(1, gen_yt_videourl("x5gLL8-M9Fo"));
+            arrayList.add(2, "1:40:59");
+            arrayList.add(3, gen_channel_name("freecodecamp"));
+            arrayList.add(4, gen_channel_url("freecodecamp"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1157");
+
+            return arrayList;
+        } else if (Objects.equals(name, "1158")) {
+            arrayList.add(0, "Basic AWS Services");
+            arrayList.add(1, gen_yt_videourl("3hLmDS179YE"));
+            arrayList.add(2, "3:58:00");
+            arrayList.add(3, gen_channel_name("freecodecamp"));
+            arrayList.add(4, gen_channel_url("freecodecamp"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1158");
+
+            return arrayList;
+        } else if (Objects.equals(name, "1159")) {
+            arrayList.add(0, "Monit");
+            arrayList.add(1, gen_yt_videourl("3cA5lNje1Ow"));
+            arrayList.add(2, "5:59");
+            arrayList.add(3, gen_channel_name("RonBillings"));
+            arrayList.add(4, gen_channel_url("RonBillings"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1159");
+
+            return arrayList;
+        } else if (Objects.equals(name, "1160")) {
+            arrayList.add(0, "Ansible");
+            arrayList.add(1, gen_yt_videourl("wgQ3rHFTM4E"));
+            arrayList.add(2, "16:55");
+            arrayList.add(3, gen_channel_name("SimplilearnOfficial"));
+            arrayList.add(4, gen_channel_url("SimplilearnOfficial"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1160");
+
+            return arrayList;
+        } else if (Objects.equals(name, "1161")) {
+            arrayList.add(0, "Terraform");
+            arrayList.add(1, gen_yt_videourl("l5k1ai_GBDE"));
+            arrayList.add(2, "18:14");
+            arrayList.add(3, gen_channel_name("TechWorldwithNana"));
+            arrayList.add(4, gen_channel_url("TechWorldwithNana"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1161");
+
+            return arrayList;
         } else {
             arrayList.add(0, "Not Found");
             arrayList.add(1, "Not Found");
