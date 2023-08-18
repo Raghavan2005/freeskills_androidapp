@@ -21,17 +21,17 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.SwitchCompat;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -46,8 +46,8 @@ public class CreateProfile2 extends AppCompatActivity {
     public boolean Notifications, user_policy;
     String language = "English";
     Handler handler = new Handler();
-    Button fianlbutton;
-    Switch Notificationtg;
+    AppCompatButton fianlbutton;
+    SwitchCompat Notificationtg;
     SharedPreferences sharedPreferences;
     sharedallinoneplace sp;
     CheckBox user_policytg;
@@ -64,9 +64,9 @@ public class CreateProfile2 extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE);
         sp = new sharedallinoneplace(this);
         loadingpg = (ProgressBar) findViewById(R.id.loadingpg);
-        Notificationtg = findViewById(R.id.Notificationtg);
+        Notificationtg = (SwitchCompat) findViewById(R.id.Notificationtg);
         user_policytg = findViewById(R.id.user_policy);
-        fianlbutton = (Button) findViewById(R.id.finalSummit);
+        fianlbutton = (AppCompatButton) findViewById(R.id.finalSummit);
 
         //laugage Spinner
         // Create a custom ArrayAdapter with overridden getDropDownView()
@@ -172,6 +172,12 @@ public class CreateProfile2 extends AppCompatActivity {
         Notifications = Boolean.parseBoolean(String.valueOf(Notificationtg.isChecked()));
         user_policy = Boolean.parseBoolean(String.valueOf(user_policytg.isChecked()));
 
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        moveTaskToBack(true);
     }
 
 }

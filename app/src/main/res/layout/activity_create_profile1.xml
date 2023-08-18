@@ -19,15 +19,17 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/dancebold"
+        android:layout_margin="5dp"
         android:padding="10dp"
+        android:fontFamily="@font/lsblack"
         android:text="Welcome Here \n Get Started"
-        android:textColor="@color/teal_200"
-        android:textSize="54sp" />
+        android:textColor="@color/Oranger"
+        android:textSize="50sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:layout_gravity="center"
         android:orientation="vertical">
 
@@ -42,12 +44,12 @@
                 android:id="@+id/text1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/dancefont"
+                android:fontFamily="@font/lsblack"
                 android:gravity="center"
                 android:padding="20dp"
                 android:paddingEnd="10dp"
                 android:text="Educational"
-                android:textColor="@color/white"
+                android:textColor="@color/purple_200"
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
@@ -59,6 +61,7 @@
                 android:onClick="checkButton"
                 android:text="School"
                 android:textAlignment="center"
+                android:buttonTint="@color/Oranger"
                 android:textColor="@color/white" />
 
             <RadioButton
@@ -68,6 +71,7 @@
                 android:drawableEnd="@drawable/college"
                 android:onClick="checkButton"
                 android:text="College"
+                android:buttonTint="@color/Oranger"
                 android:textAlignment="center"
                 android:textColor="@color/white" />
 
@@ -78,6 +82,7 @@
                 android:drawableEnd="@drawable/self"
                 android:onClick="checkButton"
                 android:text="Self-taught"
+                android:buttonTint="@color/Oranger"
                 android:textAlignment="center"
                 android:textColor="@color/white" />
 
@@ -92,18 +97,19 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/dancefont"
+                android:fontFamily="@font/lsblack"
                 android:gravity="center"
                 android:padding="20dp"
                 android:paddingEnd="10dp"
                 android:text="Current Level"
-                android:textColor="@color/white"
+                android:textColor="@color/purple_200"
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/Beginner"
                 android:layout_width="match_parent"
+                android:buttonTint="@color/Oranger"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/beginner"
                 android:onClick="checkButton1"
@@ -118,6 +124,7 @@
                 android:drawableEnd="@drawable/half"
                 android:onClick="checkButton1"
                 android:text="Intermediate"
+                android:buttonTint="@color/Oranger"
                 android:textAlignment="center"
                 android:textColor="@color/white" />
 
@@ -125,6 +132,7 @@
                 android:id="@+id/Advanced"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Oranger"
                 android:drawableEnd="@drawable/sullstart"
                 android:onClick="checkButton1"
                 android:text="Advanced"
@@ -135,13 +143,17 @@
 
     </LinearLayout>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/next"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
+        android:layout_gravity="center"
         android:layout_height="50dp"
+        android:background="@drawable/box_rd"
+        android:backgroundTint="@color/Oranger"
         android:layout_marginBottom="4dp"
         android:gravity="center"
         android:text="Next"
+        android:textSize="20sp"
         android:textColor="@color/white" />
 
 </LinearLayout>

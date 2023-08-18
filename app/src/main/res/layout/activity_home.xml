@@ -15,11 +15,74 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Home_Fragment">
 
-    <RelativeLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="9dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/rounded_bg"
+                    android:backgroundTint="@color/Oranger"
+                    android:fontFamily="@font/robotobold"
+                    android:padding="7dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="All"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/protext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/robotobold"
+                    android:padding="7dp"
+                    android:text="Programming"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/framtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/robotobold"
+                    android:padding="7dp"
+                    android:text="Framworks"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/cctext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/robotobold"
+                    android:padding="7dp"
+                    android:text="CrashCourse"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </HorizontalScrollView>
 
         <ScrollView
             android:id="@+id/mainScroll"
@@ -145,12 +208,11 @@
                 android:paddingTop="20dp">
 
     <TextView
-        android:id="@+id/protext"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="2dp"
-        android:drawableEnd="@drawable/right"
         android:fontFamily="@font/robotobold"
         android:text="Programming Languages"
         android:textColor="@color/white"
@@ -174,10 +236,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotobold"
-                    android:id="@+id/framtext"
-                    android:drawableEnd="@drawable/right"
                     android:text="Frameworks"
-
                     android:layout_marginStart="10dp"
                     android:textColor="@color/white"
                     android:layout_marginBottom="2dp"
@@ -202,9 +261,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotobold"
                     android:text="CrashCourse"
-                    android:id="@+id/cctext"
                     android:layout_marginStart="10dp"
-                    android:drawableEnd="@drawable/right"
                     android:textColor="@color/white"
                     android:layout_marginBottom="2dp"
                     android:textSize="20sp" />
@@ -234,6 +291,6 @@
         </ScrollView>
 
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </FrameLayout>

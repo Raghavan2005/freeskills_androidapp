@@ -40,14 +40,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lilite"
-            android:text="Sign With Google"
+            android:text="Signin With Google"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="25dp" />
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/bt_sign_in"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp" />
 

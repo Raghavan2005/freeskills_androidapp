@@ -1,13 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~   *************************************************************
-  ~   Created by Raghavan at softface.in on 18/08/23, 12:22 am
-  ~    funwithmetamil@gmail.com
-  ~     Last modified 07/08/23, 11:40 pm
-  ~     Copyright (c) 2023.
-  ~     All rights reserved.
-  ~   *************************************************************
-  -->
-
+<?xml version="1.0" encoding="utf-8"?>
 <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
     <background android:drawable="@color/ic_launcher_background"/>
     <foreground android:drawable="@drawable/ic_launcher_foreground"/>

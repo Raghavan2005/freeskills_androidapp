@@ -23,8 +23,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.squareup.picasso.Picasso;
-
 import in.softface.raghavan.freeskills.R;
 import in.softface.raghavan.freeskills.messageshower.CustomDialogClass;
 
@@ -63,11 +61,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         final jobsdata jobDataList = jobdatas[position];
         holder.jobName.setText(jobDataList.getjobName());
         holder.jobdis.setText(jobDataList.getjobDate());
-        Picasso.get()
-                .load(jobDataList.getjobImage())
-                .placeholder(R.drawable.loading_background)
-                .error(R.drawable.loadingerror)
-                .into(holder.jobImage);
 
         holder.drop.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,7 +111,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            jobImage = itemView.findViewById(R.id.imageview);
             jobName = itemView.findViewById(R.id.textName);
             jobdis = itemView.findViewById(R.id.textdate);
             drop = itemView.findViewById(R.id.drop);

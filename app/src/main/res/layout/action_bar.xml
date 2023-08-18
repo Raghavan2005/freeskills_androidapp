@@ -13,26 +13,28 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/toolbar"
+    android:orientation="horizontal"
     android:background="@drawable/backgroundforcard"
     app:layout_scrollFlags="scroll|enterAlways">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/lsblack"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="FreeSkills"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize">
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:padding="5dp"
-            android:layout_marginStart="5dp"
-            android:textAlignment="center"
-            android:text="FreeSkills"
-            android:fontFamily="@font/lsblack"
-            android:gravity="center"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="40dp"
@@ -54,5 +56,6 @@
         </com.google.android.material.card.MaterialCardView>
 
     </RelativeLayout>
+
 
 </LinearLayout>

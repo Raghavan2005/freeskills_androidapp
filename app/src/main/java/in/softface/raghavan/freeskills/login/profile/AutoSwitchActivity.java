@@ -32,6 +32,7 @@ public class AutoSwitchActivity {
             public void run() {
                 Intent intent = new Intent(context, targetActivity);
                 context.startActivity(intent);
+
             }
         }, delayMillis);
     }

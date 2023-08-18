@@ -27,18 +27,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textName"
-                android:fontFamily="@font/lsblack"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|bottom"
-                android:text="Full Stack Developer"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -47,17 +38,21 @@
 
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="290dp"
-                    android:layout_height="130dp"
-                    android:layout_gravity="center"
-                    android:id="@+id/imageview"
-                    android:src="@drawable/fed" />
+                <TextView
+                    android:id="@+id/textName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/lsblack"
+                    android:gravity="center"
+                    android:text="Full Stack Developer"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_500"
+                    android:textSize="25sp" />
 
                 <ImageButton
                     android:layout_width="match_parent"
                     android:id="@+id/drop"
-                    android:layout_height="130dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@color/white"
                     android:src="@drawable/dropdown" />
@@ -70,7 +65,7 @@
                 android:layout_height="match_parent"
                 android:padding="6dp"
                 android:text="asdasdas"
-                android:fontFamily="@font/lsblack"
+                android:fontFamily="@font/robotobold"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:visibility="gone" />
@@ -80,10 +75,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center"
-                android:fontFamily="@font/lsblack"
+                android:fontFamily="@font/robotobold"
                 android:layout_margin="7dp"
                 android:drawableEnd="@drawable/add"
-                android:text="Choose" />
+                android:text="Choose Your Job" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

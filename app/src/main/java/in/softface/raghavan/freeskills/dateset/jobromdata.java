@@ -86,6 +86,25 @@ public class jobromdata {
 
 
             return arraylist;
+        } else if (Objects.equals(job, "Full Stack Developer")) {
+            arraylist.add("1102");
+            arraylist.add("1103");
+            arraylist.add("1104");
+            arraylist.add("1106");
+            arraylist.add("1105");
+            arraylist.add("1111");
+            arraylist.add("1110");
+            arraylist.add("1156");
+            arraylist.add("1124");
+            arraylist.add("1133");
+            arraylist.add("1157");
+            arraylist.add("1129");
+            arraylist.add("1122");
+            arraylist.add("1158");
+            arraylist.add("1159");
+            arraylist.add("1160");
+            arraylist.add("1161");
+            return arraylist;
         } else {
             arraylist.add("Not Found");
             return arraylist;
