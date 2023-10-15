@@ -50,7 +50,7 @@ public class mainsetting extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    LinearLayout whitelist, clearcontinue, aboutus, not, Apply;
+    LinearLayout whitelist, clearcontinue, aboutus, not, Apply,profilesetting;
     TextView username, appv;
     AppCompatButton signout;
     ImageView profileimage;
@@ -104,6 +104,7 @@ public class mainsetting extends Fragment {
         not = mview.findViewById(R.id.notification);
         clearcontinue = mview.findViewById(R.id.clearcontinue);
         aboutus = mview.findViewById(R.id.aboutus);
+        profilesetting=mview.findViewById(R.id.profilesetting);
         signout = mview.findViewById(R.id.signout);
         Apply = mview.findViewById(R.id.Apply);
         dialog_loading dl = new dialog_loading(getActivity());
@@ -123,6 +124,10 @@ public class mainsetting extends Fragment {
         });
         Apply.setOnClickListener(view -> {
             Intent i = new Intent(getActivity(), GetCertificate.class);
+            startActivity(i);
+        });
+        profilesetting.setOnClickListener(view ->{
+            Intent i = new Intent(getActivity(), profilesetting.class);
             startActivity(i);
         });
         PackageManager pm = getContext().getPackageManager();

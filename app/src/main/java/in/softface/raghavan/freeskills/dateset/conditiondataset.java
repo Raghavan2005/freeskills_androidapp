@@ -612,7 +612,117 @@ public class conditiondataset {
             arrayList.add(7, "1161");
 
             return arrayList;
-        } else {
+        }
+        else if (Objects.equals(name,"1162")){
+            arrayList.add(0, "Microsoft Excel");
+            arrayList.add(1, gen_yt_videourl("Vl0H-qTclOg"));
+            arrayList.add(2, "2:26:09");
+            arrayList.add(3, gen_channel_name("freecodecamp"));
+            arrayList.add(4, gen_channel_url("freecodecamp"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1162");
+
+            return arrayList;}
+        else if (Objects.equals(name,"1163")){
+            arrayList.add(0, "Google Sheets");
+            arrayList.add(1, gen_yt_videourl("N2opj8XzYBY"));
+            arrayList.add(2, "3:03:31");
+            arrayList.add(3, gen_channel_name("freecodecamp"));
+            arrayList.add(4, gen_channel_url("freecodecamp"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1163");
+
+            return arrayList;}
+        else if (Objects.equals(name,"1164")){
+            arrayList.add(0, "Microsoft Access");
+            arrayList.add(1, gen_yt_videourl("J344sAUP0to"));
+            arrayList.add(2, "6:06:56");
+            arrayList.add(3, gen_channel_name("LearnitTraining"));
+            arrayList.add(4, gen_channel_url("LearnitTraining"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1164");
+
+            return arrayList;}
+        else if (Objects.equals(name,"1165")){
+            arrayList.add(0, "Database Management Software");
+            arrayList.add(1, gen_yt_videourl("c5HAwKX-suM"));
+            arrayList.add(2, "4:25:23");
+            arrayList.add(3, gen_channel_name("SCALER"));
+            arrayList.add(4, gen_channel_url("SCALER"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1165");
+
+            return arrayList;}
+        else if (Objects.equals(name,"1166")){
+            arrayList.add(0, "Text Editors");
+            arrayList.add(1, gen_yt_videourl("8PhdfcX9tG0"));
+            arrayList.add(2, "10:27");
+            arrayList.add(3, gen_channel_name("Fireship"));
+            arrayList.add(4, gen_channel_url("Fireship"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1166");
+
+            return arrayList;}
+        else if (Objects.equals(name,"1167")){
+            arrayList.add(0, "Data Entry Software");
+            arrayList.add(1, gen_yt_videourl("XOx2lO6ydGk"));
+            arrayList.add(2, "15:18");
+            arrayList.add(3, gen_channel_name("trulymsf"));
+            arrayList.add(4, gen_channel_url("trulymsf"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1167");
+
+            return arrayList;}
+        else if (Objects.equals(name,"1168")){
+            arrayList.add(0, "OCR (Optical Character Recognition) Software");
+            arrayList.add(1, gen_yt_videourl("or8AcS6y1xg"));
+            arrayList.add(2, "6:15");
+            arrayList.add(3, gen_channel_name("IBMTechnology"));
+            arrayList.add(4, gen_channel_url("IBMTechnology"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1168");
+
+            return arrayList;}
+        else if (Objects.equals(name,"1169")){
+            arrayList.add(0, "Data Entry Automation Tools");
+            arrayList.add(1, gen_yt_videourl("_S65r0urexs"));
+            arrayList.add(2, "30:56");
+            arrayList.add(3, gen_channel_name("Bardeenai"));
+            arrayList.add(4, gen_channel_url("Bardeenai"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1169");
+
+            return arrayList;}
+        else if (Objects.equals(name,"1170")){
+            arrayList.add(0, "Data Validation Tools");
+            arrayList.add(1, gen_yt_videourl("SlWIgMFpsPg"));
+            arrayList.add(2, "13:07");
+            arrayList.add(3, gen_channel_name("techteachersandstudents"));
+            arrayList.add(4, gen_channel_url("techteachersandstudents"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1170");
+
+            return arrayList;}
+        else if (Objects.equals(name,"1171")){
+            arrayList.add(0, "Keyboard Shortcut Tools");
+            arrayList.add(1, gen_yt_videourl("OHodk0bMb00"));
+            arrayList.add(2, "10:26");
+            arrayList.add(3, gen_channel_name("AlphaRez"));
+            arrayList.add(4, gen_channel_url("AlphaRez"));
+            arrayList.add(5, english);
+            arrayList.add(6, cc);
+            arrayList.add(7, "1171");
+
+            return arrayList;}else {
             arrayList.add(0, "Not Found");
             arrayList.add(1, "Not Found");
             arrayList.add(2, "Not Found");

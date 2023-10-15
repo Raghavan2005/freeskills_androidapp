@@ -36,6 +36,7 @@ public class Joblist extends AppCompatActivity {
                 new jobsdata("Backend Developer", "As a Backend developer, your primary focus is on designing and developing the Functional  of a website or web application. ", "https://i.ibb.co/M9MkgZ1/Backend.png"),
                 new jobsdata("Android Developer", "As a Android Developer, your primary focus is on designing and developing the Functional  of a Android application. ", "https://i.ibb.co/gSRQ5gn/Android.png"),
                 new jobsdata("Full Stack Developer", "As a Full Stack Developer, your primary focus is on designing and developing the Functional  of a Backend and Frontend. ", "https://i.ibb.co/gSRQ5gn/Android.png"),
+                new jobsdata("Data Entry", "Data entry is a type of clerical work that involves using various processes like typing and voice recording for entering data into computers. Data entry operators work in a variety of industries including retail, healthcare, finance and transportation.", "https://i.ibb.co/gSRQ5gn/Android.png"),
 
 
         };
@@ -46,6 +47,7 @@ public class Joblist extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
+        super.onBackPressed();
         finishAffinity();
     }
 }

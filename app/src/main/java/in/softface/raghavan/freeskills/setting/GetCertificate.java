@@ -71,7 +71,7 @@ public class GetCertificate extends AppCompatActivity {
 
             // Schedule the work to reset certificatestats after 10 seconds (for testing purposes)
             OneTimeWorkRequest resetWorkRequest = new OneTimeWorkRequest.Builder(ResetCertificateWorker.class)
-                    .setInitialDelay(10, TimeUnit.SECONDS)
+                    .setInitialDelay(100, TimeUnit.SECONDS)
                     .build();
             workManager.enqueue(resetWorkRequest);
         }

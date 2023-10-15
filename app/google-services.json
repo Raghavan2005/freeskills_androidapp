@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "676464473518",
+    "firebase_url": "https://freeskills-e5d65-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "freeskills-e5d65",
     "storage_bucket": "freeskills-e5d65.appspot.com"
   },
@@ -14,7 +15,23 @@
       },
       "oauth_client": [
         {
-          "client_id": "676464473518-hal5t8mj0g315mj02ldp0f283iar3ohs.apps.googleusercontent.com",
+          "client_id": "676464473518-9lm4e7fsmjr9mqskch9r0kiu53v3qq6l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.softface.raghavan.freeskills",
+            "certificate_hash": "741bf46cf04ba75094876f55daf0a04f750b5982"
+          }
+        },
+        {
+          "client_id": "676464473518-cid50ki77vdmj3asr3g06fr5s03a07tr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.softface.raghavan.freeskills",
+            "certificate_hash": "3b184e66793dca08ef62b92ee5ac66bb4e9ef110"
+          }
+        },
+        {
+          "client_id": "676464473518-n3m654co8lnqlvk53uf2eebn62vnk0l1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],

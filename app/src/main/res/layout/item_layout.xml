@@ -46,7 +46,7 @@
                     android:gravity="center"
                     android:text="Full Stack Developer"
                     android:textAlignment="center"
-                    android:textColor="@color/purple_500"
+                    android:textColor="#F44336"
                     android:textSize="25sp" />
 
                 <ImageButton
@@ -77,6 +77,7 @@
                 android:layout_gravity="bottom|center"
                 android:fontFamily="@font/robotobold"
                 android:layout_margin="7dp"
+                android:textColor="@color/white"
                 android:drawableEnd="@drawable/add"
                 android:text="Choose Your Job" />
         </LinearLayout>

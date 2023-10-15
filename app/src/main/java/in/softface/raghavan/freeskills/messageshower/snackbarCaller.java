@@ -38,9 +38,9 @@ public class snackbarCaller {
         message.setText(displaytext);
         if (id == 0) {
             message.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.ok_baseline_check_24, 0, 0, 0);
-            customView.setBackgroundResource(R.drawable.green_rounded_background);
+            customView.setBackgroundResource(R.color.green);
             } else if (id == 1) {
-                customView.setBackgroundResource(R.drawable.red_rounded_background);
+                customView.setBackgroundResource(R.color.red);
                 message.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.error_baseline_close_24, 0, 0, 0);
             }
             // snackbar.getView().setBackgroundColor(Color.TRANSPARENT);

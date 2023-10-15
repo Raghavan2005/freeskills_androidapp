@@ -14,7 +14,6 @@
     android:layout_height="wrap_content"
     android:id="@+id/toolbar"
     android:orientation="horizontal"
-    android:background="@drawable/backgroundforcard"
     app:layout_scrollFlags="scroll|enterAlways">
 
     <TextView

@@ -105,7 +105,20 @@ public class jobromdata {
             arraylist.add("1160");
             arraylist.add("1161");
             return arraylist;
-        } else {
+        } else if (Objects.equals(job,"Data Entry")) {
+            arraylist.add("1162");
+            arraylist.add("1163");
+            arraylist.add("1164");
+            arraylist.add("1165");
+            arraylist.add("1166");
+            arraylist.add("1167");
+            arraylist.add("1168");
+            arraylist.add("1169");
+            arraylist.add("1170");
+            arraylist.add("1171");
+            return arraylist;
+        }
+        else {
             arraylist.add("Not Found");
             return arraylist;
         }
